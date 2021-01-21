@@ -1,0 +1,37 @@
+table#debugGridLevelTable {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	border: none;
+	margin: 0;
+	padding: 0;
+	border-width: 0px;
+	height: 100%;
+	width: 400%;
+}
+
+div#world {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+div#playerCarDiv {
+	position: absolute;
+	width: 6.25%;
+	height: 10%;
+}
+
+td#debugGridLevelTd {
+	padding: 0px;
+}
+
+img#debugGridLevelImg {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+img#playerCarImg {
+	width: 100%;
+	position: absolute;
+}

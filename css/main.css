@@ -1,0 +1,15 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body#body {
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	margin: 0px;
+}
+
+h1#titleText {
+	color: #fff;
+}

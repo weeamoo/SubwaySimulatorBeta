@@ -1,0 +1,8 @@
+.invis {
+	visibility: hidden;
+}
+
+.hideScroll {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
