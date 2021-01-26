@@ -20,7 +20,13 @@
 */
 
 function toggleNoClip () {
-
+	if (noClip) {
+		noClip = false;
+		console.log("No Clip off");
+	} else {
+		noClip = true;
+		console.log("No Clip on");
+	}
 }
 
 function toggleFreeCam () {
