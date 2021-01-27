@@ -34,6 +34,22 @@ function keyActions () {
 		}
 		xSpeed = accel(xSpeed, 1, playerAccelPower);
 	}
+	
+	//y coord movement if you have freecam or unlocked
+	
+	if (freeCam || unlockY) {
+		if (up) {
+		if (Math.abs(ySpeed) < kick) {
+			ySpeed = 0 - kick;
+		}
+		ySpeed = accel(ySpeed, -1, playerAccelPower);
+	} else if (down) {
+		if (Math.abs(ySpeed) < kick) {
+			ySpeed = kick;
+		}
+		ySpeed = accel(xSpeed, 1, playerAccelPower);
+	}
+	}
 
 }
 
