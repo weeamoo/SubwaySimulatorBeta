@@ -1,8 +1,3 @@
-//vars
-
-var x = 0;
-var y = 0;
-
 //runs every frame
 function everyFrame () {
 
@@ -24,30 +19,30 @@ function keyActions () {
 
 	//for each directions sees if speed is far enough away from zero then calls accel function
 	if (left) {
-		if (Math.abs(xSpeed) < kick) {
-			xSpeed = 0 - kick;
+		if (Math.abs(player.xSpeed) < player.kick) {
+			player.xSpeed = 0 - player.kick;
 		}
-		xSpeed = accel(xSpeed, -1, playerAccelPower);
+		player.xSpeed = accel(player.xSpeed, -1, player.accelPower);
 	} else if (right) {
-		if (Math.abs(xSpeed) < kick) {
-			xSpeed = kick;
+		if (Math.abs(player.xSpeed) < player.kick) {
+			player.xSpeed = player.kick;
 		}
-		xSpeed = accel(xSpeed, 1, playerAccelPower);
+		player.xSpeed = accel(player.xSpeed, 1, player.accelPower);
 	}
 	
 	//y coord movement if you have freecam or unlocked
 	
-	if (noClip || unlockY) {
+	if (noClip || player.unlockY) {
 		if (up) {
-		if (Math.abs(ySpeed) < kick) {
-			ySpeed = 0 - kick;
+		if (Math.abs(player.ySpeed) < player.kick) {
+			player.ySpeed = 0 - player.kick;
 		}
-		ySpeed = accel(ySpeed, -1, playerAccelPower);
+		player.ySpeed = accel(player.ySpeed, -1, player.accelPower);
 	} else if (down) {
-		if (Math.abs(ySpeed) < kick) {
-			ySpeed = kick;
+		if (Math.abs(player.ySpeed) < player.kick) {
+			player.ySpeed = player.kick;
 		}
-		ySpeed = accel(xSpeed, 1, playerAccelPower);
+		player.ySpeed = accel(player.xSpeed, 1, player.accelPower);
 	}
 	}
 
