@@ -53,6 +53,8 @@ player.xSpeed = 0;
 player.ySpeed = 0;
 player.wantedLevel = 0;
 player.speedLimit = 0;
+player.x = 0;
+player.y = 0;
 //putting some semicontstants here lol
 //semi constants, can be changed when buying upgrandes
 
