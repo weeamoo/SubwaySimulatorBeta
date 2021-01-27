@@ -43,24 +43,27 @@ function toggleFreeCam () {
 
 //rando vars
 
+//container var for player data
+var player = {};
+
 var noClip = false;
 var freeCam = false;
-var unlockY = false;
-var xSpeed = 0;
-var ySpeed = 0;
+player.unlockY = false;
+player.xSpeed = 0;
+player.ySpeed = 0;
 
 //putting some semicontstants here lol
 //semi constants, can be changed when buying upgrandes
 
 
 //acceleration power in percent of speed per frame
-var playerAccelPower = 0.1;
+player.accelPower = 0.1;
 
 //what minimum speed should be when key is held
-var kick = 0.05;
+player.kick = 0.05;
 
 //when the car will stop completely while brakes are held
-var brakesFullStop = 0.05;
+player.brakesFullStop = 0.05;
 
 //brakes power
-var palyerBrakePower = 0.1;
+palyer.brakePower = 0.1;
