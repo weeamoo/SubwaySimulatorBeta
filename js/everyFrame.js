@@ -71,6 +71,7 @@ function frameMovement () {
 
 }
 
+//need to redo this so that anything can use it when ai cars are added
 function frameSpeedEnv () {
 	if (brakes) {
 		if (Math.abs(xSpeed) < brakesFullStop) {
