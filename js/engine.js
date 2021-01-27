@@ -69,4 +69,4 @@ player.kick = 0.05;
 player.brakesFullStop = 0.05;
 
 //brakes power
-palyer.brakePower = 0.1;
+player.brakePower = 0.1;
