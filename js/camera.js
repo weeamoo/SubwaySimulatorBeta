@@ -23,7 +23,7 @@ function updateCameraOffset () {
 		xOffset = xMax - 800;
 	} else {
 		//between min and max, calc offset
-		xOffset = x - xMin;
+		xOffset = player.x - xMin;
 	}
 
 	/* if (player.y < yMin) {
