@@ -45,6 +45,7 @@ function toggleFreeCam () {
 
 var noClip = false;
 var freeCam = false;
+var unlockY = false;
 var xSpeed = 0;
 var ySpeed = 0;
 
