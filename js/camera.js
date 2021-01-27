@@ -15,10 +15,10 @@ function calcBounds () {
 
 //updates offsets for current position
 function updateCameraOffset () {
-	if (x < xMin) {
+	if (player.x < xMin) {
 		//smaller than min, camera all the way to the left
 		xOffset = 0;
-	} else if (x > xMax) {
+	} else if (player.x > xMax) {
 		//larger than max, camera all the way to the right
 		xOffset = xMax - 800;
 	} else {
@@ -26,14 +26,14 @@ function updateCameraOffset () {
 		xOffset = x - xMin;
 	}
 
-	/* if (y < yMin) {
+	/* if (player.y < yMin) {
 		//smaller than min, camera all the way to the bottom
 		yOffset = 0;
-	} else if (y > yMax) {
+	} else if (player.y > yMax) {
 		//larger than max, camera all the way to the bottom
 		yOffset = xMax;
 	} else {
 		//between min and max, calc offset
-		yOffset = y - yMin;
+		yOffset = player.y - yMin;
 	} */
 }
