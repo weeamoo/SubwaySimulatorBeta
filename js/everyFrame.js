@@ -51,21 +51,21 @@ function keyActions () {
 function frameMovement () {
 
 	//sets y to where the rail is (if needed)
-	if (noClip == false && unlockY == false) {
-		y = getNearestRail(x, y);
+	if (noClip == false && player.unlockY == false) {
+		player.y = getNearestRail(player.x, player.y);
 	}
 
 	//applies one frame of movement
-	x = x + xSpeed;
+	player.x = player.x + player.xSpeed;
 
 	//calcs new camera pos
 	updateCameraOffset();
 
 	//moves sub to position & moves camera if freecam is off
 	if (freeCam) {
-		updateSubPos(x, y);
+		updateSubPos(player.x, player.y);
 	} else {
-		updateSubPos(x - xOffset, y - yOffset);
+		updateSubPos(player.x - xOffset, player.y - yOffset);
 		updateBackPos(0 - xOffset, 0 - yOffset);
 	}
 
