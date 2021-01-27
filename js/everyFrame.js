@@ -55,8 +55,10 @@ function keyActions () {
 
 function frameMovement () {
 
-	//sets y to where the rail is
-	y = getNearestRail(x, y);
+	//sets y to where the rail is (if needed)
+	if !(noClip || unlockY) {
+		y = getNearestRail(x, y);
+	}
 
 	//applies one frame of movement
 	x = x + xSpeed;
