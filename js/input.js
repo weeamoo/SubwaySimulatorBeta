@@ -74,7 +74,7 @@ document.onkeydown = function(event) {
 //    outputs key code when viewKeycode is true
     default:
       if (viewKeycode) { 
-        alert(event.keyCode + " OR " + keyCodeLookup[event.keyCode]);
+        alert("JS Keycode :" + event.keyCode + " Lookup Table: " + keyCodeLookup[event.keyCode]);
       }
       break;
 
