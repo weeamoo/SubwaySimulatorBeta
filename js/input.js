@@ -1,64 +1,74 @@
-//vars
-var up = false;
-var down = false;
-var left = false;
-var right = false;
-var brakes = false;
+//empty container vars
+var up = {};
+var down = {};
+var left = {};
+var right = {};
+var brakes = {};
+//pause is weird
+var pause {};
+
+//set pressed to false to start
+var up.pressed = false;
+var down.pressed = false;
+var left.pressed = false;
+var right.pressed = false;
+var brakes.pressed = false;
+//no pressed var for pause cause weird
 
 var viewKeycode = false;
 
 //default binds
-var left1 = 37;
-var left2 = 65;
-var left3 = 74;
-var right1 = 39;
-var right2 = 68;
-var right3 = 76;
-var up1 = 38;
-var up2 = 87;
-var up3 = 73;
-var down1 = 40;
-var down2 = 83;
-var down3 = 75;
-var brakes1 = 16;
-var brakes2 = "UNBOUND";
-var brakes3 = "UNBOUND";
-var pause1 = 27;
-var pause2 = "UNBOUND";
-var pause3 = "UNBOUND";
+var left.1 = 37;
+var left.2 = 65;
+var left.3 = 74;
+var right.1 = 39;
+var right.2 = 68;
+var right.3 = 76;
+var up.1 = 38;
+var up.2 = 87;
+var up.3 = 73;
+var down.1 = 40;
+var down.2 = 83;
+var down.3 = 75;
+var brakes.1 = 16;
+var brakes.2 = "UNBOUND";
+var brakes.3 = "UNBOUND";
+var pause.1 = 27;
+var pause.2 = "UNBOUND";
+var pause.3 = "UNBOUND";
 
 //sets var to true when key is pressed
 document.onkeydown = function(event) {
   switch (event.keyCode) {
-    case left1:
-    case left2:
-    case left3:
-        left = true;
+    case left.1:
+    case left.2:
+    case left.3:
+        left.pressed = true;
       break;
-    case right1:
-    case right2:
-    case right3:
-        right = true;
+    case right.1:
+    case right.2:
+    case right.3:
+        right.pressed = true;
       break;
-    case up1:
-    case up2:
-    case up3:
-        up = true;
+    case up.1:
+    case up.2:
+    case up.3:
+        up.pressed = true;
       break;
-    case down1:
-    case down2:
-    case down3:
-        down = true;
+    case down.1:
+    case down.2:
+    case down.3:
+        down.pressed = true;
       break;
-    case brakes1:
-    case brakes2:
-    case brakes3:
-        brakes = true;
+    case brakes.1:
+    case brakes.2:
+    case brakes.3:
+        brakes.pressed = true;
       break;
 //    pause menu
-    case pause1:
-    case pause2:
-    case pause3:
+    case pause.1:
+    case pause.2:
+    case pause.3:
         togglePause();
       break;
 //    outputs key code when viewKeycode is true
@@ -74,30 +84,30 @@ document.onkeydown = function(event) {
 //sets var to false when key is released
 document.onkeyup = function(event) {
   switch (event.keyCode) {
-    case left1:
-    case left2:
-    case left3:
-        left = false;
+    case left.1:
+    case left.2:
+    case left.3:
+        left.pressed = false;
       break;
-    case right1:
-    case right2:
-    case right3:
-        right = false;
+    case right.1:
+    case right.2:
+    case right.3:
+        right.pressed = false;
       break;
-    case up1:
-    case up2:
-    case up3:
-        up = false;
+    case up.1:
+    case up.2:
+    case up.3:
+        up.pressed = false;
       break;
-    case down1:
-    case down2:
-    case down3:
-        down = false;
+    case down.1:
+    case down.2:
+    case down.3:
+        down.pressed = false;
       break;
-    case brakes1:
-    case brakes2:
-    case brakes3:
-        brakes = false;
+    case brakes.1:
+    case brakes.2:
+    case brakes.3:
+        brakes.pressed = false;
       break;
     }
 };
