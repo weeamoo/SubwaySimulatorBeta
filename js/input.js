@@ -8,34 +8,34 @@ var brakes = {};
 var pause = {};
 
 //set pressed to false to start
-var up.pressed = false;
-var down.pressed = false;
-var left.pressed = false;
-var right.pressed = false;
-var brakes.pressed = false;
+up.pressed = false;
+down.pressed = false;
+left.pressed = false;
+right.pressed = false;
+brakes.pressed = false;
 //no pressed var for pause cause weird
 
 var viewKeycode = false;
 
 //default binds
-var left.1 = 37;
-var left.2 = 65;
-var left.3 = 74;
-var right.1 = 39;
-var right.2 = 68;
-var right.3 = 76;
-var up.1 = 38;
-var up.2 = 87;
-var up.3 = 73;
-var down.1 = 40;
-var down.2 = 83;
-var down.3 = 75;
-var brakes.1 = 16;
-var brakes.2 = "UNBOUND";
-var brakes.3 = "UNBOUND";
-var pause.1 = 27;
-var pause.2 = "UNBOUND";
-var pause.3 = "UNBOUND";
+left.1 = 37;
+left.2 = 65;
+left.3 = 74;
+right.1 = 39;
+right.2 = 68;
+right.3 = 76;
+up.1 = 38;
+up.2 = 87;
+up.3 = 73;
+down.1 = 40;
+down.2 = 83;
+down.3 = 75;
+brakes.1 = 16;
+brakes.2 = "UNBOUND";
+brakes.3 = "UNBOUND";
+pause.1 = 27;
+pause.2 = "UNBOUND";
+pause.3 = "UNBOUND";
 
 //sets var to true when key is pressed
 document.onkeydown = function(event) {
