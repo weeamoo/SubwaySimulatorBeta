@@ -9,7 +9,7 @@ div#controlBindingsMenu {
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: #000;
 }
 
 //window title
