@@ -57,6 +57,7 @@ function frameMovement () {
 
 	//applies one frame of movement
 	player.x = player.x + player.xSpeed;
+	player.y = player.y + player.ySpeed;
 
 	//calcs new camera pos
 	updateCameraOffset();
