@@ -1,0 +1,13 @@
+/*main binding menu div */
+div#controlBindingsMenu {
+	width: 50%;
+	height: 50%;
+	border-color: white;
+	border-style: solid;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.8);
+}
