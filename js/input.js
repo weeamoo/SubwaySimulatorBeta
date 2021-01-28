@@ -5,7 +5,7 @@ var left = {};
 var right = {};
 var brakes = {};
 //pause is weird
-var pause {};
+var pause = {};
 
 //set pressed to false to start
 var up.pressed = false;
