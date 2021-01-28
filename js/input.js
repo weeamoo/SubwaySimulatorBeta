@@ -18,57 +18,57 @@ brakes.pressed = false;
 var viewKeycode = false;
 
 //default binds
-left.1 = 37;
-left.2 = 65;
-left.3 = 74;
-right.1 = 39;
-right.2 = 68;
-right.3 = 76;
-up.1 = 38;
-up.2 = 87;
-up.3 = 73;
-down.1 = 40;
-down.2 = 83;
-down.3 = 75;
-brakes.1 = 16;
-brakes.2 = "UNBOUND";
-brakes.3 = "UNBOUND";
-pause.1 = 27;
-pause.2 = "UNBOUND";
-pause.3 = "UNBOUND";
+left.a = 37;
+left.b = 65;
+left.c = 74;
+right.a = 39;
+right.b = 68;
+right.c = 76;
+up.a = 38;
+up.b = 87;
+up.c = 73;
+down.a = 40;
+down.b = 83;
+down.c = 75;
+brakes.a = 16;
+brakes.b = "UNBOUND";
+brakes.c = "UNBOUND";
+pause.a = 27;
+pause.b = "UNBOUND";
+pause.c = "UNBOUND";
 
 //sets var to true when key is pressed
 document.onkeydown = function(event) {
   switch (event.keyCode) {
-    case left.1:
-    case left.2:
-    case left.3:
+    case left.a:
+    case left.b:
+    case left.c:
         left.pressed = true;
       break;
-    case right.1:
-    case right.2:
-    case right.3:
+    case right.a:
+    case right.b:
+    case right.c:
         right.pressed = true;
       break;
-    case up.1:
-    case up.2:
-    case up.3:
+    case up.a:
+    case up.b:
+    case up.c:
         up.pressed = true;
       break;
-    case down.1:
-    case down.2:
-    case down.3:
+    case down.a:
+    case down.b:
+    case down.c:
         down.pressed = true;
       break;
-    case brakes.1:
-    case brakes.2:
-    case brakes.3:
+    case brakes.a:
+    case brakes.b:
+    case brakes.c:
         brakes.pressed = true;
       break;
 //    pause menu
-    case pause.1:
-    case pause.2:
-    case pause.3:
+    case pause.a:
+    case pause.b:
+    case pause.c:
         togglePause();
       break;
 //    outputs key code when viewKeycode is true
@@ -84,29 +84,29 @@ document.onkeydown = function(event) {
 //sets var to false when key is released
 document.onkeyup = function(event) {
   switch (event.keyCode) {
-    case left.1:
-    case left.2:
-    case left.3:
+    case left.a:
+    case left.b:
+    case left.c:
         left.pressed = false;
       break;
-    case right.1:
-    case right.2:
-    case right.3:
+    case right.a:
+    case right.b:
+    case right.c:
         right.pressed = false;
       break;
-    case up.1:
-    case up.2:
-    case up.3:
+    case up.a:
+    case up.b:
+    case up.c:
         up.pressed = false;
       break;
-    case down.1:
-    case down.2:
-    case down.3:
+    case down.a:
+    case down.b:
+    case down.c:
         down.pressed = false;
       break;
-    case brakes.1:
-    case brakes.2:
-    case brakes.3:
+    case brakes.a:
+    case brakes.b:
+    case brakes.c:
         brakes.pressed = false;
       break;
     }
