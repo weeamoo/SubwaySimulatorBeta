@@ -33,12 +33,12 @@ function keyActions () {
 	//y coord movement if you have freecam or unlocked
 	
 	if (noClip || player.unlockY) {
-		if (up.pressed) {
+		if (down.pressed) {
 		if (Math.abs(player.ySpeed) < player.kick) {
 			player.ySpeed = 0 - player.kick;
 		}
 		player.ySpeed = accel(player.ySpeed, -1, player.accelPower);
-	} else if (down.pressed) {
+	} else if (up.pressed) {
 		if (Math.abs(player.ySpeed) < player.kick) {
 			player.ySpeed = player.kick;
 		}
