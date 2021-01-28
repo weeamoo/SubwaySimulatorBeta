@@ -2,6 +2,7 @@
 //vars used to talk to input script for binding
 var nextKeyRequested = false;
 var nextKey = 0;
+var newKey = 0;
 
 //hide or show binding menu
 function showBindMenu () {
