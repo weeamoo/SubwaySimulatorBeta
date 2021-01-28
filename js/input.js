@@ -72,12 +72,11 @@ document.onkeydown = function(event) {
         togglePause();
       break;
 //    outputs key code when viewKeycode is true
-    default:
       if (viewKeycode) { 
         alert("JS Keycode: " + event.keyCode + "\nLookup Table: " + keyCodeLookup[event.keyCode]);
+      } else if (nextKeyRequested) { //stuff for binding keys
+        nextKey = event.keyCode;
       }
-      break;
-
     }
 };
 
