@@ -61,5 +61,7 @@ keyCodeLookup[105] = "NUM 9";
 keyCodeLookup[109] = "NUM -";
 keyCodeLookup[173] = "-_";
 keyCodeLookup[192] = "~`";
+keyCodeLookup[219] = "\{ \[";
 keyCodeLookup[220] = "\\ \|";
 keyCodeLookup[221] = "\] \}";
+keyCodeLookup[222] = "\" \'";
