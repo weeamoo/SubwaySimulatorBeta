@@ -71,15 +71,14 @@ function frameMovement () {
 
 }
 
-//need to redo this so that anything can use it when ai cars are added
 function frameSpeedEnv () {
 	if (brakes.pressed) {
-		if (Math.abs(xSpeed) < brakesFullStop) {
-			xSpeed = 0;
-		} else if (xSpeed > 0) {
-			xSpeed = brake(palyerBrakePower, 1, palyerBrakePower);
+		if (Math.abs(player.xSpeed) < player.brakesFullStop) {
+			player.xSpeed = 0;
+		} else if (player.xSpeed > 0) {
+			player.xSpeed = brake(palyer.brakePower, 1, palyer.brakePower);
 		} else {
-			xSpeed = brake(palyerBrakePower, -1, palyerBrakePower);
+			player.xSpeed = brake(palyer.brakePower, -1, palyer.brakePower);
 		}
 	}
 }
