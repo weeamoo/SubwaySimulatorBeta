@@ -3604,7 +3604,7 @@
 						
 						<td  id="titleScreenButtonsTable" >
 
-							<a onclick='alert("Not Ready");' >
+							<a onclick='showBindMenu();' >
 				
 								<div id="titleScreenStartButton" >
 							       
@@ -3654,7 +3654,7 @@
 				
 								<div id="pauseMenuStartButton" >
 							       
-									<p id="titleScreenStartButtonText" >MORE ACTION</p>
+									<p id="titleScreenStartButtonText" >Resume</p>
 	
 								</div>
 				
@@ -3664,7 +3664,7 @@
 						
 						<td  id="pauseMenuButtonsTable" >
 
-							<a onclick='alert("Not Ready");' >
+							<a onclick='showBindMenu();' >
 				
 								<div id="pauseMenuStartButton" >
 							       
@@ -3701,8 +3701,12 @@
 		<div id="controlBindingsMenu"  class="invis" >
 			
 			<h1 id="controlBindingsMenuH1" >Edit Control Bindings</h1>
+
+			<a onclick="unShowBindMenu();">
 			
-			<h1 id="controlBindingsMenuCloseButton" >X</h1>
+				<h1 id="controlBindingsMenuCloseButton" >X</h1>
+
+			</a>
 			
 			<table id="controlBindingsTable" >
 
