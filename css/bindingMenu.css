@@ -11,3 +11,10 @@ div#controlBindingsMenu {
 	transform: translate(-50%, -50%);
 	background-color: rgba(0, 0, 0, 0.8);
 }
+
+//window title
+h1#controlBindingsMenuH1 {
+    color: #fff;
+    font-style: italic;
+    text-align: center;
+}
