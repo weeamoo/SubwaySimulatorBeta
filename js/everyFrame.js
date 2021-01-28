@@ -76,9 +76,9 @@ function frameSpeedEnv () {
 		if (Math.abs(player.xSpeed) < player.brakesFullStop) {
 			player.xSpeed = 0;
 		} else if (player.xSpeed > 0) {
-			player.xSpeed = brake(palyer.brakePower, 1, palyer.brakePower);
+			player.xSpeed = brake(player.brakePower, 1, player.brakePower);
 		} else {
-			player.xSpeed = brake(palyer.brakePower, -1, palyer.brakePower);
+			player.xSpeed = brake(player.brakePower, -1, player.brakePower);
 		}
 	}
 }
