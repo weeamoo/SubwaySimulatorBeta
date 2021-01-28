@@ -40,4 +40,4 @@ keyCodeLookup[88] = "X";
 keyCodeLookup[89] = "Y";
 keyCodeLookup[90] = "Z";
 keyCodeLookup[109] = "NUM -";
-keyCodeLookup[173] = "-";
+keyCodeLookup[173] = "-_";
