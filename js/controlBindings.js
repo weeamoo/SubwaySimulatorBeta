@@ -1,3 +1,8 @@
+//vars
+//vars used to talk to input script for binding
+var nextKeyRequested = false;
+var nextKey = 0;
+
 //hide or show binding menu
 function showBindMenu () {
     document.getElementById('controlBindingsMenu').classList.remove("invis");
@@ -5,6 +10,16 @@ function showBindMenu () {
 
 function unShowBindMenu () {
     document.getElementById('controlBindingsMenu').classList.add("invis");
+}
+
+//function to output the next key pressed
+function getNextKey () {
+    nextKey = -1;
+    nextKeyRequested = true;
+    while (nextKey == -1) {
+        //waiting
+    }
+    return nextKey;
 }
 //creates empty array to hold description of each keycode
 var keyCodeLookup = [];
