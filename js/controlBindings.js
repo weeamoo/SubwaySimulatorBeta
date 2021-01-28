@@ -3,6 +3,11 @@
 var keyCodeLookup = [];
 
 //add known codes in numeric order plz
+keyCodeLookup[8] = "Backspace";
+keyCodeLookup[9] = "Tab";
+keyCodeLookup[17] = "Ctrl";
+keyCodeLookup[18] = "Alt";
+keyCodeLookup[20] = "Caps";
 keyCodeLookup[48] = "0";
 keyCodeLookup[49] = "1";
 keyCodeLookup[50] = "2";
@@ -13,6 +18,7 @@ keyCodeLookup[49] = "6";
 keyCodeLookup[49] = "7";
 keyCodeLookup[49] = "8";
 keyCodeLookup[49] = "9";
+keyCodeLookup[61] = "+=";
 keyCodeLookup[69] = "A";
 keyCodeLookup[66] = "B";
 keyCodeLookup[67] = "C";
@@ -39,5 +45,9 @@ keyCodeLookup[87] = "W";
 keyCodeLookup[88] = "X";
 keyCodeLookup[89] = "Y";
 keyCodeLookup[90] = "Z";
+keyCodeLookup[91] = "Pengu";
 keyCodeLookup[109] = "NUM -";
 keyCodeLookup[173] = "-_";
+keyCodeLookup[192] = "~`";
+keyCodeLookup[220] = "\\ \|";
+keyCodeLookup[221] = "\] \}";
