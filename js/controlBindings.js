@@ -1,4 +1,11 @@
+//hide or show binding menu
+function showBindMenu () {
+    document.getElementById('controlBindingsMenu').classList.remove("invis");
+}
 
+function unShowBindMenu () {
+    document.getElementById('controlBindingsMenu').classList.add("invis");
+}
 //creates empty array to hold description of each keycode
 var keyCodeLookup = [];
 
