@@ -18,12 +18,12 @@ function everyFrame () {
 function keyActions () {
 
 	//for each directions sees if speed is far enough away from zero then calls accel function
-	if (left) {
+	if (left.pressed) {
 		if (Math.abs(player.xSpeed) < player.kick) {
 			player.xSpeed = 0 - player.kick;
 		}
 		player.xSpeed = accel(player.xSpeed, -1, player.accelPower);
-	} else if (right) {
+	} else if (right.pressed) {
 		if (Math.abs(player.xSpeed) < player.kick) {
 			player.xSpeed = player.kick;
 		}
@@ -33,12 +33,12 @@ function keyActions () {
 	//y coord movement if you have freecam or unlocked
 	
 	if (noClip || player.unlockY) {
-		if (up) {
+		if (up.pressed) {
 		if (Math.abs(player.ySpeed) < player.kick) {
 			player.ySpeed = 0 - player.kick;
 		}
 		player.ySpeed = accel(player.ySpeed, -1, player.accelPower);
-	} else if (down) {
+	} else if (down.pressed) {
 		if (Math.abs(player.ySpeed) < player.kick) {
 			player.ySpeed = player.kick;
 		}
@@ -73,7 +73,7 @@ function frameMovement () {
 
 //need to redo this so that anything can use it when ai cars are added
 function frameSpeedEnv () {
-	if (brakes) {
+	if (brakes.pressed) {
 		if (Math.abs(xSpeed) < brakesFullStop) {
 			xSpeed = 0;
 		} else if (xSpeed > 0) {
