@@ -38,7 +38,7 @@ brakes.c = "UNBOUND";
 pause.a = 27;
 pause.b = "UNBOUND";
 pause.c = "UNBOUND";
-doorControl.a = "UNBOUND";
+doorControl.a = 71;
 doorControl.b = "UNBOUND";
 doorControl.c = "UNBOUND";
 
