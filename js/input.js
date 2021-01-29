@@ -4,6 +4,7 @@ var down = {};
 var left = {};
 var right = {};
 var brakes = {};
+var doorControl = {};
 //pause is weird
 var pause = {};
 
@@ -13,6 +14,7 @@ down.pressed = false;
 left.pressed = false;
 right.pressed = false;
 brakes.pressed = false;
+doorControl.pressed = false;
 //no pressed var for pause cause weird
 
 var viewKeycode = false;
@@ -36,6 +38,9 @@ brakes.c = "UNBOUND";
 pause.a = 27;
 pause.b = "UNBOUND";
 pause.c = "UNBOUND";
+doorControl.a = "UNBOUND";
+doorControl.b = "UNBOUND";
+doorControl.c = "UNBOUND";
 
 //sets var to true when key is pressed
 document.onkeydown = function(event) {
