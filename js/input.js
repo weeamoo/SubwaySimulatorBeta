@@ -71,13 +71,13 @@ document.onkeydown = function(event) {
     case pause.c:
         togglePause();
       break;
-//    outputs key code when viewKeycode is true
-      if (viewKeycode) { 
-        alert("JS Keycode: " + event.keyCode + "\nLookup Table: " + keyCodeLookup[event.keyCode]);
-      } else if (nextKeyRequested) { //stuff for binding keys
-        nextKey = event.keyCode;
-      }
-    }
+  }
+  //    outputs key code when viewKeycode is true
+  if (viewKeycode) { 
+    alert("JS Keycode: " + event.keyCode + "\nLookup Table: " + keyCodeLookup[event.keyCode]);
+  } else if (nextKeyRequested) { //stuff for binding keys
+    nextKey = event.keyCode;
+  }
 };
 
 //sets var to false when key is released
