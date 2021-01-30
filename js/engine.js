@@ -41,6 +41,63 @@ function toggleFreeCam () {
 	}
 }
 
+//wanted level functions
+
+//takes a wanted level, applies it to the player, and requests update of stars
+function setPlayerWantedLevel (level) {
+	player.wantedLevel = level;
+	updateWantedStars(level);
+}
+
+//sets wanted stars on screen to number passed, can be called outside of updatePlayerWantedLevel function for cutscenes and stuff
+function updateWantedStars (stars) {
+	switch (stars) {
+		case 0:
+			document.getElementById('wantedStarsDiv').classList.add("invis");
+		break;
+		case 1:
+			document.getElementById('wantedStarsDiv').classList.remove("invis");
+			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/emptyStar.png";
+			document.getElementById('wantedStar3').src = "/img/gui/police/wanted/emptyStar.png";
+			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/emptyStar.png";
+			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/emptyStar.png";
+		break;
+		case 2;
+			document.getElementById('wantedStarsDiv').classList.remove("invis");
+			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar3').src = "/img/gui/police/wanted/emptyStar.png";
+			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/emptyStar.png";
+			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/emptyStar.png";
+		break;
+		case 3:
+			document.getElementById('wantedStarsDiv').classList.remove("invis");
+			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar3').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/emptyStar.png";
+			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/emptyStar.png";
+		break;
+		case 4:
+			document.getElementById('wantedStarsDiv').classList.remove("invis");
+			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar3').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/starFull.png";
+			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/emptyStar.png";
+		break;
+		case 5:
+			document.getElementById('wantedStarsDiv').classList.remove("invis");
+			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar3').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/starFull.png";
+			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/starFull.png";
+		break;
+	}
+}
+
 //rando vars
 
 //container var for player data
