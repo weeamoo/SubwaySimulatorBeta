@@ -31,7 +31,7 @@ function loadLevel (level, x, y) {
 			//css sheet for background
 			document.getElementById("lvlLoaderCSS").href = "/levels/debug/miku/css/miku.css";
 			//HTML data for background
-			document.getElementById('world').innerHTML = "HATSUNE MIKU FOREVER (MORE COMING SOON)";
+			document.getElementById('world').innerHTML = "\n\n\t\t<table id=\"gridMikuLevel\" cellspacing=\"0\">\n\t\t\t\n\t\t\t<tbody>\n\n\t\t\t\t<tr>\n\n\t\t\t\t\t<td>\n\n\t\t\t\t\t\t<img id=\"backMikuPic1\" class=\"backMikuPic\" src=\"/levels/debug/miku/img/miku1.png\">\n\t\t\t\t\t\t\n\t\t\t\t\t</td>\n\n\t\t\t\t\t<td>\n\n\t\t\t\t\t\t<img id=\"backMikuPic2\" class=\"backMikuPic\" src=\"/levels/debug/miku/img/miku2.jpg\">\n\t\t\t\t\t\t\n\t\t\t\t\t</td>\n\n\t\t\t\t\t<td>\n\n\t\t\t\t\t\t<img id=\"backMikuPic3\" class=\"backMikuPic\" src=\"/levels/debug/miku/img/miku3.jpg\">\n\t\t\t\t\t\t\n\t\t\t\t\t</td>\n\n\t\t\t\t\t<td>\n\n\t\t\t\t\t\t<img id=\"backMikuPic4\" class=\"backMikuPic\" src=\"/levels/debug/miku/img/miku4.jpg\">\n\t\t\t\t\t\t\n\t\t\t\t\t</td>\n\n\t\t\t\t\t<td>\n\n\t\t\t\t\t\t<img id=\"backMikuPic5\" class=\"backMikuPic\" src=\"/levels/debug/miku/img/miku5.jpg\">\n\t\t\t\t\t\t\n\t\t\t\t\t</td>\n\t\t\t\t\t\n\t\t\t\t</tr>\n\t\t\t\t\n\t\t\t</tbody>\n\n\t\t</table>\n\t\t\n\t";
 		break;
 	}
 	
