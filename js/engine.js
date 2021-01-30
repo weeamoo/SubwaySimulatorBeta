@@ -49,7 +49,7 @@ function setPlayerWantedLevel (level) {
 	updateWantedStars(level);
 }
 
-//sets wanted stars on screen to number passed, can be called outside of updatePlayerWantedLevel function for cutscenes and stuff
+//sets wanted stars on screen to number# passed, can be called outside of updatePlayerWantedLevel function for cutscenes and stuff
 function updateWantedStars (stars) {
 	switch (stars) {
 		case 0:
