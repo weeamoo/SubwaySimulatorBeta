@@ -68,7 +68,7 @@ player.accelPower = 0.1;
 player.kick = 0.05;
 
 //when the car will stop completely while brakes are held
-player.brakesFullStop = 0.05;
+player.brakesFullStop = 0.1;
 
 //brakes power
 player.brakePower = 0.1;

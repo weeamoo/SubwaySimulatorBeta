@@ -14,12 +14,14 @@ h1#titleText {
 	color: #fff;
 }
 
+/* world container Div */
 div#world {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 }
 
+/*player subway car */
 div#playerCarDiv {
 	position: absolute;
 	width: 6.25%;
@@ -28,5 +30,11 @@ div#playerCarDiv {
 
 img#playerCarImg {
 	width: 100%;
+	position: absolute;
+}
+
+/*wanted stars */
+div#wantedStarsDiv {
+	right: 0px;
 	position: absolute;
 }
