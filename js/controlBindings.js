@@ -17,9 +17,7 @@ function unShowBindMenu () {
 function getNextKey () {
     nextKey = -1;
     nextKeyRequested = true;
-    while (nextKey == -1) {
-        //waiting
-    }
+    //somecode to wait until a key is pressed
     return nextKey;
 }
 //creates empty array to hold description of each keycode
