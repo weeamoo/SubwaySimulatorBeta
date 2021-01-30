@@ -84,7 +84,7 @@ function updateWantedStars (stars) {
 			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
 			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/starFull.gif";
 			document.getElementById('wantedStar3').src = "/img/gui/police/wanted/starFull.gif";
-			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/starFull.png";
+			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/starFull.gif";
 			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/emptyStar.png";
 		break;
 		case 5:
@@ -92,8 +92,8 @@ function updateWantedStars (stars) {
 			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
 			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/starFull.gif";
 			document.getElementById('wantedStar3').src = "/img/gui/police/wanted/starFull.gif";
-			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/starFull.png";
-			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/starFull.png";
+			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/starFull.gif";
+			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/starFull.gif";
 		break;
 	}
 }
