@@ -63,7 +63,7 @@ function updateWantedStars (stars) {
 			document.getElementById('wantedStar4').src = "/img/gui/police/wanted/emptyStar.png";
 			document.getElementById('wantedStar5').src = "/img/gui/police/wanted/emptyStar.png";
 		break;
-		case 2;
+		case 2:
 			document.getElementById('wantedStarsDiv').classList.remove("invis");
 			document.getElementById('wantedStar1').src = "/img/gui/police/wanted/starFull.gif";
 			document.getElementById('wantedStar2').src = "/img/gui/police/wanted/starFull.gif";
