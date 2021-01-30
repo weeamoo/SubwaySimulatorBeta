@@ -1,1 +1,11 @@
-Miku
+img.backMikuPic {
+	height: 100%;
+}
+
+td {
+	padding: 0px;
+}
+
+table#gridMikuLevel {
+	height: 100%;
+}
