@@ -13,7 +13,7 @@ function loadLevel (level, x, y) {
 	switch (level) {
 		case "debug/test1":
 			//level geometry
-			function getNearestRail (x, y) {return 500;}
+			getNearestRail = function (x, y) {return 500;}
 			//level size
 			levelWidth = 4800;
 			levelHeight = 900;
@@ -24,7 +24,7 @@ function loadLevel (level, x, y) {
 		break;
 		case "debug/miku":
 			//level geometry
-			function getNearestRail (x, y) {return 500;}
+			getNearestRail = function (x, y) {return 0;}
 			//level size
 			levelWidth = 48000;
 			levelHeight = 900;
@@ -40,4 +40,4 @@ function loadLevel (level, x, y) {
 }
 
 //default level geometry function
-function getNearestRail (x, y) {return 0;}
+var getNearestRail = function (x, y) {return 0;}
