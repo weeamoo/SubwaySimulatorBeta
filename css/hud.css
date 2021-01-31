@@ -1,4 +1,4 @@
-/*hud stuff*/
+/* main div container */
 div#hud {
 	width: 50%;
 	height: 15%;
@@ -11,4 +11,9 @@ div#hud {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* general text stuff */
+h1.hudH1Label, h1.hudH1Display {
+	color: #fff;
 }
