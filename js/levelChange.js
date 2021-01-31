@@ -66,7 +66,7 @@ var getNearestRail = function (x, y) {return 0;}
 
 //test level 2 is too big made a function to generae it
 function generateTestLvlTwo () {
-	var cmprTst1Td = "<td id=\"debugGridLevelTd\"><img id=\"debugGridLevelImg\" src=\"/img/levels/test1/bedrock.png\"></td>";
+	var cmprTst1Td = "<td id=\"debugGridLevelTd\"><img id=\"debugGridLevelImg\" src=\"/levels/debug/test2/img/bedrock.png\"></td>";
 
 	var cmprTst1TdN = cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td;
 
