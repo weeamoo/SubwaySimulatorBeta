@@ -101,9 +101,14 @@ function updateWantedStars (stars) {
 //update HUD stuff
 function updateHUD () {
 	//update speed display
-	document.getElementById('hudSpeedDisplay').innerHTML = player.xSpeed;
+
+	//how to find 0.144 100 game units ~ 4 M which means 1 M = 25 game units
+	//internal speed value is game units per frame
+	//game runs at 60 fps
+	// 1/25 * 60 * 60 / 1000
+	document.getElementById('hudSpeedDisplay').innerHTML = (player.xSpeed * 0.144).toFixed(2) + " KM/H";
 	//update speed limit display
-	document.getElementById('hudSpeedLimitDisplay').innerHTML = player.speedLimit;
+	document.getElementById('hudSpeedLimitDisplay').innerHTML = (player.speedLimit * 0.144).toFixed(2) + " KM/H";
 	//update switch choice display
 	document.getElementById('hudSwitchDisplay').innerHTML = player.lastPress;
 }
