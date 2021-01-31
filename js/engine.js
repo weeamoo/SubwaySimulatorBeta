@@ -117,6 +117,7 @@ function updateHUD () {
 function playVideoHud (id) {
 	//id should be video link until I add more stuff
 	document.getElementById('hudVideo').src = "https://www.youtube-nocookie.com/embed/" + id.slice(-11) + "?autoplay=1&controls=0&loop=1";
+	document.getElementById('hudVideo').classList.remove('invis')
 }
 
 //rando vars
