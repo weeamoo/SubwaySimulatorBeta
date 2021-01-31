@@ -5,6 +5,9 @@ function startGame () {
 	//hide title screen
 	document.getElementById("titleScreen").classList.add("invis");
 
+	//show hud
+	document.getElementById("hud").classList.remove("invis");
+
 	//starting level
 	loadLevel("debug/test1", 0, 0);
 
