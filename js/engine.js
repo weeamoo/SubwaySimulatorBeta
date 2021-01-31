@@ -113,6 +113,12 @@ function updateHUD () {
 	document.getElementById('hudSwitchDisplay').innerHTML = player.lastPress;
 }
 
+//music player stuff
+function playVideoHud (id) {
+	//id should be video link until I add more stuff
+	document.getElementById('hudVideo').src = "https://www.youtube-nocookie.com/embed/" + id.slice(-11) + "?autoplay=1&controls=0&loop=1";
+}
+
 //rando vars
 
 //container var for player data
