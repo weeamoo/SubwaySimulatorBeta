@@ -21,7 +21,8 @@ div#hud {
 	border-color: white;
 	border-style: solid;
 	position: absolute;
-	bottom: 0%;
+	/* no fucking clue why but this is what works for this value */
+	bottom: -8%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
