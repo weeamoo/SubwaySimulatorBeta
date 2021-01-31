@@ -68,7 +68,7 @@ var getNearestRail = function (x, y) {return 0;}
 function generateTestLvlTwo () {
 	var cmprTst1Td = "<td id=\"debugGridLevelTd\"><img id=\"debugGridLevelImg\" src=\"/img/levels/test1/bedrock.png\"></td>";
 
-	var cmprTst1TdN = "cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td";
+	var cmprTst1TdN = cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td;
 
 	var cmprTst1Tr = "<tr id=\"debugGridLevelTr\">" + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1Td + "</tr>";
 
