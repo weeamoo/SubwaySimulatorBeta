@@ -9,6 +9,8 @@ function everyFrame () {
 		frameMovement();
 
 		frameSpeedEnv();
+
+		renderStuff();
 	}
 
 	//calls function after one frame has passed
@@ -59,17 +61,6 @@ function frameMovement () {
 	player.x = player.x + player.xSpeed;
 	player.y = player.y + player.ySpeed;
 
-	//calcs new camera pos
-	updateCameraOffset();
-
-	//moves sub to position & moves camera if freecam is off
-	if (freeCam) {
-		updateSubPos(player.x, player.y);
-	} else {
-		updateSubPos(player.x - xOffset, player.y - yOffset);
-		updateBackPos(0 - xOffset, 0 - yOffset);
-	}
-
 }
 
 function frameSpeedEnv () {
@@ -81,6 +72,22 @@ function frameSpeedEnv () {
 		} else {
 			player.xSpeed = brake(player.brakePower, -1, player.brakePower);
 		}
+	}
+}
+
+function renderStuff () {
+	//update HUD
+	updateHUD();
+
+	//calcs new camera pos
+	updateCameraOffset();
+
+	//moves sub to position & moves camera if freecam is off
+	if (freeCam) {
+		updateSubPos(player.x, player.y);
+	} else {
+		updateSubPos(player.x - xOffset, player.y - yOffset);
+		updateBackPos(0 - xOffset, 0 - yOffset);
 	}
 }
 

@@ -98,6 +98,16 @@ function updateWantedStars (stars) {
 	}
 }
 
+//update HUD stuff
+function updateHUD () {
+	//update speed display
+	document.getElementById('hudSpeedDisplay').innerHtml = player.xSpeed;
+	//update speed limit display
+	document.getElementById('hudSpeedLimitDisplay').innerHtml = player.speedLimit;
+	//update switch choice display
+	document.getElementById('hudSwitchDisplay').innerHtml = player.lastPress;
+}
+
 //rando vars
 
 //container var for player data
@@ -112,6 +122,7 @@ player.wantedLevel = 0;
 player.maxXSpeed = 25;
 player.maxYSpeed = 25;
 player.speedLimit = 0;
+player.lastPress = "UP";
 player.x = 0;
 player.y = 0;
 //putting some semicontstants here lol
