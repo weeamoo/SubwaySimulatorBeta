@@ -48,7 +48,7 @@ function loadLevel (level, x, y) {
 			//level geometry
 			getNearestRail = function (x, y) {player.speedLimit = 25;return 500;}
 			//level size
-			levelWidth = 16000;
+			levelWidth = 48000;
 			levelHeight = 900;
 			//css sheet for background
 			document.getElementById("lvlLoaderCSS").href = "/levels/debug/test2/css/test2.css";
