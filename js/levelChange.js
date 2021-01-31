@@ -13,7 +13,7 @@ function loadLevel (level, x, y) {
 	switch (level) {
 		case "debug/caramelldansen":
 			//level geometry
-			getNearestRail = function (x, y) {return 0;}
+			getNearestRail = function (x, y) {player.speedLimit = 5;return 0;}
 			//level size
 			levelWidth = 1600;
 			levelHeight = 900;
@@ -24,7 +24,7 @@ function loadLevel (level, x, y) {
 		break;
 		case "debug/miku":
 			//level geometry
-			getNearestRail = function (x, y) {return 0;}
+			getNearestRail = function (x, y) {player.speedLimit = 25;return 0;}
 			//level size
 			levelWidth = 48000;
 			levelHeight = 900;
@@ -35,7 +35,7 @@ function loadLevel (level, x, y) {
 		break;
 		case "debug/test1":
 			//level geometry
-			getNearestRail = function (x, y) {return 500;}
+			getNearestRail = function (x, y) {player.speedLimit = 25;return 500;}
 			//level size
 			levelWidth = 4800;
 			levelHeight = 900;
