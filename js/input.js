@@ -59,11 +59,13 @@ document.onkeydown = function(event) {
     case up.b:
     case up.c:
         up.pressed = true;
+        player.lastPress = "Up";
       break;
     case down.a:
     case down.b:
     case down.c:
         down.pressed = true;
+        player.lastPress = "Down"
       break;
     case brakes.a:
     case brakes.b:
