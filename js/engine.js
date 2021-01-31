@@ -101,11 +101,11 @@ function updateWantedStars (stars) {
 //update HUD stuff
 function updateHUD () {
 	//update speed display
-	document.getElementById('hudSpeedDisplay').innerHtml = player.xSpeed;
+	document.getElementById('hudSpeedDisplay').innerHTML = player.xSpeed;
 	//update speed limit display
-	document.getElementById('hudSpeedLimitDisplay').innerHtml = player.speedLimit;
+	document.getElementById('hudSpeedLimitDisplay').innerHTML = player.speedLimit;
 	//update switch choice display
-	document.getElementById('hudSwitchDisplay').innerHtml = player.lastPress;
+	document.getElementById('hudSwitchDisplay').innerHTML = player.lastPress;
 }
 
 //rando vars
