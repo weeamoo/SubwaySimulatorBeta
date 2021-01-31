@@ -1,0 +1,14 @@
+/*hud stuff*/
+div#hud {
+	width: 50%;
+	height: 15%;
+	border-color: white;
+	border-style: solid;
+	position: absolute;
+	/* no fucking clue why but this is what works for this value */
+	bottom: -8%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.8);
+}
