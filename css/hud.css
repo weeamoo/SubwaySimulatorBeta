@@ -17,3 +17,12 @@ div#hud {
 h1.hudH1Label, h1.hudH1Display {
 	color: #fff;
 }
+
+/* video player on HUD */
+iframe#hudVideo {
+	height: 100%;
+	right: 0px;
+	top: 0px;
+	position: absolute;
+	width: 25%;
+}

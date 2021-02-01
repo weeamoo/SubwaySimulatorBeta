@@ -28,7 +28,7 @@ div#playerCarDiv {
 	height: 10%;
 }
 
-img#playerCarImg {
+img.playerCarImg {
 	width: 100%;
 	position: absolute;
 }
