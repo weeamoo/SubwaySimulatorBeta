@@ -54,6 +54,7 @@ function frameMovement () {
 
 	//sets y to where the rail is (if needed)
 	if (noClip == false && player.unlockY == false) {
+		//this needs a third input for up or down for the switch selector
 		player.y = getNearestRail(player.x, player.y);
 	}
 
