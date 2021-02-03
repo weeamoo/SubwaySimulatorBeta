@@ -13,6 +13,7 @@ function loadLevel (level, x, y) {
 	switch (level) {
 		case "debug/caramelldansen":
 			//level geometry
+			//this needs a third input for up or down for the switch selector
 			getNearestRail = function (x, y) {player.speedLimit = 5;return 0;}
 			//level size
 			levelWidth = 1600;
@@ -24,6 +25,7 @@ function loadLevel (level, x, y) {
 		break;
 		case "debug/miku":
 			//level geometry
+			//this needs a third input for up or down for the switch selector
 			getNearestRail = function (x, y) {player.speedLimit = 25;return 0;}
 			//level size
 			levelWidth = 48000;
@@ -35,6 +37,7 @@ function loadLevel (level, x, y) {
 		break;
 		case "debug/test1":
 			//level geometry
+			//this needs a third input for up or down for the switch selector
 			getNearestRail = function (x, y) {player.speedLimit = 25;return 500;}
 			//level size
 			levelWidth = 4800;
@@ -46,6 +49,7 @@ function loadLevel (level, x, y) {
 		break;
 		case "debug/test2":
 			//level geometry
+			//this needs a third input for up or down for the switch selector
 			getNearestRail = function (x, y) {player.speedLimit = 25;return 500;}
 			//level size
 			levelWidth = 48000;
@@ -62,6 +66,7 @@ function loadLevel (level, x, y) {
 }
 
 //default level geometry function
+//this needs a third input for up or down for the switch selector
 var getNearestRail = function (x, y) {return 0;}
 
 //test level 2 is too big made a function to generae it
