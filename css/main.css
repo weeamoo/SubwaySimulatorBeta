@@ -15,7 +15,7 @@ h1#titleText {
 }
 
 /* world container Div */
-div#world {
+div#worldBg1 {
 	position: absolute;
 	height: 100%;
 	width: 100%;
