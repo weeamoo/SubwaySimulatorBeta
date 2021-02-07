@@ -20,6 +20,9 @@ function loadLevel (level, x, y) {
 	eval("levelWidth = lvlData." + level + ".width;");
 	eval("levelHeight = lvlData." + level + ".height;");
 
+	//recalculate level bounds
+	calcBounds()
+
 	//css sheet for background
 	eval("document.getElementById(\"lvlLoaderCSS\").href = lvlData." + level + ".css;");
 
