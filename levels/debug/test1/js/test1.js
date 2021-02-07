@@ -23,7 +23,7 @@ lvlData.debug.test1.sfg1 = "";
 //factor of 1 will make it move with the background
 //anything in between is in between
 
-lvlData.debug.test1.bg1factor = 0;
+lvlData.debug.test1.bg1factor = 1;
 lvlData.debug.test1.bg2factor = 1;
 lvlData.debug.test1.bg3factor = 1;
 lvlData.debug.test1.bg4factor = 1;
