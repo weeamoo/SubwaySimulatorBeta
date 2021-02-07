@@ -9,7 +9,7 @@ function startGame () {
 	document.getElementById("hud").classList.remove("invis");
 
 	//starting level
-	loadLevel("debug/test1", 0, 0);
+	loadLevel("debug.test1", 0, 0);
 
 	//slef
 	onStartMenu = false;
