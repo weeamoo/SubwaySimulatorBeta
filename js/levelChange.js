@@ -66,6 +66,10 @@ function loadLevel (level, x, y) {
 	eval("fg5factor = lvlData." + level + ".fg5");
 	eval("sfg1factor = lvlData." + level + ".sfg1");
 
+	//factor of 0 will sync it to the car and essentially make a still image of it
+	//factor of 1 will make it move with the background
+	//anything in between is in between
+
 }
 
 //clears all world divs
