@@ -10,7 +10,7 @@ lvlData.debug.test4.geo = function (x, y, dir) {player.speedLimit = 1;return 500
 lvlData.debug.test4.bg1 = "";
 lvlData.debug.test4.bg2 = "";
 lvlData.debug.test4.bg3 = "";
-lvlData.debug.test4.bg4 = "";
+lvlData.debug.test4.bg4 = "<img id=\"bg4BackBuildingA\" class=\"backBuilding\" src=\"/img/world/buildings/basic/tall.png\"><img id=\"bg4BackBuildingB\" class=\"backBuilding\" src=\"/img/world/buildings/basic/subwaySimulator.png\"><img id=\"bg4BackBuildingC\" class=\"backBuilding\" src=\"/img/world/buildings/basic/subsim.moe2.png\"><img id=\"bg4BackBuildingD\" class=\"backBuilding\" src=\"/img/world/buildings/basic/subsim.moe2.png\">";
 lvlData.debug.test4.bg5 = "<img id=\"bg5BackImg\" src=\"/levels/debug/test4/img/purpleBlackGraStars2.png\">";
 lvlData.debug.test4.fg1 = "";
 lvlData.debug.test4.fg2 = "";
@@ -26,7 +26,7 @@ lvlData.debug.test4.sfg1 = "";
 lvlData.debug.test4.bg1factor = 1;
 lvlData.debug.test4.bg2factor = 1;
 lvlData.debug.test4.bg3factor = 1;
-lvlData.debug.test4.bg4factor = 1;
+lvlData.debug.test4.bg4factor = 0.5;
 lvlData.debug.test4.bg5factor = 0;
 lvlData.debug.test4.fg1factor = 1;
 lvlData.debug.test4.fg2factor = 1;
