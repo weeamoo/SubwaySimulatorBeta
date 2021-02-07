@@ -17,8 +17,7 @@ function updateBackPos (xPass, yPass) {
 	xPass = xPass / 16;
 	yPass = yPass / 9;
 
-	document.getElementById("worldBg1").style.left = xPass + "%";
-	document.getElementById("worldBg1").style.bottom = yPass + "%"
+	updatePos("worldBg1", xPass, yPass);
 }
 
 //universial function that can move other stuff

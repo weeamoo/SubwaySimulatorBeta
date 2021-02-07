@@ -2,6 +2,18 @@
 var levelWidth = 0;
 var levelHeight = 0;
 
+var bg1factor = 0;
+var bg2factor = 0;
+var bg3factor = 0;
+var bg4factor = 0;
+var bg5factor = 0;
+var fg1factor = 0;
+var fg2factor = 0;
+var fg3factor = 0;
+var fg4factor = 0;
+var fg5factor = 0;
+var sfg1factor = 0;
+
 function loadLevel (level, x, y) {
 
 	//clearing stuff
@@ -41,6 +53,19 @@ function loadLevel (level, x, y) {
 	eval("document.getElementById(\"worldFg5\").innerHTML = lvlData." + level + ".fg5;");
 	eval("document.getElementById(\"worldSFg1\").innerHTML = lvlData." + level + ".sfg5;");
 
+	//speed factor stuff
+	eval("bg1factor = lvlData." + level + ".bg1");
+	eval("bg2factor = lvlData." + level + ".bg2");
+	eval("bg3factor = lvlData." + level + ".bg3");
+	eval("bg4factor = lvlData." + level + ".bg4");
+	eval("bg5factor = lvlData." + level + ".bg5");
+	eval("fg1factor = lvlData." + level + ".fg1");
+	eval("fg2factor = lvlData." + level + ".fg2");
+	eval("fg3factor = lvlData." + level + ".fg3");
+	eval("fg4factor = lvlData." + level + ".fg4");
+	eval("fg5factor = lvlData." + level + ".fg5");
+	eval("sfg1factor = lvlData." + level + ".sfg1");
+
 }
 
 //clears all world divs
@@ -56,6 +81,17 @@ function lvlReset () {
 	document.getElementById('worldFg4').innerHTML = "";
 	document.getElementById('worldFg5').innerHTML = "";
 	document.getElementById('worldSFg1').innerHTML = "";
+	bg1factor = 0;
+	bg2factor = 0;
+	bg3factor = 0;
+	bg4factor = 0;
+	bg5factor = 0;
+	fg1factor = 0;
+	fg2factor = 0;
+	fg3factor = 0;
+	fg4factor = 0;
+	fg5factor = 0;
+	sfg1factor = 0;
 }
 
 //default level geometry function
