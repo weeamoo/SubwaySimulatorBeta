@@ -41,7 +41,7 @@ function loadLevel (level, x, y) {
 		case "debug/test1":
 			//level geometry
 			//this needs a third input for up or down for the switch selector
-			getNearestRail = lvlData.debug.test2.geo;
+			getNearestRail = lvlData.debug.test1.geo;
 			//level size
 			levelWidth = 4800;
 			levelHeight = 900;
