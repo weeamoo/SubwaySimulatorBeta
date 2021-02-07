@@ -4,6 +4,22 @@ img.backBuilding {
 	height: 50%;
 }
 
+img#bg4BackBuildingA {
+	left: 15%;
+}
+
+img#bg4BackBuildingB {
+	left: 40%;
+}
+
+img#bg4BackBuildingC {
+	left: 55%;
+}
+
+img#bg4BackBuildingD {
+	left: 75%;
+}
+
 /*bg5 */
 img#bg5BackImg {
 	position: absolute;
