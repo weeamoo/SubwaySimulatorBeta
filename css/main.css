@@ -15,7 +15,7 @@ h1#titleText {
 }
 
 /* world container Div */
-div#worldBg1 {
+div#worldBg1, div#worldBg2, div#worldBg3, div#worldBg4, div#worldBg5, div#worldFg1, div#worldFg2, div#worldFg3, div#worldFg4, div#worldFg5, div#worldSFg1 {
 	position: absolute;
 	height: 100%;
 	width: 100%;
