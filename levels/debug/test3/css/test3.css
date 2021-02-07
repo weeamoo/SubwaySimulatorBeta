@@ -8,10 +8,9 @@ img#bg4BackImg {
 }
 
 /*bg5 */
-img#bg5BackImg {
-	position: ;
-	position: absolute;
-	width: 100%;
+img#bg4BackImg {
+	position: relative;
+	height: 100%;
 	bottom: 0px;
 	left: 0px;
 }
