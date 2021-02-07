@@ -11,7 +11,7 @@ lvlData.debug.test4.bg1 = "";
 lvlData.debug.test4.bg2 = "";
 lvlData.debug.test4.bg3 = "";
 lvlData.debug.test4.bg4 = "";
-lvlData.debug.test4.bg5 = "";
+lvlData.debug.test4.bg5 = "<img id=\"bg5BackImg\" src=\"/levels/debug/test4/img/purpleBlackGraStars2.png\">";
 lvlData.debug.test4.fg1 = "";
 lvlData.debug.test4.fg2 = "";
 lvlData.debug.test4.fg3 = "";
