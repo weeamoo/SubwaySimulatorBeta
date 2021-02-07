@@ -11,7 +11,7 @@ lvlData.debug.test3.bg1 = "<table id=\"debugGridLevelTable\" cellspacing=\"0\"><
 lvlData.debug.test3.bg2 = "";
 lvlData.debug.test3.bg3 = "";
 lvlData.debug.test3.bg4 = "";
-lvlData.debug.test3.bg5 = "";
+lvlData.debug.test3.bg5 = "<img id=\"bg5BackImg\" src=\"/levels/debug/test3/img/backMiku.jpg\">";
 lvlData.debug.test3.fg1 = "";
 lvlData.debug.test3.fg2 = "";
 lvlData.debug.test3.fg3 = "";
@@ -27,7 +27,7 @@ lvlData.debug.test3.bg1factor = 1;
 lvlData.debug.test3.bg2factor = 1;
 lvlData.debug.test3.bg3factor = 1;
 lvlData.debug.test3.bg4factor = 1;
-lvlData.debug.test3.bg5factor = 1;
+lvlData.debug.test3.bg5factor = 0;
 lvlData.debug.test3.fg1factor = 1;
 lvlData.debug.test3.fg2factor = 1;
 lvlData.debug.test3.fg3factor = 1;
