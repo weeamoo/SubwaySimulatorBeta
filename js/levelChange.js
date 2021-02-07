@@ -60,7 +60,7 @@ function loadLevel (level, x, y) {
 			//css sheet for background
 			document.getElementById("lvlLoaderCSS").href = "/levels/debug/test2/css/test2.css";
 			//HTML data for background
-			document.getElementById('worldBg1').innerHTML = generateTestLvlTwo();
+			document.getElementById('worldBg1').innerHTML = lvlData.debug.test2.bg1;
 		break;
 	}
 	
@@ -87,13 +87,6 @@ function lvlReset () {
 //this needs a third input for up or down for the switch selector
 var getNearestRail = function (x, y) {return 0;}
 
-//test level 2 is too big made a function to generae it
-function generateTestLvlTwo () {
-	var cmprTst1Td = "<td id=\"debugGridLevelTd\"><img id=\"debugGridLevelImg\" src=\"/levels/debug/test2/img/bedrock.png\"></td>";
-
-	var cmprTst1TdN = cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td + cmprTst1Td;
-
-	var cmprTst1Tr = "<tr id=\"debugGridLevelTr\">" + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1TdN + cmprTst1Td + "</tr>";
-
-	return "<table id=\"debugGridLevelTable\" cellspacing=\"0\"><tbody id=\"debugGridLevelTbody\">" + cmprTst1Tr + cmprTst1Tr + cmprTst1Tr + cmprTst1Tr + cmprTst1Tr + cmprTst1Tr + cmprTst1Tr + cmprTst1Tr + cmprTst1Tr + "</tbody></table>";
-}
+//loads container vars to hold level data (just dir structure that has nowhere else to be)
+var lvlData = [];
+lvlData.debug = [];
