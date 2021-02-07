@@ -19,22 +19,22 @@ function loadLevel (level, x, y) {
 			//this needs a third input for up or down for the switch selector
 			getNearestRail = lvlData.debug.caramelldansen.geo;
 			//level size
-			levelWidth = 1600;
-			levelHeight = 900;
+			levelWidth = lvlData.debug.caramelldansen.width;
+			levelHeight = lvlData.debug.caramelldansen.height;
 			//css sheet for background
-			document.getElementById("lvlLoaderCSS").href = "/levels/debug/caramelldansen/css/caramelldansen.css";
+			document.getElementById("lvlLoaderCSS").href = lvlData.debug.caramelldansen.css;
 			//HTML data for background
-			document.getElementById('worldBg1').innerHTML = ;
+			document.getElementById('worldBg1').innerHTML = lvlData.debug.caramelldansen.bg1;
 		break;
 		case "debug/miku":
 			//level geometry
 			//this needs a third input for up or down for the switch selector
 			getNearestRail = lvlData.debug.miku.geo;
 			//level size
-			levelWidth = 48000;
-			levelHeight = 900;
+			levelWidth = lvlData.debug.miku.width;
+			levelHeight = lvlData.debug.miku.height;
 			//css sheet for background
-			document.getElementById("lvlLoaderCSS").href = "/levels/debug/miku/css/miku.css";
+			document.getElementById("lvlLoaderCSS").href = lvlData.debug.miku.css;
 			//HTML data for background
 			document.getElementById('worldBg1').innerHTML = lvlData.debug.miku.bg1;
 		break;
@@ -43,10 +43,10 @@ function loadLevel (level, x, y) {
 			//this needs a third input for up or down for the switch selector
 			getNearestRail = lvlData.debug.test1.geo;
 			//level size
-			levelWidth = 4800;
-			levelHeight = 900;
+			levelWidth = lvlData.debug.test1.width;
+			levelHeight = lvlData.debug.test1.height;
 			//css sheet for background
-			document.getElementById("lvlLoaderCSS").href = "/levels/debug/test1/css/test1.css";
+			document.getElementById("lvlLoaderCSS").href = lvlData.debug.test1.css;
 			//HTML data for background
 			document.getElementById('worldBg1').innerHTML = lvlData.debug.test2.bg1;
 		break;
@@ -55,10 +55,10 @@ function loadLevel (level, x, y) {
 			//this needs a third input for up or down for the switch selector
 			getNearestRail = lvlData.debug.test2.geo;
 			//level size
-			levelWidth = 48000;
-			levelHeight = 900;
+			levelWidth = lvlData.debug.test2.width;
+			levelHeight = lvlData.debug.test2.height;
 			//css sheet for background
-			document.getElementById("lvlLoaderCSS").href = "/levels/debug/test2/css/test2.css";
+			document.getElementById("lvlLoaderCSS").href = lvlData.debug.test2.css;
 			//HTML data for background
 			document.getElementById('worldBg1').innerHTML = lvlData.debug.test2.bg1;
 		break;
