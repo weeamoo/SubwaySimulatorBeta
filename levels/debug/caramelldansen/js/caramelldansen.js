@@ -16,3 +16,19 @@ lvlData.debug.caramelldansen.fg3 = "";
 lvlData.debug.caramelldansen.fg4 = "";
 lvlData.debug.caramelldansen.fg5 = "";
 lvlData.debug.caramelldansen.sfg1 = "";
+
+//factor of 0 will sync it to the car and essentially make a still image of it
+//factor of 1 will make it move with the background
+//anything in between is in between
+
+lvlData.debug.caramelldansen.bg1factor = 1;
+lvlData.debug.caramelldansen.bg2factor = 1;
+lvlData.debug.caramelldansen.bg3factor = 1;
+lvlData.debug.caramelldansen.bg4factor = 1;
+lvlData.debug.caramelldansen.bg5factor = 1;
+lvlData.debug.caramelldansen.fg1factor = 1;
+lvlData.debug.caramelldansen.fg2factor = 1;
+lvlData.debug.caramelldansen.fg3factor = 1;
+lvlData.debug.caramelldansen.fg4factor = 1;
+lvlData.debug.caramelldansen.fg5factor = 1;
+lvlData.debug.caramelldansen.sfg1factor = 1;

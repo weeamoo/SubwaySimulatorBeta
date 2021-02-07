@@ -16,3 +16,19 @@ lvlData.debug.miku.fg3 = "";
 lvlData.debug.miku.fg4 = "";
 lvlData.debug.miku.fg5 = "";
 lvlData.debug.miku.sfg1 = "";
+
+//factor of 0 will sync it to the car and essentially make a still image of it
+//factor of 1 will make it move with the background
+//anything in between is in between
+
+lvlData.debug.miku.bg1factor = 1;
+lvlData.debug.miku.bg2factor = 1;
+lvlData.debug.miku.bg3factor = 1;
+lvlData.debug.miku.bg4factor = 1;
+lvlData.debug.miku.bg5factor = 1;
+lvlData.debug.miku.fg1factor = 1;
+lvlData.debug.miku.fg2factor = 1;
+lvlData.debug.miku.fg3factor = 1;
+lvlData.debug.miku.fg4factor = 1;
+lvlData.debug.miku.fg5factor = 1;
+lvlData.debug.miku.sfg1factor = 1;

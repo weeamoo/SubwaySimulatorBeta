@@ -27,3 +27,19 @@ lvlData.debug.test2.fg3 = "";
 lvlData.debug.test2.fg4 = "";
 lvlData.debug.test2.fg5 = "";
 lvlData.debug.test2.sfg1 = "";
+
+//factor of 0 will sync it to the car and essentially make a still image of it
+//factor of 1 will make it move with the background
+//anything in between is in between
+
+lvlData.debug.test2.bg1factor = 1;
+lvlData.debug.test2.bg2factor = 1;
+lvlData.debug.test2.bg3factor = 1;
+lvlData.debug.test2.bg4factor = 1;
+lvlData.debug.test2.bg5factor = 1;
+lvlData.debug.test2.fg1factor = 1;
+lvlData.debug.test2.fg2factor = 1;
+lvlData.debug.test2.fg3factor = 1;
+lvlData.debug.test2.fg4factor = 1;
+lvlData.debug.test2.fg5factor = 1;
+lvlData.debug.test2.sfg1factor = 1;
