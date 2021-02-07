@@ -54,17 +54,17 @@ function loadLevel (level, x, y) {
 	eval("document.getElementById(\"worldSFg1\").innerHTML = lvlData." + level + ".sfg5;");
 
 	//speed factor stuff
-	eval("bg1factor = lvlData." + level + ".bg1");
-	eval("bg2factor = lvlData." + level + ".bg2");
-	eval("bg3factor = lvlData." + level + ".bg3");
-	eval("bg4factor = lvlData." + level + ".bg4");
-	eval("bg5factor = lvlData." + level + ".bg5");
-	eval("fg1factor = lvlData." + level + ".fg1");
-	eval("fg2factor = lvlData." + level + ".fg2");
-	eval("fg3factor = lvlData." + level + ".fg3");
-	eval("fg4factor = lvlData." + level + ".fg4");
-	eval("fg5factor = lvlData." + level + ".fg5");
-	eval("sfg1factor = lvlData." + level + ".sfg1");
+	eval("bg1factor = lvlData." + level + ".bg1factor");
+	eval("bg2factor = lvlData." + level + ".bg2factor");
+	eval("bg3factor = lvlData." + level + ".bg3factor");
+	eval("bg4factor = lvlData." + level + ".bg4factor");
+	eval("bg5factor = lvlData." + level + ".bg5factor");
+	eval("fg1factor = lvlData." + level + ".fg1factor");
+	eval("fg2factor = lvlData." + level + ".fg2factor");
+	eval("fg3factor = lvlData." + level + ".fg3factor");
+	eval("fg4factor = lvlData." + level + ".fg4factor");
+	eval("fg5factor = lvlData." + level + ".fg5factor");
+	eval("sfg1factor = lvlData." + level + ".sfg1factor");
 
 	//factor of 0 will sync it to the car and essentially make a still image of it
 	//factor of 1 will make it move with the background
