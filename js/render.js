@@ -15,9 +15,10 @@ function updateBackPos (xPass, yPass) {
 
 // translates game units to percent of screen
 	xPass = xPass / 16;
-	yPass = yPass / 9;
+	yPass = yPass / 9; 
 
-	updatePos("worldBg1", xPass, yPass);
+	document.getElementById("worldBg1").style.left = xPass + "%";
+	document.getElementById("worldBg1").style.bottom = yPass + "%"
 }
 
 //universial function that can move other stuff
