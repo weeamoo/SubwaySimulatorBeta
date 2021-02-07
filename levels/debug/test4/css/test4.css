@@ -1,9 +1,7 @@
 /*bg4 */
-img#bg4BackImg {
+img.backBuilding {
 	position: absolute;
-	width: 100%;
-	bottom: 0px;
-	left: 0px;
+	height: 50%;
 }
 
 /*bg5 */
