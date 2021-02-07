@@ -9,6 +9,9 @@ function loadLevel (level, x, y) {
 	player.x = x;
 	player.y = y;
 
+	//calls to reset all world divs
+	lvlReset();
+
 	//translates passed sting to level data to load in
 	switch (level) {
 		case "debug/caramelldansen":
@@ -63,6 +66,21 @@ function loadLevel (level, x, y) {
 	
 	//calls for bounds to be calced after loading level
 	calcBounds();
+}
+
+//clears all world divs
+function lvlReset () {
+	document.getElementById('worldBg1').innerHTML = "";
+	document.getElementById('worldBg2').innerHTML = "";
+	document.getElementById('worldBg3').innerHTML = "";
+	document.getElementById('worldBg4').innerHTML = "";
+	document.getElementById('worldBg5').innerHTML = "";
+	document.getElementById('worldFg1').innerHTML = "";
+	document.getElementById('worldFg2').innerHTML = "";
+	document.getElementById('worldFg3').innerHTML = "";
+	document.getElementById('worldFg4').innerHTML = "";
+	document.getElementById('worldFg5').innerHTML = "";
+	document.getElementById('worldSFg1').innerHTML = "";
 }
 
 //default level geometry function
