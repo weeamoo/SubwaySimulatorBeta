@@ -24,9 +24,9 @@ lvlData.debug.test4.sfg1 = "";
 //anything in between is in between
 
 lvlData.debug.test4.bg1factor = 1;
-lvlData.debug.test4.bg2factor = 1;
-lvlData.debug.test4.bg3factor = 1;
-lvlData.debug.test4.bg4factor = 0.5;
+lvlData.debug.test4.bg2factor = 0.75;
+lvlData.debug.test4.bg3factor = 0.5;
+lvlData.debug.test4.bg4factor = 0.25;
 lvlData.debug.test4.bg5factor = 0;
 lvlData.debug.test4.fg1factor = 1;
 lvlData.debug.test4.fg2factor = 1;
