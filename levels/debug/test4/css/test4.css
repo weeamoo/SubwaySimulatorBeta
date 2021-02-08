@@ -1,7 +1,8 @@
 /*bg4 */
-img.backBuilding {
+img.bg4BackBuilding {
 	position: absolute;
-	height: 50%;
+	height: 95%;
+	bottom: 0px;
 }
 
 img#bg4BackBuildingA {
@@ -9,15 +10,15 @@ img#bg4BackBuildingA {
 }
 
 img#bg4BackBuildingB {
-	left: 40%;
+	left: 75%;
 }
 
 img#bg4BackBuildingC {
-	left: 55%;
+	left: 80%;
 }
 
 img#bg4BackBuildingD {
-	left: 75%;
+	left: 120%;
 }
 
 /*bg5 */
