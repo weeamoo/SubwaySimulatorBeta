@@ -10,6 +10,10 @@ function bind (key, bindName) {
     eval(bindName + " = " + key + ";");
 }
 
+//sets last keypressed display on bindings menu
+function setLastKeyDisplay () {
+}
+
 //hide or show binding menu
 function showBindMenu () {
     document.getElementById('controlBindingsMenu').classList.remove("invis");
