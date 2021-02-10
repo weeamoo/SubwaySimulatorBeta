@@ -1,6 +1,7 @@
 //vars
 //vars used to talk to input script for binding
 var nextKey = 0;
+var bindMenuOpen = false;
 
 //just changes the bind
 function bind (key, bindName) {
@@ -12,10 +13,12 @@ function bind (key, bindName) {
 //hide or show binding menu
 function showBindMenu () {
     document.getElementById('controlBindingsMenu').classList.remove("invis");
+    bindMenuOpen = true;
 }
 
 function unShowBindMenu () {
     document.getElementById('controlBindingsMenu').classList.add("invis");
+    bindMenuOpen = false;
 }
 
 //function to output the next key pressed
