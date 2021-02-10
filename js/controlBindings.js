@@ -6,6 +6,7 @@ var nextKey = 0;
 function bind (key, bind) {
     //key is js keycode
     //bind is bind name
+    eval(bind + " = " + key + ";");
 }
 
 //hide or show binding menu
