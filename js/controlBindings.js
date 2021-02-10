@@ -2,6 +2,12 @@
 //vars used to talk to input script for binding
 var nextKey = 0;
 
+//just changes the bind
+function bind (key, bind) {
+    //key is js keycode
+    //bind is bind name
+}
+
 //hide or show binding menu
 function showBindMenu () {
     document.getElementById('controlBindingsMenu').classList.remove("invis");
