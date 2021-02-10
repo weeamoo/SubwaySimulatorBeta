@@ -3,10 +3,10 @@
 var nextKey = 0;
 
 //just changes the bind
-function bind (key, bind) {
+function bind (key, bindName) {
     //key is js keycode
     //bind is bind name
-    eval(bind + " = " + key + ";");
+    eval(bindName + " = " + key + ";");
 }
 
 //hide or show binding menu
