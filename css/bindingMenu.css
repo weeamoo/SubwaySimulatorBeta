@@ -18,3 +18,13 @@ h1#controlBindingsMenuH1 {
     font-style: italic;
     text-align: center;
 }
+
+/* table that contains last press output */
+table#lastKeyPressTable {
+	margin: auto;
+}
+
+/*applies to all h1 in last press output table */
+h1.lastKeyPressTableCell {
+	color: #fff;
+}
