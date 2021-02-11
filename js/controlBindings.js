@@ -58,7 +58,7 @@ function refreshKeyBindMenu () {
 
 //convert keycode to english if possible
 function keyToEng (key) {
-    if (keyCodeLookup[key] = undefined ) {
+    if (keyCodeLookup[key] == undefined ) {
         return key;
     } else {
         return keyCodeLookup[key];
