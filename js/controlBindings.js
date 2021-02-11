@@ -4,6 +4,9 @@ var lastKey = 0;
 var bindMenuOpen = false;
 var tableBuilding = "";
 var rowBuilding = "";
+var loopControlStorageA = "";
+var loopControlStorageB = "";
+var loopControlStorageC = "";
 
 //just changes the bind
 function bind (key, bindName) {
@@ -44,8 +47,13 @@ function refreshKeyBindMenu () {
     for (var property in input) {
         console.log(`${property}: ${input[property]}`);
         //needs to make this "<tr><td><h1 id=\"controlBindingsTableH1TestLabel\" class=\"controlBindingsTableCell\">Control</h1></td><td><a onclick=\"bind(lastKey, &quot;input.test.a&quot;);\"><h1 id=\"controlBindingsTableH1TestA\" class=\"controlBindingsTableCell\">Bind 1</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.b&quot;);\"><h1 id=\"controlBindingsTableH1TestB\" class=\"controlBindingsTableCell\">Bind 2</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.c&quot;);\"><h1 id=\"controlBindingsTableH1TestC\" class=\"controlBindingsTableCell\">Bind 3</h1></a></td></tr>"
-
-        rowBuilding = "<tr><td><h1 id=\"controlBindingsTableH1" + property + "Label\" class=\"controlBindingsTableCell\">" + property + "</h1></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".a&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "A\" class=\"controlBindingsTableCell\">Bind 1</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".b&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "B\" class=\"controlBindingsTableCell\">Bind 2</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".c&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "C\" class=\"controlBindingsTableCell\">Bind 3</h1></a></td></tr>";
+        
+        //translates keycodes to english (or not if translation is unavaible)
+        eval("loopControlStorageA = keyToEng(input." + property + ".a);");
+        eval("loopControlStorageB = keyToEng(input." + property + ".b);");
+        eval("loopControlStorageC = keyToEng(input." + property + ".c);");
+        
+        rowBuilding = "<tr><td><h1 id=\"controlBindingsTableH1" + property + "Label\" class=\"controlBindingsTableCell\">" + property + "</h1></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".a&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "A\" class=\"controlBindingsTableCell\">" + loopControlStorageA + "</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".b&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "B\" class=\"controlBindingsTableCell\">" + loopControlStorageB + "</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".c&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "C\" class=\"controlBindingsTableCell\">" + loopControlStorageC + "</h1></a></td></tr>";
 
         tableBuilding = tableBuilding + rowBuilding;
 
