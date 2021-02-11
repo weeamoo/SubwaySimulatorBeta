@@ -66,7 +66,7 @@ keyCodeLookup[54] = "6";
 keyCodeLookup[55] = "7";
 keyCodeLookup[56] = "8";
 keyCodeLookup[57] = "9";
-keyCodeLookup[59] = "\: \:";
+keyCodeLookup[59] = "\: \;";
 keyCodeLookup[61] = "+=";
 keyCodeLookup[65] = "A";
 keyCodeLookup[66] = "B";
