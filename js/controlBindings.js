@@ -56,6 +56,15 @@ function refreshKeyBindMenu () {
     document.getElementById("controlBindingsTable").innerHTML = tableBuilding;
 }
 
+//convert keycode to english if possible
+function keyToEng (key) {
+    if (keyCodeLookup[key] = undefined ) {
+        return key;
+    } else {
+        return keyCodeLookup[key];
+    }
+}
+
 //creates empty array to hold description of each keycode
 var keyCodeLookup = [];
 
