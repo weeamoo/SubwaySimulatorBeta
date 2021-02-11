@@ -1,81 +1,82 @@
 //empty container vars
-var up = {};
-var down = {};
-var left = {};
-var right = {};
-var brakes = {};
-var doorControl = {};
+var input = {};
+input.up = {};
+input.down = {};
+input.left = {};
+input.right = {};
+input.brakes = {};
+input.doorControl = {};
 //pause is weird
-var pause = {};
+input.pause = {};
 
 //set pressed to false to start
-up.pressed = false;
-down.pressed = false;
-left.pressed = false;
-right.pressed = false;
-brakes.pressed = false;
-doorControl.pressed = false;
+input.up.pressed = false;
+input.down.pressed = false;
+input.left.pressed = false;
+input.right.pressed = false;
+input.brakes.pressed = false;
+input.doorControl.pressed = false;
 //no pressed var for pause cause weird
 
 var viewKeycode = false;
 
 //default binds
-left.a = 37;
-left.b = 65;
-left.c = 74;
-right.a = 39;
-right.b = 68;
-right.c = 76;
-up.a = 38;
-up.b = 87;
-up.c = 73;
-down.a = 40;
-down.b = 83;
-down.c = 75;
-brakes.a = 16;
-brakes.b = "UNBOUND";
-brakes.c = "UNBOUND";
-pause.a = 27;
-pause.b = "UNBOUND";
-pause.c = "UNBOUND";
-doorControl.a = 71;
-doorControl.b = "UNBOUND";
-doorControl.c = "UNBOUND";
+input.left.a = 37;
+input.left.b = 65;
+input.left.c = 74;
+input.right.a = 39;
+input.right.b = 68;
+input.right.c = 76;
+input.up.a = 38;
+input.up.b = 87;
+input.up.c = 73;
+input.down.a = 40;
+input.down.b = 83;
+input.down.c = 75;
+input.brakes.a = 16;
+input.brakes.b = "UNBOUND";
+input.brakes.c = "UNBOUND";
+input.pause.a = 27;
+input.pause.b = "UNBOUND";
+input.pause.c = "UNBOUND";
+input.doorControl.a = 71;
+input.doorControl.b = "UNBOUND";
+input.doorControl.c = "UNBOUND";
 
 //sets var to true when key is pressed
 document.onkeydown = function(event) {
   switch (event.keyCode) {
-    case left.a:
-    case left.b:
-    case left.c:
-        left.pressed = true;
+    case input.left.a:
+    case input.left.b:
+    case input.left.c:
+        input.left.pressed = true;
       break;
-    case right.a:
-    case right.b:
-    case right.c:
-        right.pressed = true;
+    case input.right.a:
+    case input.right.b:
+    case input.right.c:
+        input.right.pressed = true;
       break;
-    case up.a:
-    case up.b:
-    case up.c:
-        up.pressed = true;
+    case input.up.a:
+    case input.up.b:
+    case input.up.c:
+        input.up.pressed = true;
         player.lastPress = "Up";
       break;
-    case down.a:
-    case down.b:
-    case down.c:
-        down.pressed = true;
+    case input.down.a:
+    case input.down.b:
+    case input.down.c:
+        input.down.pressed = true;
         player.lastPress = "Down"
       break;
-    case brakes.a:
-    case brakes.b:
-    case brakes.c:
-        brakes.pressed = true;
+    case input.brakes.a:
+    case input.brakes.b:
+    case input.brakes.c:
+        input.brakes.pressed = true;
       break;
 //    pause menu
-    case pause.a:
-    case pause.b:
-    case pause.c:
+    case input.pause.a:
+    case input.pause.b:
+    case input.pause.c:
         togglePause();
       break;
   }
@@ -86,36 +87,39 @@ document.onkeydown = function(event) {
   //    outputs key code when viewKeycode is true
   if (viewKeycode) { 
     alert("JS Keycode: " + event.keyCode + "\nLookup Table: " + keyCodeLookup[event.keyCode]);
-  } 
+  } if (bindMenuOpen) {
+    //runs code for updating display of last pressed key in binding menu when it's open
+
+  }
 };
 
 //sets var to false when key is released
 document.onkeyup = function(event) {
   switch (event.keyCode) {
-    case left.a:
-    case left.b:
-    case left.c:
-        left.pressed = false;
+    case input.left.a:
+    case input.left.b:
+    case input.left.c:
+        input.left.pressed = false;
       break;
-    case right.a:
-    case right.b:
-    case right.c:
-        right.pressed = false;
+    case input.right.a:
+    case input.right.b:
+    case input.right.c:
+        input.right.pressed = false;
       break;
-    case up.a:
-    case up.b:
-    case up.c:
-        up.pressed = false;
+    case input.up.a:
+    case input.up.b:
+    case input.up.c:
+        input.up.pressed = false;
       break;
-    case down.a:
-    case down.b:
-    case down.c:
-        down.pressed = false;
+    case input.down.a:
+    case input.down.b:
+    case input.down.c:
+        input.down.pressed = false;
       break;
-    case brakes.a:
-    case brakes.b:
-    case brakes.c:
-        brakes.pressed = false;
+    case input.brakes.a:
+    case input.brakes.b:
+    case input.brakes.c:
+        input.brakes.pressed = false;
       break;
     }
 };

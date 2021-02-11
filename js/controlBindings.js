@@ -25,13 +25,11 @@ function unShowBindMenu () {
     bindMenuOpen = false;
 }
 
-//function to output the next key pressed
-function getNextKey () {
-    nextKey = -1;
-    nextKeyRequested = true;
-    //somecode to wait until a key is pressed
-    return nextKey;
+//update lastpress key display
+function updateLastPressDisplay () {
+
 }
+
 //creates empty array to hold description of each keycode
 var keyCodeLookup = [];
 
