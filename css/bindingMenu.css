@@ -42,3 +42,18 @@ h1.lastKeyPressTableCell {
 h1#lastKeyPressTableH1KeyName {
 	margin-right: 40px;
 }
+
+/* control binding menu table */
+table#controlBindingsTable {
+	margin: auto;
+}
+
+/* control binding table headings */
+h1.controlBindingsTableHeaderCell {
+	color: #fff;
+}
+
+/* control binding table cells */
+h1.controlBindingsTableCell {
+	color: #fff;
+}
