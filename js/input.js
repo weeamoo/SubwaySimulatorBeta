@@ -89,7 +89,7 @@ document.onkeydown = function(event) {
     alert("JS Keycode: " + event.keyCode + "\nLookup Table: " + keyCodeLookup[event.keyCode]);
   } if (bindMenuOpen) {
     //runs code for updating display of last pressed key in binding menu when it's open
-
+    updateLastPressDisplay ()
   }
 };
 
