@@ -27,7 +27,8 @@ function unShowBindMenu () {
 
 //update lastpress key display
 function updateLastPressDisplay () {
-
+    document.getElementById("lastKeyPressTableH1KeyName").innerHTML = keyCodeLookup[lastKey];
+    document.getElementById("lastKeyPressTableH1KeyCode").innerHTML = lastKey;
 }
 
 //creates empty array to hold description of each keycode
