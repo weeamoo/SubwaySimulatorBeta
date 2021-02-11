@@ -1,6 +1,6 @@
 //vars
 //vars used to talk to input script for binding
-var nextKey = 0;
+var lastKey = 0;
 var bindMenuOpen = false;
 
 //just changes the bind
