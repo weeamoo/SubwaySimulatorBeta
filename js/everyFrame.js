@@ -20,12 +20,12 @@ function everyFrame () {
 function keyActions () {
 
 	//for each directions sees if speed is far enough away from zero then calls accel function
-	if (left.pressed && player.xSpeed > player.maxXSpeed * -1) {
+	if (input.left.pressed && player.xSpeed > player.maxXSpeed * -1) {
 		if (Math.abs(player.xSpeed) < player.kick) {
 			player.xSpeed = 0 - player.kick;
 		}
 		player.xSpeed = accel(player.xSpeed, -1, player.accelPower);
-	} else if (right.pressed && player.xSpeed < player.maxXSpeed * 1) {
+	} else if (input.right.pressed && player.xSpeed < player.maxXSpeed * 1) {
 		if (Math.abs(player.xSpeed) < player.kick) {
 			player.xSpeed = player.kick;
 		}
@@ -35,12 +35,12 @@ function keyActions () {
 	//y coord movement if you have freecam or unlocked
 	
 	if (noClip || player.unlockY) {
-		if (down.pressed && player.ySpeed > player.maxYSpeed * -1) {
+		if (input.down.pressed && player.ySpeed > player.maxYSpeed * -1) {
 		if (Math.abs(player.ySpeed) < player.kick) {
 			player.ySpeed = 0 - player.kick;
 		}
 		player.ySpeed = accel(player.ySpeed, -1, player.accelPower);
-	} else if (up.pressed && player.xSpeed > player.maxYSpeed * 1) {
+	} else if (input.up.pressed && player.xSpeed > player.maxYSpeed * 1) {
 		if (Math.abs(player.ySpeed) < player.kick) {
 			player.ySpeed = player.kick;
 		}
