@@ -37,7 +37,7 @@ function updateLastPressDisplay () {
 }
 
 //updates key bindings menu
-//not ready yet :)
+//ready :)
 function refreshKeyBindMenu () {
     //initial control binding table value
     // "<tbody><tr><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Control</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 1</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 2</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 3</h1></td></tr><tr><td><h1 id=\"controlBindingsTableH1TestLabel\" class=\"controlBindingsTableCell\">Control</h1></td><td><a onclick=\"bind(lastKey, &quot;input.test.a&quot;);\"><h1 id=\"controlBindingsTableH1TestA\" class=\"controlBindingsTableCell\">Bind 1</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.b&quot;);\"><h1 id=\"controlBindingsTableH1TestB\" class=\"controlBindingsTableCell\">Bind 2</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.c&quot;);\"><h1 id=\"controlBindingsTableH1TestC\" class=\"controlBindingsTableCell\">Bind 3</h1></a></td></tr></tbody>"
@@ -67,7 +67,7 @@ function refreshKeyBindMenu () {
 //convert keycode to english if possible
 function keyToEng (key) {
     if (keyCodeLookup[key] == undefined ) {
-        return key;
+        return "JS " + key;
     } else {
         return keyCodeLookup[key];
     }
