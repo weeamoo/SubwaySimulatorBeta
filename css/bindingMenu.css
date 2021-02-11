@@ -19,6 +19,15 @@ h1#controlBindingsMenuH1 {
     text-align: center;
 }
 
+/* close button */
+h1#controlBindingsMenuCloseButton {
+	color: #FFF;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	border-style: solid;
+}
+
 /* table that contains last press output */
 table#lastKeyPressTable {
 	margin: auto;
@@ -27,4 +36,9 @@ table#lastKeyPressTable {
 /*applies to all h1 in last press output table */
 h1.lastKeyPressTableCell {
 	color: #fff;
+}
+
+/* shit way to add space between two outputs on last press display table */
+h1#lastKeyPressTableH1KeyName {
+	margin-right: 40px;
 }

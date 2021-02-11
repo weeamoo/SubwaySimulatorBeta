@@ -16,6 +16,7 @@ function setLastKeyDisplay () {
 
 //hide or show binding menu
 function showBindMenu () {
+    updateLastPressDisplay();
     document.getElementById('controlBindingsMenu').classList.remove("invis");
     bindMenuOpen = true;
 }
