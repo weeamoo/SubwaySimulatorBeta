@@ -1,7 +1,7 @@
 //makes container for lvl stuff
 lvlData.debug.test4 = [];
 
-lvlData.debug.test4.width = 4800;
+lvlData.debug.test4.width = 16000;
 lvlData.debug.test4.height = 900;
 lvlData.debug.test4.css = "/levels/debug/test4/css/test4.css";
 lvlData.debug.test4.geo = function (x, y, dir) {player.speedLimit = 1;return 500;};
@@ -28,9 +28,9 @@ lvlData.debug.test4.bg2factor = 0.75;
 lvlData.debug.test4.bg3factor = 0.5;
 lvlData.debug.test4.bg4factor = 0.25;
 lvlData.debug.test4.bg5factor = 0;
-lvlData.debug.test4.fg1factor = 1;
-lvlData.debug.test4.fg2factor = 1;
-lvlData.debug.test4.fg3factor = 1;
-lvlData.debug.test4.fg4factor = 1;
-lvlData.debug.test4.fg5factor = 1;
-lvlData.debug.test4.sfg1factor = 1;
+lvlData.debug.test4.fg1factor = 0;
+lvlData.debug.test4.fg2factor = 0;
+lvlData.debug.test4.fg3factor = 0;
+lvlData.debug.test4.fg4factor = 0;
+lvlData.debug.test4.fg5factor = 0;
+lvlData.debug.test4.sfg1factor = 0;

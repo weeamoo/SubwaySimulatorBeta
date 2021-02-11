@@ -1,16 +1,28 @@
 //vars
 //vars used to talk to input script for binding
-var nextKeyRequested = false;
 var nextKey = 0;
-var newKey = 0;
+var bindMenuOpen = false;
+
+//just changes the bind
+function bind (key, bindName) {
+    //key is js keycode
+    //bind is bind name
+    eval(bindName + " = " + key + ";");
+}
+
+//sets last keypressed display on bindings menu
+function setLastKeyDisplay () {
+}
 
 //hide or show binding menu
 function showBindMenu () {
     document.getElementById('controlBindingsMenu').classList.remove("invis");
+    bindMenuOpen = true;
 }
 
 function unShowBindMenu () {
     document.getElementById('controlBindingsMenu').classList.add("invis");
+    bindMenuOpen = false;
 }
 
 //function to output the next key pressed
