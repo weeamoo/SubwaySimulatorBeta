@@ -3,6 +3,7 @@
 var lastKey = 0;
 var bindMenuOpen = false;
 var tableBuilding = "";
+var rowBuilding = "";
 
 //just changes the bind
 function bind (key, bindName) {
@@ -33,11 +34,23 @@ function updateLastPressDisplay () {
 //not ready yet :)
 function refreshKeyBindMenu () {
     //initial control binding table value
-    // "\n\n\t\t\t\t<tbody>\n\t\t\t\t\t\n\t\t\t\t\t<tr>\n\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Control</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 1</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 2</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 3</h1>\n\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\n\t\t\t\t\t</tr>\n\t\t\t\t\t\n\t\t\t\t\t<tr>\n\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestLabel\" class=\"controlBindingsTableCell\">Control</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<a onclick=\"bind(lastKey, &quot;input.test.a&quot;);\">\n\n\t\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestA\" class=\"controlBindingsTableCell\">Bind 1</h1>\n\n\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<a onclick=\"bind(lastKey, &quot;input.test.b&quot;);\">\n\n\t\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestB\" class=\"controlBindingsTableCell\">Bind 2</h1>\n\n\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<a onclick=\"bind(lastKey, &quot;input.test.c&quot;);\">\n\n\t\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestC\" class=\"controlBindingsTableCell\">Bind 3</h1>\n\n\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\n\t\t\t\t\t</tr>\n\n\t\t\t\t</tbody>\n\t\t\t\t\n\t\t\t"
+    // "<tbody><tr><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Control</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 1</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 2</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 3</h1></td></tr><tr><td><h1 id=\"controlBindingsTableH1TestLabel\" class=\"controlBindingsTableCell\">Control</h1></td><td><a onclick=\"bind(lastKey, &quot;input.test.a&quot;);\"><h1 id=\"controlBindingsTableH1TestA\" class=\"controlBindingsTableCell\">Bind 1</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.b&quot;);\"><h1 id=\"controlBindingsTableH1TestB\" class=\"controlBindingsTableCell\">Bind 2</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.c&quot;);\"><h1 id=\"controlBindingsTableH1TestC\" class=\"controlBindingsTableCell\">Bind 3</h1></a></td></tr></tbody>"
+
+    tableBuilding = "<tbody><tr><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Control</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 1</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 2</h1></td><td><h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 3</h1></td></tr>";
     
     for (var property in input) {
         console.log(`${property}: ${input[property]}`);
+        //needs to make this "<tr><td><h1 id=\"controlBindingsTableH1TestLabel\" class=\"controlBindingsTableCell\">Control</h1></td><td><a onclick=\"bind(lastKey, &quot;input.test.a&quot;);\"><h1 id=\"controlBindingsTableH1TestA\" class=\"controlBindingsTableCell\">Bind 1</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.b&quot;);\"><h1 id=\"controlBindingsTableH1TestB\" class=\"controlBindingsTableCell\">Bind 2</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input.test.c&quot;);\"><h1 id=\"controlBindingsTableH1TestC\" class=\"controlBindingsTableCell\">Bind 3</h1></a></td></tr>"
+
+        rowBuilding = "<tr><td><h1 id=\"controlBindingsTableH1" + property + "Label\" class=\"controlBindingsTableCell\"> + property + </h1></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".a&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "A\" class=\"controlBindingsTableCell\">Bind 1</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".b&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "B\" class=\"controlBindingsTableCell\">Bind 2</h1></a></td><td><a onclick=\"bind(lastKey, &quot;input." + property + ".c&quot;);\"><h1 id=\"controlBindingsTableH1" + property + "C\" class=\"controlBindingsTableCell\">Bind 3</h1></a></td></tr>";
+
+        tableBuilding = tableBuilding + rowBuilding;
+
     }
+
+    tableBuilding = tableBuilding + "</tbody>";
+
+    document.getElementById("controlBindingsTable").innerHTML = tableBuilding;
 }
 
 //creates empty array to hold description of each keycode
