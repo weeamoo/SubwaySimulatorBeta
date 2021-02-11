@@ -10,10 +10,6 @@ function bind (key, bindName) {
     eval(bindName + " = " + key + ";");
 }
 
-//sets last keypressed display on bindings menu
-function setLastKeyDisplay () {
-}
-
 //hide or show binding menu
 function showBindMenu () {
     updateLastPressDisplay();
@@ -30,6 +26,14 @@ function unShowBindMenu () {
 function updateLastPressDisplay () {
     document.getElementById("lastKeyPressTableH1KeyName").innerHTML = keyCodeLookup[lastKey];
     document.getElementById("lastKeyPressTableH1KeyCode").innerHTML = lastKey;
+}
+
+//updates key bindings menu
+//not ready yet :)
+function refreshKeyBindMenu () {
+    for (var property in input) {
+        console.log(`${property}: ${input[property]}`);
+    }
 }
 
 //creates empty array to hold description of each keycode
