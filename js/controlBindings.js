@@ -10,11 +10,14 @@ function bind (key, bindName) {
     //key is js keycode
     //bind is bind name
     eval(bindName + " = " + key + ";");
+    //updates binding menu
+    refreshKeyBindMenu();
 }
 
 //hide or show binding menu
 function showBindMenu () {
     updateLastPressDisplay();
+    refreshKeyBindMenu();
     document.getElementById('controlBindingsMenu').classList.remove("invis");
     bindMenuOpen = true;
 }
