@@ -65,7 +65,7 @@ function frameMovement () {
 }
 
 function frameSpeedEnv () {
-	if (brakes.pressed) {
+	if (input.brakes.pressed) {
 		if (Math.abs(player.xSpeed) < player.brakesFullStop) {
 			player.xSpeed = 0;
 		} else if (player.xSpeed > 0) {
