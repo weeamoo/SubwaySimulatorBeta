@@ -2,6 +2,7 @@
 //vars used to talk to input script for binding
 var lastKey = 0;
 var bindMenuOpen = false;
+var tableBuilding = "";
 
 //just changes the bind
 function bind (key, bindName) {
