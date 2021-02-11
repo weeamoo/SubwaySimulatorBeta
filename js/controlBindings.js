@@ -31,6 +31,9 @@ function updateLastPressDisplay () {
 //updates key bindings menu
 //not ready yet :)
 function refreshKeyBindMenu () {
+    //initial control binding table value
+    // "\n\n\t\t\t\t<tbody>\n\t\t\t\t\t\n\t\t\t\t\t<tr>\n\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Control</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 1</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 2</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1\" class=\"controlBindingsTableHeaderCell\">Bind 3</h1>\n\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\n\t\t\t\t\t</tr>\n\t\t\t\t\t\n\t\t\t\t\t<tr>\n\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestLabel\" class=\"controlBindingsTableCell\">Control</h1>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<a onclick=\"bind(lastKey, &quot;input.test.a&quot;);\">\n\n\t\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestA\" class=\"controlBindingsTableCell\">Bind 1</h1>\n\n\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<a onclick=\"bind(lastKey, &quot;input.test.b&quot;);\">\n\n\t\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestB\" class=\"controlBindingsTableCell\">Bind 2</h1>\n\n\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td>\n\n\t\t\t\t\t\t\t<a onclick=\"bind(lastKey, &quot;input.test.c&quot;);\">\n\n\t\t\t\t\t\t\t\t<h1 id=\"controlBindingsTableH1TestC\" class=\"controlBindingsTableCell\">Bind 3</h1>\n\n\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\n\t\t\t\t\t</tr>\n\n\t\t\t\t</tbody>\n\t\t\t\t\n\t\t\t"
+    
     for (var property in input) {
         console.log(`${property}: ${input[property]}`);
     }
