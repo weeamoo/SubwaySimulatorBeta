@@ -31,7 +31,7 @@ function updateCameraOffset () {
 		yOffset = 0;
 	} else if (player.y > yMax) {
 		//larger than max, camera all the way to the bottom
-		yOffset = yMax;
+		yOffset = yMax - 450;
 	} else {
 		//between min and max, calc offset
 		yOffset = player.y - yMin;
