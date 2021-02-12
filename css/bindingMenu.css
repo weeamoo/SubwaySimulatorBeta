@@ -56,4 +56,6 @@ h1.controlBindingsTableHeaderCell {
 /* control binding table cells */
 h1.controlBindingsTableCell {
 	color: #fff;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
