@@ -52,12 +52,12 @@ img#titleScreenImgLogo {
 
 /* start button */
 img#titleScreenImgStartButton {
-	width: 100%;
+	width: 50%;
 }
 
 /* controls button */
 img#titleScreenImgControlsButton {
-	width: 100%;
+	width: 50%;
 }
 
 /* version number */
