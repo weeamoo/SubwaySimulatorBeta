@@ -50,6 +50,16 @@ img#titleScreenImgLogo {
 	top: 5%;
 }
 
+/* start button */
+img#titleScreenImgStartButton {
+	width: 100%;
+}
+
+/* controls button */
+img#titleScreenImgControlsButton {
+	width: 100%;
+}
+
 /* version number */
 p#titleScreenVersionNumber {
 	position: absolute;
