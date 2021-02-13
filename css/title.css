@@ -32,7 +32,20 @@ p#titleScreenStartButtonText {
 	margin: 0;
 }
 
+/* table that holds title screen buttons */
 table#titleScreenButtonsTable {
 	margin: auto;
 	border-spacing: 20px;
+	top: 15%;
+	position: absolute;
+	width: 50%;
+	left: 25%;
+}
+
+/* title */
+img#titleScreenImgLogo {
+	width: 40%;
+	left: 30%;
+	position: absolute;
+	top: 5%;
 }
