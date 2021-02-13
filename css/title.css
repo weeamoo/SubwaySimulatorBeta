@@ -49,3 +49,10 @@ img#titleScreenImgLogo {
 	position: absolute;
 	top: 5%;
 }
+
+/* version number */
+p#titleScreenVersionNumber {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
