@@ -51,7 +51,7 @@ function loadLevel (level, x, y) {
 	eval("document.getElementById(\"worldFg3\").innerHTML = lvlData." + level + ".fg3;");
 	eval("document.getElementById(\"worldFg4\").innerHTML = lvlData." + level + ".fg4;");
 	eval("document.getElementById(\"worldFg5\").innerHTML = lvlData." + level + ".fg5;");
-	eval("document.getElementById(\"worldSFg1\").innerHTML = lvlData." + level + ".sfg5;");
+	eval("document.getElementById(\"worldSFg1\").innerHTML = lvlData." + level + ".sfg1;");
 
 	//speed factor stuff
 	eval("bg1factor = lvlData." + level + ".bg1factor");
