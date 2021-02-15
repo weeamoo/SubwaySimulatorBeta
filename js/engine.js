@@ -122,14 +122,21 @@ function playVideoHud (id) {
 
 //door code
 function togglePlayerDoor () {
+	if (player.doorOpen) {
+		closePlayerDoor();
+	} else {
+		openPlayerDoor ();
+	}
 }
 
 function openPlayerDoor () {
 	document.getElementById("playerCarDoorImg").style.right = "15%";
+	player.doorOpen = true;
 }
 
 function closePlayerDoor () {
 	document.getElementById("playerCarDoorImg").style.right = "0%";
+	player.doorOpen = false;
 }
 
 //rando vars
