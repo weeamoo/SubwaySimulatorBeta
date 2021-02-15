@@ -134,7 +134,8 @@ player.wantedLevel = 0;
 player.maxXSpeed = 25;
 player.maxYSpeed = 25;
 player.speedLimit = 0;
-player.lastPress = "UP";
+player.lastPress = "Up";
+player.doorOpen = false;
 player.x = 0;
 player.y = 0;
 //putting some semicontstants here lol
