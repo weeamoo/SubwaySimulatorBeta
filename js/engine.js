@@ -120,6 +120,18 @@ function playVideoHud (id) {
 	document.getElementById('hudVideo').classList.remove('invis')
 }
 
+//door code
+function togglePlayerDoor () {
+}
+
+function openPlayerDoor () {
+	document.getElementById("playerCarDoorImg").style.right = "15%";
+}
+
+function closePlayerDoor () {
+	document.getElementById("playerCarDoorImg").style.right = "0%";
+}
+
 //rando vars
 
 //container var for player data
