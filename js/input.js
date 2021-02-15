@@ -79,6 +79,12 @@ document.onkeydown = function(event) {
     case input.pause.c:
         togglePause();
       break;
+    case input.doorControl.a:
+    case input.doorControl.b:
+    case input.doorControl.c:
+        input.doorControl.pressed = true;
+        togglePlayerDoor();
+      break;
   }
   
   //stuff for binding keys
