@@ -1,3 +1,16 @@
+/*bg1*/
+img.testLvl4BgaGridImg {
+	width: 100%;
+}
+
+td.testLvl4BgaGridTd {
+	width: 6.25%;
+}
+
+table#testLvl4BgaGridLevelTable {
+	width: 100%;
+}
+
 /*bg2 */
 img.bg2BackBuilding {
 	position: absolute;
