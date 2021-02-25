@@ -9,6 +9,8 @@ td.testLvl4BgaGridTd {
 
 table#testLvl4BgaGridLevelTable {
 	width: 100%;
+	position: absolute;
+	bottom: 0px;
 }
 
 /*bg2 */
