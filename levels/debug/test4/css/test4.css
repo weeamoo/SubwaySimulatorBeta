@@ -5,6 +5,7 @@ img.testLvl4BgaGridImg {
 
 td.testLvl4BgaGridTd {
 	width: 6.25%;
+	padding: 0px;
 }
 
 table#testLvl4BgaGridLevelTable {
