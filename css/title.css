@@ -1,7 +1,7 @@
 h1#titleScreenH1 {
 	color: #fff;
-	font-style: italic;
 	text-align: center;
+	margin-top: 15%;
 }
 
 div#titleScreenStartButton {
