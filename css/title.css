@@ -23,6 +23,8 @@ div#titleScreen {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	background-color: rgba(0, 0, 0, 0.8);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 p#titleScreenStartButtonText {
@@ -57,7 +59,7 @@ img#titleScreenImgStartButton {
 
 /* controls button */
 img#titleScreenImgControlsButton {
-	width: 50%;
+	width: 75%;
 }
 
 /* version number */

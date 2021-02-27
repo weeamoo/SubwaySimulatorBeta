@@ -15,3 +15,7 @@ function startGame () {
 	onStartMenu = false;
 	paused = false;
 }
+
+function addMikuToTitle () {
+	document.getElementById("titleScreen").style.backgroundImage = "url(\"https://surfinontheinter.net/img/myspace/mikuback.jpg\")";
+}
