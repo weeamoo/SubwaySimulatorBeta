@@ -9,7 +9,7 @@ td.testLvl5BgaGridTd {
 }
 
 table#testLvl5BgaGridLevelTable {
-	height: 33.333%;
+	height: 66.666%;
 	border-spacing: 0px;
 	border-collapse: collapse;
 	border: none;
@@ -18,7 +18,7 @@ table#testLvl5BgaGridLevelTable {
 	border-width: 0px;
 	position: absolute;
 	bottom: 0px;
-	width: 1000%;
+	width: 100%;
 }
 
 /*bg2 */
