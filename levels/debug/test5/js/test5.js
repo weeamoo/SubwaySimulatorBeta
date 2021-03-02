@@ -7,7 +7,7 @@ lvlData.debug.test5.css = "/levels/debug/test5/css/test5.css";
 /*lvlData.debug.test5.geo = function (x, y, dir) {player.speedLimit = 1;return 262;};  see workspace below*/
 
 //html data
-lvlData.debug.test5.bg1 = "";
+lvlData.debug.test5.bg1 = "\n\n\t\t\t<table id=\"testLvl5BgaGridLevelTable\" cellspacing=\"0\">\n\n\t\t\t\t<tbody>\n\n\t\t\t\t\t<tr>\n\n\t\t\t\t\t\t<td class=\"testLvl4BgaGridTd\" colspan=\"8\"></td>\n\n\t\t\t\t\t\t<td class=\"testLvl5BgaGridTd\">\n\n\t\t\t\t\t\t\t<img class=\"testLvl5BgaGridImg\" src=\"/levels/debug/test5/img/bridge/bridgeAngle2.png\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td class=\"testLvl5BgaGridTd\">\n\n\t\t\t\t\t\t\t<img class=\"testLvl5BgaGridImg\" src=\"/levels/debug/test5/img/bridge/bridge.png\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td>\n\n\t\t\t\t\t\t<td class=\"testLvl5BgaGridTd\">\n\n\t\t\t\t\t\t\t<img class=\"testLvl5BgaGridImg\" src=\"/levels/debug/test5/img/bridge/bridgeAngle.png\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\n\t\t\t\t\t</tr>\n\t\t\t\t\t\n\t\t\t\t</tbody>\n\n\t\t\t</table>\n\t\t\n\t\t";
 lvlData.debug.test5.bg2 = "";
 lvlData.debug.test5.bg3 = "";
 lvlData.debug.test5.bg4 = "";
