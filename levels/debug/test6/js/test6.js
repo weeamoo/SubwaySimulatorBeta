@@ -104,7 +104,7 @@ lvlData.debug.test6.geo = function getNearestRail (x, y, dir) {
         		break;
     		case (x < 1000):
         		
-    			if (dir == "up") {
+    			if (dir == "Up") {
 
                     return (x * -1) + 1362;
 
