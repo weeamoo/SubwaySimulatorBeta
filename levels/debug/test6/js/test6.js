@@ -44,39 +44,90 @@ lvlData.debug.test6.geo = function getNearestRail (x, y, dir) {
 
 		/*x coord starts at zero */
 
-    		case (x < 700):
-        		
-    			return 262;
-
-        		break;
-    		case (x < 800):
-        		
-    			return x - 438;
-
-        		break;
-    		case (x < 900):
+    		case (x < 600):
         		
     			return 362;
 
         		break;
+    		case (x < 610):
+        		
+    			if (dir == "Up") {
+
+                    return x - 238;
+                
+                } else {
+
+                    return (x * -1) + 962;
+
+                }
+
+        		break;
+
+    		case (x < 700):
+        		
+    			if (y > x - 248) {
+
+                    return x - 238;
+
+                } else {
+
+                    return (x * -1) + 962;
+                }
+
+        		break;
+    		case (x < 900):
+        		
+    			if (y > 452) {
+
+
+                    return 462;
+
+                } else {
+
+                    return 262;
+
+                }
+
+        		break;
+    		case (x < 990):
+        		
+    			if (y > (x * -1) + 1352) {
+
+                    return (x * -1) + 1362;
+
+                } else {
+
+                    return x - 638;
+
+                }
+
+        		break;
     		case (x < 1000):
         		
-    			return x - 538;
+    			if (dir == "up") {
+
+                    return (x * -1) + 1362;
+
+                } else {
+
+                    return x - 638;
+
+                }
 
         		break;
-    		case (x < 1100):
-        		
-    			return 462;
+            case (x < 1200):
+                
+                return 362;
 
-        		break;
-    		case (x < 1300):
-        		
-    			return (x * -1) + 1562;
+                break;
+            case (x < 1300):
+                
+                return x - 838;
 
-        		break;
+                break;
     		default:
         		
-        		return 262;
+        		return 462;
 
            	break;
 	}
