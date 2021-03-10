@@ -51,16 +51,16 @@ function keyActions () {
 }
 
 function frameMovement () {
-
-	//sets y to where the rail is (if needed)
-	if (noClip == false && player.unlockY == false) {
-		//this needs a third input for up or down for the switch selector
-		player.y = getNearestRail(player.x, player.y, player.lastPress);
-	}
-
+	
 	//applies one frame of movement
 	player.x = player.x + player.xSpeed;
 	player.y = player.y + player.ySpeed;
+
+	//sets y to where the rail is (if needed)
+	if (noClip == false && player.unlockY == false) {
+		// old code player.y = getNearestRail(player.x, player.y, player.lastPress);
+		update(player);
+	}
 
 }
 
