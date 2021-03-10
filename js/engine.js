@@ -139,6 +139,11 @@ function closePlayerDoor () {
 	player.doorOpen = false;
 }
 
+//updates object sent to it (does physics and stuff and sets it to the new position
+function update (entity) {
+	entity.y = getNearestRail(entity.x, entity.y, entity.lastPress);
+}
+
 //rando vars
 
 //container var for player data
