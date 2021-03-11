@@ -38,7 +38,7 @@ function updateCameraOffset () {
 	} 
 
 	//set to zero if noclip
-	if (noclip) {
+	if (player.noclip) {
 		xOffset = 0;
 		yOffset = 0;
 	}
