@@ -36,4 +36,10 @@ function updateCameraOffset () {
 		//between min and max, calc offset
 		yOffset = player.y - yMin;
 	} 
+
+	//set to zero if noclip
+	if (noclip) {
+		xOffset = 0;
+		yOffset = 0;
+	}
 }

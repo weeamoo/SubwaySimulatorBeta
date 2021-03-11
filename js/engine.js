@@ -153,6 +153,9 @@ function update (entity) {
 	if (entity.noClip == false) {
 		entity.y = getNearestRail(entity.x, entity.y, entity.lastPress);
 	}
+
+	//applies camera offset
+	updatePos(entity.id ,entity.x - xOffset, entity.y - yOffset);
 }
 
 function calcAccel (entity) {
@@ -185,6 +188,17 @@ function calcAccel (entity) {
 		entity.ySpeed = accel(entity.xSpeed, 1, entity.accelPower);
 	}
 	}
+
+	//stuff for brakes
+	if (entity.input.brakes) {
+		if (Math.abs(entity.xSpeed) < entity.brakesFullStop) {
+			entity.xSpeed = 0;
+		} else if (entity.xSpeed > 0) {
+			entity.xSpeed = brake(entity.xSpeed, 1, entity.brakePower);
+		} else {
+			entity.xSpeed = brake(entity.xSpeed, -1, entity.brakePower);
+		}
+	}
 }
 
 //rando vars
@@ -205,6 +219,7 @@ player.lastPress = "Up";
 player.doorOpen = false;
 player.x = 0;
 player.y = 0;
+player.id = "playerCarDiv";
 //putting some semicontstants here lol
 //semi constants, can be changed when buying upgrandes
 
