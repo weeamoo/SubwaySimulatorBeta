@@ -72,6 +72,11 @@ function loadLevel (level, x, y) {
 
 }
 
+//gets level parts from level data
+function getLevelObject (lvl, part) {
+	return lvl.part;
+}
+
 //clears all world divs
 function lvlReset () {
 	document.getElementById('worldBg1').innerHTML = "";
