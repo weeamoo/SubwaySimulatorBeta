@@ -73,8 +73,8 @@ function loadLevel (level, x, y) {
 }
 
 //gets level parts from level data
-function getLevelObject (lvl, part) {
-	return lvl.part;
+function getLevelpart (part) {
+	return part;
 }
 
 //clears all world divs
