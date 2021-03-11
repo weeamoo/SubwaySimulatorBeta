@@ -130,12 +130,12 @@ function togglePlayerDoor () {
 }
 
 function openPlayerDoor () {
-	document.getElementById("playerCarDoorImg").style.right = "15%";
+	document.getElementById("playerCarDoorImg").style.right = "65%";
 	player.doorOpen = true;
 }
 
 function closePlayerDoor () {
-	document.getElementById("playerCarDoorImg").style.right = "0%";
+	document.getElementById("playerCarDoorImg").style.right = "50%";
 	player.doorOpen = false;
 }
 
