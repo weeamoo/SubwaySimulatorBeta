@@ -100,7 +100,9 @@ function lvlReset () {
 
 //default level geometry function
 //this needs a third input for up or down for the switch selector
-var getNearestRail = function (x, y, dir) {return 0;}
+var getNearestRail = function (x, y, dir) {return 0;};
+var speedLimitCalc = function (x, y) {return 0;};
+var objectCalc = function (x, y, entity) {};
 
 //loads container vars to hold level data (just dir structure that has nowhere else to be)
 var lvlData = [];
