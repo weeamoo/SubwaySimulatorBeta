@@ -25,8 +25,8 @@ function addMikuToTitle () {
 function idleBackground () {
 	if (onStartMenu == true) {
 	    
-		loadLevel(lvlData.debug.test4, 0, 0);
+		loadLevel(lvlData.debug.caramelldansen, 0, 0);
 		player.xSpeed = 0.1;
-	    
+	    	paused = false;
 	}
 }
