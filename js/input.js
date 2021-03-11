@@ -6,16 +6,18 @@ input.left = {};
 input.right = {};
 input.brakes = {};
 input.doorControl = {};
+//container for player input
+player.input = {};
 //pause is weird
 input.pause = {};
 
 //set pressed to false to start
-input.up.pressed = false;
-input.down.pressed = false;
-input.left.pressed = false;
-input.right.pressed = false;
-input.brakes.pressed = false;
-input.doorControl.pressed = false;
+player.input.up = false;
+player.input.down = false;
+player.input.left = false;
+player.input.right = false;
+player.input.brakes = false;
+player.input.doorControl = false;
 //no pressed var for pause cause weird
 
 var viewKeycode = false;
@@ -49,29 +51,29 @@ document.onkeydown = function(event) {
     case input.left.a:
     case input.left.b:
     case input.left.c:
-        input.left.pressed = true;
+        player.input.left = true;
       break;
     case input.right.a:
     case input.right.b:
     case input.right.c:
-        input.right.pressed = true;
+        player.input.right = true;
       break;
     case input.up.a:
     case input.up.b:
     case input.up.c:
-        input.up.pressed = true;
+        player.input.up = true;
         player.lastPress = "Up";
       break;
     case input.down.a:
     case input.down.b:
     case input.down.c:
-        input.down.pressed = true;
+        player.input.down = true;
         player.lastPress = "Down"
       break;
     case input.brakes.a:
     case input.brakes.b:
     case input.brakes.c:
-        input.brakes.pressed = true;
+        player.input.brakes = true;
       break;
 //    pause menu
     case input.pause.a:
@@ -82,7 +84,7 @@ document.onkeydown = function(event) {
     case input.doorControl.a:
     case input.doorControl.b:
     case input.doorControl.c:
-        input.doorControl.pressed = true;
+        player.input.doorControl = true;
         togglePlayerDoor();
       break;
   }
@@ -105,27 +107,27 @@ document.onkeyup = function(event) {
     case input.left.a:
     case input.left.b:
     case input.left.c:
-        input.left.pressed = false;
+        player.input.left = false;
       break;
     case input.right.a:
     case input.right.b:
     case input.right.c:
-        input.right.pressed = false;
+        player.input.right = false;
       break;
     case input.up.a:
     case input.up.b:
     case input.up.c:
-        input.up.pressed = false;
+        player.input.up = false;
       break;
     case input.down.a:
     case input.down.b:
     case input.down.c:
-        input.down.pressed = false;
+        player.input.down = false;
       break;
     case input.brakes.a:
     case input.brakes.b:
     case input.brakes.c:
-        input.brakes.pressed = false;
+        player.input.brakes = false;
       break;
     }
 };
