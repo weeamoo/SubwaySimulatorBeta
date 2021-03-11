@@ -39,7 +39,7 @@ function loadLevel (level, x, y) {
 	eval("document.getElementById(\"lvlLoaderCSS\").href = lvlData." + level + ".css;");
 
 	//HTML data for backgrounds
-	eval("document.getElementById(\"worldBg1\").innerHTML = lvlData." + level + ".bg1;");
+	document.getElementById("worldBg1").innerHTML = getLevelPart(level.bg1);
 	eval("document.getElementById(\"worldBg2\").innerHTML = lvlData." + level + ".bg2;");
 	eval("document.getElementById(\"worldBg3\").innerHTML = lvlData." + level + ".bg3;");
 	eval("document.getElementById(\"worldBg4\").innerHTML = lvlData." + level + ".bg4;");
