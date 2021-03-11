@@ -27,6 +27,9 @@ function loadLevel (level, x, y) {
 
 	//sets geo function
 	getNearestRail = getLevelPart(level.geo);
+	
+	//sets speed limit function
+	speedLimitCalc = getLevelPart(level.speedLimit);
 
 	//level size
 	levelWidth = getLevelPart(level.width);
