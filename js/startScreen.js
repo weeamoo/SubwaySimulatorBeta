@@ -1,5 +1,7 @@
 var onStartMenu = true;
 
+setTimeout(idleBackground(), 60000)
+
 function startGame () {
 
 	//hide title screen
@@ -18,4 +20,13 @@ function startGame () {
 
 function addMikuToTitle () {
 	document.getElementById("titleScreen").style.backgroundImage = "url(\"https://surfinontheinter.net/img/myspace/mikuback.jpg\")";
+}
+
+function idleBackground () {
+	if (onStartMenu == false) {
+	    
+		loadLevel(lvlData.debug.test4, 0, 0);
+		player.xSpeed = 0.1;
+	    
+	}
 }
