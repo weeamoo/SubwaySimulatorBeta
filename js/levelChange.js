@@ -73,7 +73,7 @@ function loadLevel (level, x, y) {
 }
 
 //gets level parts from level data
-function getLevelpart (part) {
+function getLevelPart (part) {
 	return part;
 }
 
