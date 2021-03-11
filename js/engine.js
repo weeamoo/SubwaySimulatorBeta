@@ -142,6 +142,9 @@ function closePlayerDoor () {
 //updates object sent to it (does physics and stuff and sets it to the new position
 function update (entity) {
 
+	//calls for accel calculations
+	calcAccel(entity);
+
 	//applies one frame of movement
 	entity.x = entity.x + entity.xSpeed;
 	entity.y = entity.y + entity.ySpeed;
