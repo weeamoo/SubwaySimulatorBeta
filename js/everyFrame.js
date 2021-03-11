@@ -4,8 +4,6 @@ function everyFrame () {
 	//don't run the game if it's paused
 	if (paused == false) {
 
-		keyActions();
-
 		frameMovement();
 
 		frameSpeedEnv();
@@ -17,39 +15,6 @@ function everyFrame () {
 	requestAnimationFrame(everyFrame);
 }
 
-function keyActions () {
-
-	//for each directions sees if speed is far enough away from zero then calls accel function
-	if (input.left.pressed && player.xSpeed > player.maxXSpeed * -1) {
-		if (Math.abs(player.xSpeed) < player.kick) {
-			player.xSpeed = 0 - player.kick;
-		}
-		player.xSpeed = accel(player.xSpeed, -1, player.accelPower);
-	} else if (input.right.pressed && player.xSpeed < player.maxXSpeed * 1) {
-		if (Math.abs(player.xSpeed) < player.kick) {
-			player.xSpeed = player.kick;
-		}
-		player.xSpeed = accel(player.xSpeed, 1, player.accelPower);
-	}
-	
-	//y coord movement if you have freecam or unlocked
-	
-	if (player.noclip || player.unlockY) {
-		if (input.down.pressed && player.ySpeed > player.maxYSpeed * -1) {
-		if (Math.abs(player.ySpeed) < player.kick) {
-			player.ySpeed = 0 - player.kick;
-		}
-		player.ySpeed = accel(player.ySpeed, -1, player.accelPower);
-	} else if (input.up.pressed && player.xSpeed > player.maxYSpeed * 1) {
-		if (Math.abs(player.ySpeed) < player.kick) {
-			player.ySpeed = player.kick;
-		}
-		player.ySpeed = accel(player.xSpeed, 1, player.accelPower);
-	}
-	}
-
-}
-
 function frameMovement () {
 	
 	update(player);
@@ -57,7 +22,7 @@ function frameMovement () {
 }
 
 function frameSpeedEnv () {
-	if (input.brakes.pressed) {
+	if (player.input.brakes) {
 		if (Math.abs(player.xSpeed) < player.brakesFullStop) {
 			player.xSpeed = 0;
 		} else if (player.xSpeed > 0) {

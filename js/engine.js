@@ -152,6 +152,38 @@ function update (entity) {
 	}
 }
 
+function calcAccel (entity) {
+	//made to be called by update function to accelereate entity based off it's inputs
+	//for each directions sees if speed is far enough away from zero then calls accel function
+	if (entity.input.left && entity.xSpeed > entity.maxXSpeed * -1) {
+		if (Math.abs(entity.xSpeed) < entity.kick) {
+			entity.xSpeed = 0 - entity.kick;
+		}
+		entity.xSpeed = accel(entity.xSpeed, -1, entity.accelPower);
+	} else if (entity.input.right && entity.xSpeed < entity.maxXSpeed * 1) {
+		if (Math.abs(entity.xSpeed) < entity.kick) {
+			entity.xSpeed = entity.kick;
+		}
+		entity.xSpeed = accel(entity.xSpeed, 1, entity.accelPower);
+	}
+	
+	//y coord movement if you have freecam or unlocked
+	
+	if (entity.noclip) {
+		if (entity.input.down && entity.ySpeed > entity.maxYSpeed * -1) {
+		if (Math.abs(entity.ySpeed) < entity.kick) {
+			entity.ySpeed = 0 - entity.kick;
+		}
+		entity.ySpeed = accel(entity.ySpeed, -1, entity.accelPower);
+	} else if (entity.input.up && entity.xSpeed > entity.maxYSpeed * 1) {
+		if (Math.abs(entity.ySpeed) < entity.kick) {
+			entity.ySpeed = entity.kick;
+		}
+		entity.ySpeed = accel(entity.xSpeed, 1, entity.accelPower);
+	}
+	}
+}
+
 //rando vars
 
 //container var for player data
