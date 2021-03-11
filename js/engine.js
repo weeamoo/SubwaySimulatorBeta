@@ -141,7 +141,15 @@ function closePlayerDoor () {
 
 //updates object sent to it (does physics and stuff and sets it to the new position
 function update (entity) {
-	entity.y = getNearestRail(entity.x, entity.y, entity.lastPress);
+
+	//applies one frame of movement
+	entity.x = entity.x + entity.xSpeed;
+	entity.y = entity.y + entity.ySpeed;
+
+	//sets y to where the rail is (if needed)
+	if (entity.noClip == false) {
+		entity.y = getNearestRail(entity.x, entity.y, entity.lastPress);
+	}
 }
 
 //rando vars
@@ -149,8 +157,8 @@ function update (entity) {
 //container var for player data
 var player = {};
 
-var noClip = false;
 var freeCam = false;
+player.noClip = false;
 player.unlockY = false;
 player.xSpeed = 0;
 player.ySpeed = 0;
