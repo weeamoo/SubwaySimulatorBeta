@@ -30,5 +30,7 @@ function renderStuff () {
 	//updates background position with offset value
 	updateBackPos(0 - xOffset, 0 - yOffset);
 
+}
+
 //inital call to function to start eveything up
 requestAnimationFrame(everyFrame);
