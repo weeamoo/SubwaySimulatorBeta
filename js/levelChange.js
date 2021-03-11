@@ -36,7 +36,7 @@ function loadLevel (level, x, y) {
 	calcBounds()
 
 	//css sheet for background
-	document.getElementById(lvlLoaderCSS).href = getLevelPart(level.css);
+	document.getElementById("lvlLoaderCSS").href = getLevelPart(level.css);
 
 	//HTML data for backgrounds
 	document.getElementById("worldBg1").innerHTML = getLevelPart(level.bg1);
