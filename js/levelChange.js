@@ -31,7 +31,7 @@ function loadLevel (level, x, y) {
 	//sets speed limit function
 	speedLimitCalc = getLevelPart(level.speedLimit);
 	
-	/sets function for objects that can be collided with
+	//sets function for objects that can be collided with
 	objectCalc = getLevelPart(level.speedLimit);
 
 	//level size
