@@ -34,7 +34,7 @@ function keyActions () {
 	
 	//y coord movement if you have freecam or unlocked
 	
-	if (noClip || player.unlockY) {
+	if (player.noclip || player.unlockY) {
 		if (input.down.pressed && player.ySpeed > player.maxYSpeed * -1) {
 		if (Math.abs(player.ySpeed) < player.kick) {
 			player.ySpeed = 0 - player.kick;
