@@ -8,7 +8,7 @@ function everyFrame () {
 
 		renderStuff();
 
-		getControllerInput();
+		updateInput();
 		
 	}
 
