@@ -78,6 +78,7 @@ function updateInput () {
       case -1:
         player.input.up = true;
         player.input.down = false;
+        player.lastPress = "Up";
       break;
       case 0:
         player.input.up = false;
@@ -86,6 +87,7 @@ function updateInput () {
       case 1:
         player.input.up = false;
         player.input.down = true;
+        player.lastPress = "Down";
       break;
     }
 
