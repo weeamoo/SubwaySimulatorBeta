@@ -16,7 +16,9 @@ function exit () {
 	setTimeout(function(){document.getElementById("title").innerHTML = "cya l8";}, 1000);
 	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "cya l8r";}, 1100);
 	setTimeout(function(){document.getElementById("title").innerHTML = "cya l8r";}, 1100);
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "Redirecting to Hentai Haven";}, 7500);
+	setTimeout(function(){document.getElementById("title").innerHTML = "Redirecting to Hentai Haven";}, 7500);
 
-	setTimeout(function(){window.location.replace("https://hentaihaven.org/");}, 10000);
+	setTimeout(function(){window.location.replace("https://hentaihaven.xxx/");}, 10000);
 
 }
