@@ -7,6 +7,9 @@ function everyFrame () {
 		frameMovement();
 
 		renderStuff();
+
+		getControllerInput();
+		
 	}
 
 	//calls function after one frame has passed

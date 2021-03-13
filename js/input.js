@@ -1,5 +1,6 @@
 //empty container vars
-var input = {};
+var input = {};\
+var gamepad;
 input.up = {};
 input.down = {};
 input.left = {};
@@ -131,3 +132,7 @@ document.onkeyup = function(event) {
       break;
     }
 };
+
+function getControllerInput () {
+  gamepad = navigator.getGamepads()[0];
+}
