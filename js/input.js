@@ -1,5 +1,5 @@
 //empty container vars
-var input = {};\
+var input = {};
 var gamepad;
 input.up = {};
 input.down = {};
