@@ -50,11 +50,11 @@ input.doorControl.c = "UNBOUND";
 //called every frame to update input values
 function updateInput () {
 
+  //updates gamepad var with new info
+  getControllerInput();
+
   //controller support is new so it is off by default
   if (controllerMode) {
-
-    //updates gamepad var with new info
-    getControllerInput();
 
     //left and right axis
     switch (gamepad.axes[0]) {
