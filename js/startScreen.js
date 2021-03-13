@@ -1,6 +1,6 @@
 var onStartMenu = true;
 
-setTimeout(function(){idleBackground()}, 60000)
+setTimeout(function(){idleBackground()}, 60000);
 
 function startGame () {
 

@@ -1,35 +1,22 @@
 function exit () {
 
-	//does not fucking work will fix later
+	//should work now
 
-	document.getElementById("pauseMenuH1").innerHTML = "c";
-	document.getElementById("title").innerHTML = "c";
-	sleep(200);
-	document.getElementById("pauseMenuH1").innerHTML = "cy";
-	document.getElementById("title").innerHTML = "cy";
-	sleep(200);
-	document.getElementById("pauseMenuH1").innerHTML = "cya";
-	document.getElementById("title").innerHTML = "cya";
-	sleep(200);
-	document.getElementById("pauseMenuH1").innerHTML = "cya ";
-	document.getElementById("title").innerHTML = "cya ";
-	sleep(200);
-	document.getElementById("pauseMenuH1").innerHTML = "cya l";
-	document.getElementById("title").innerHTML = "cya l";
-	sleep(200);
-	document.getElementById("pauseMenuH1").innerHTML = "cya l8";
-	document.getElementById("title").innerHTML = "cya l8";
-	sleep(200);
-	document.getElementById("pauseMenuH1").innerHTML = "cya l8r";
-	document.getElementById("title").innerHTML = "cya l8r";
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "c";}, 200);
+	setTimeout(function(){document.getElementById("title").innerHTML = "c";}, 200);
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "cy";}, 400);
+	setTimeout(function(){document.getElementById("title").innerHTML = "cy";}, 400);
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "cya";}, 600);
+	setTimeout(function(){document.getElementById("title").innerHTML = "cya";}, 600);
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "cya ";}, 800);
+	setTimeout(function(){document.getElementById("title").innerHTML = "cya ";}, 800);
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "cya l";}, 900);
+	setTimeout(function(){document.getElementById("title").innerHTML = "cya l";}, 900);
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "cya l8";}, 1000);
+	setTimeout(function(){document.getElementById("title").innerHTML = "cya l8";}, 1000);
+	setTimeout(function(){document.getElementById("pauseMenuH1").innerHTML = "cya l8r";}, 1100);
+	setTimeout(function(){document.getElementById("title").innerHTML = "cya l8r";}, 1100);
 
-	window.location.replace("https://hentaihaven.org/");
-}
+	setTimeout(function(){window.location.replace("https://hentaihaven.org/");}, 10000);
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
 }
