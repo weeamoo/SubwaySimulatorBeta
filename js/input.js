@@ -1,6 +1,7 @@
 //empty container vars
 var input = {};
 var gamepad;
+var controllerMode = false;
 input.up = {};
 input.down = {};
 input.left = {};
@@ -45,6 +46,71 @@ input.pause.c = "UNBOUND";
 input.doorControl.a = 71;
 input.doorControl.b = "UNBOUND";
 input.doorControl.c = "UNBOUND";
+
+//called every frame to update input values
+function updateInput () {
+
+  //controller support is new so it is off by default
+  if (controllerMode) {
+
+    //updates gamepad var with new info
+    getControllerInput();
+
+    //left and right axis
+    switch (gamepad.axes[0]) {
+      case -1:
+        player.input.left = true;
+        player.input.right = false;
+      break;
+      case 0:
+        player.input.left = false;
+        player.input.right = false;
+      break;
+      case 1:
+        player.input.left = false;
+        player.input.right = true;
+      break;
+    }
+
+    //up and down axis
+    //looks backwards but it works
+    switch (gamepad.axes[1]) {
+      case -1:
+        player.input.up = true;
+        player.input.down = false;
+      break;
+      case 0:
+        player.input.up = false;
+        player.input.down = false;
+      break;
+      case 1:
+        player.input.up = false;
+        player.input.down = true;
+      break;
+    }
+
+    //B button
+    //B for breaks
+    if (gamepad.buttons[0].pressed) {
+      player.input.brakes = true;
+    } else {
+      player.input.brakes = false;
+    }
+
+    //select
+    //select = door?
+    //what the fuck
+    //it's testing
+    //k fine
+    if (gamepad.buttons[9].pressed) {
+      player.input.doorControl = true;
+    } else {
+      player.input.doorControl = false;
+    }
+  
+  }
+  
+}
 
 //sets var to true when key is pressed
 document.onkeydown = function(event) {
