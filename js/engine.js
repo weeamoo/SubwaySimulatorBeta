@@ -151,7 +151,21 @@ function update (entity) {
 
 	//sets y to where the rail is (if needed)
 	if (entity.noClip == false) {
-		entity.y = getNearestRail(entity.x, entity.y, entity.lastPress);
+
+		//if it's below the track (going uphill) move it up to rail and upates upwards speed
+		if (entity.y <= getNearestRail(entity.x, entity.y, entity.lastPress)) {
+			//applies Y movement
+			entity.ySpeed = getNearestRail(entity.x, entity.y, entity.lastPress) - entity.y;
+		} else {
+			//shit's falling need to calc gravity
+			if (entity.ySpeed < entity.terminalVelocity * -1) {
+				//falling faster than terminal velocity nothing to do
+			} else {
+				//calc gravity
+				entity.ySpeed = entity.ySpeed + 4.083333333;
+			}
+		}
+		
 	}
 
 	//applies camera offset
@@ -219,6 +233,7 @@ player.lastPress = "Up";
 player.doorOpen = false;
 player.x = 0;
 player.y = 0;
+player.terminalVelocity = 81000;
 player.id = "playerCarDiv";
 //putting some semicontstants here lol
 //semi constants, can be changed when buying upgrandes
