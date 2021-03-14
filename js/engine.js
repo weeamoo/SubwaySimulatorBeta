@@ -162,7 +162,7 @@ function update (entity) {
 				//falling faster than terminal velocity nothing to do
 			} else {
 				//calc gravity
-				entity.ySpeed = entity.ySpeed + 4.083333333;
+				entity.ySpeed = entity.ySpeed - 4.083333333;
 			}
 		}
 		
