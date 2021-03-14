@@ -251,7 +251,7 @@ player.y = 0;
 //max downward speed that can come from gravity
 player.terminalVelocity = 81000;
 //weight more makes it fall faster
-player.weight = 4.083333333;
+player.weight = 1;
 //HTML ID of the elemet for the code to control
 player.id = "playerCarDiv";
 //putting some semicontstants here lol
