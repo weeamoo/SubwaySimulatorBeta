@@ -162,7 +162,7 @@ function update (entity) {
 				//falling faster than terminal velocity nothing to do
 			} else {
 				//calc gravity
-				entity.ySpeed = entity.ySpeed - 4.083333333;
+				entity.ySpeed = entity.ySpeed - player.weight;
 			}
 		}
 		
@@ -220,20 +220,39 @@ function calcAccel (entity) {
 //container var for player data
 var player = {};
 
+//don't change thease directly
+//thease store weather thease modes are enabled
+//freecam enables the scrollbars so you can move the camera
+//toggle with toggleFreeCam()
 var freeCam = false;
+//turns off collision detection when true
+//toggle with toggleNoClip()
 player.noClip = false;
+//was for testing stuff, replaced by noclip, this one is probably not used
 player.unlockY = false;
+//I don't think I need to explain thease
 player.xSpeed = 0;
 player.ySpeed = 0;
+//how many wanted stars you have
 player.wantedLevel = 0;
+//top speed of the car
 player.maxXSpeed = 25;
+//I don't think this is used
 player.maxYSpeed = 25;
+//fastest the car is legally allowed to go
 player.speedLimit = 0;
+//used for switches
 player.lastPress = "Up";
+//door state
 player.doorOpen = false;
+//coords
 player.x = 0;
 player.y = 0;
+//max downward speed that can come from gravity
 player.terminalVelocity = 81000;
+//weight more makes it fall faster
+player.weight = 4.083333333;
+//HTML ID of the elemet for the code to control
 player.id = "playerCarDiv";
 //putting some semicontstants here lol
 //semi constants, can be changed when buying upgrandes
