@@ -41,7 +41,7 @@ input.doorControl.c = "UNBOUND";
 
 //generate pressed vars
 for (var property in input) {
-  input.property.pressed = false;
+  eval("input." + property + ".pressed = false");
 }
 
 //called every frame to update input values
