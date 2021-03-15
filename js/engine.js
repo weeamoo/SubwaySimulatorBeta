@@ -296,6 +296,7 @@ var entity = {};
 //container var for player data
 entity.player = defaultEntityData();
 entity.player.id = "playerCarDiv";
+entity.player.ai = ai.controller;
 
 //don't change thease directly
 //thease store weather thease modes are enabled
