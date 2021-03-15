@@ -15,10 +15,10 @@ function calcBounds () {
 
 //updates offsets for current position
 function updateCameraOffset () {
-	if (player.x < xMin) {
+	if (entity.player.x < xMin) {
 		//smaller than min, camera all the way to the left
 		xOffset = 0;
-	} else if (player.x > xMax) {
+	} else if (entity.player.x > xMax) {
 		//larger than max, camera all the way to the right
 		xOffset = xMax - 800;
 	} else {
@@ -26,10 +26,10 @@ function updateCameraOffset () {
 		xOffset = player.x - xMin;
 	}
 
-	if (player.y < yMin) {
+	if (entity.player.y < yMin) {
 		//smaller than min, camera all the way to the bottom
 		yOffset = 0;
-	} else if (player.y > yMax) {
+	} else if (entity.player.y > yMax) {
 		//larger than max, camera all the way to the bottom
 		yOffset = yMax - 450;
 	} else {
@@ -38,7 +38,7 @@ function updateCameraOffset () {
 	} 
 
 	//set to zero if noclip
-	if (player.noclip) {
+	if (entity.player.noclip) {
 		xOffset = 0;
 		yOffset = 0;
 	}
