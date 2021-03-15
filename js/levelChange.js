@@ -17,10 +17,10 @@ var sfg1factor = 0;
 function loadLevel (level, x, y) {
 
 	//clearing stuff
-	player.xSpeed = 0;
-	player.ySpeed = 0;
-	player.x = x;
-	player.y = y;
+	entity.player.xSpeed = 0;
+	entity.player.ySpeed = 0;
+	entity.player.x = x;
+	entity.player.y = y;
 
 	//calls to reset all world divs
 	lvlReset();
