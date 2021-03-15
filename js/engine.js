@@ -140,80 +140,87 @@ function closePlayerDoor () {
 }
 
 //updates object sent to it (does physics and stuff and sets it to the new position
-function update (entity) {
+function update (entityPass) {
 
 	//runs ai for entity
-	entity.ai(entity);
+	entityPass.ai(entityPass);
 
 	//calls for accel calculations
-	calcAccel(entity);
+	calcAccel(entityPass);
 
 	//applies one frame of movement
-	entity.x = entity.x + entity.xSpeed;
-	entity.y = entity.y + entity.ySpeed;
+	entityPass.x = entityPass.x + entityPass.xSpeed;
+	entityPass.y = entityPass.y + entityPass.ySpeed;
 
 	//sets y to where the rail is (if needed)
-	if (entity.noClip == false) {
+	if (entityPass.noClip == false) {
 
 		//if it's below the track (going uphill) move it up to rail and upates upwards speed
-		if (entity.y <= getNearestRail(entity.x, entity.y, entity.lastPress)) {
+		if (entityPass.y <= getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress)) {
 			//applies Y movement
-			entity.ySpeed = getNearestRail(entity.x, entity.y, entity.lastPress) - entity.y;
+			entityPass.ySpeed = getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress) - entityPass.y;
 		} else {
 			//shit's falling need to calc gravity
-			if (entity.ySpeed < entity.terminalVelocity * -1) {
+			if (entityPass.ySpeed < entityPass.terminalVelocity * -1) {
 				//falling faster than terminal velocity nothing to do
 			} else {
 				//calc gravity
-				entity.ySpeed = entity.ySpeed - player.weight;
+				entityPass.ySpeed = entityPass.ySpeed - player.weight;
 			}
 		}
 		
 	}
 
 	//applies camera offset
-	updatePos(entity.id ,entity.x - xOffset, entity.y - yOffset);
+	updatePos(entityPass.id ,entityPass.x - xOffset, entityPass.y - yOffset);
 }
 
-function calcAccel (entity) {
+function updateAll (entityPass) {
+	//updates all entities in container passed to it
+	for (var property in entityPass) {
+		eval("update(" + entityPass + "." + property + ");");
+	}
+}
+
+function calcAccel (entityPass) {
 	//made to be called by update function to accelereate entity based off it's inputs
 	//for each directions sees if speed is far enough away from zero then calls accel function
-	if (entity.input.left && entity.xSpeed > entity.maxXSpeed * -1) {
-		if (Math.abs(entity.xSpeed) < entity.kick) {
-			entity.xSpeed = 0 - entity.kick;
+	if (entityPass.input.left && entityPass.xSpeed > entityPass.maxXSpeed * -1) {
+		if (Math.abs(entityPass.xSpeed) < entityPass.kick) {
+			entityPass.xSpeed = 0 - entityPass.kick;
 		}
-		entity.xSpeed = accel(entity.xSpeed, -1, entity.accelPower);
-	} else if (entity.input.right && entity.xSpeed < entity.maxXSpeed * 1) {
-		if (Math.abs(entity.xSpeed) < entity.kick) {
-			entity.xSpeed = entity.kick;
+		entityPass.xSpeed = accel(entityPass.xSpeed, -1, entityPass.accelPower);
+	} else if (entityPass.input.right && entityPass.xSpeed < entityPass.maxXSpeed * 1) {
+		if (Math.abs(entityPass.xSpeed) < entityPass.kick) {
+			entityPass.xSpeed = entityPass.kick;
 		}
-		entity.xSpeed = accel(entity.xSpeed, 1, entity.accelPower);
+		entityPass.xSpeed = accel(entityPass.xSpeed, 1, entityPass.accelPower);
 	}
 	
 	//y coord movement if you have freecam or unlocked
 	
-	if (entity.noclip) {
-		if (entity.input.down && entity.ySpeed > entity.maxYSpeed * -1) {
-		if (Math.abs(entity.ySpeed) < entity.kick) {
-			entity.ySpeed = 0 - entity.kick;
+	if (entityPass.noclip) {
+		if (entityPass.input.down && entityPass.ySpeed > entityPass.maxYSpeed * -1) {
+		if (Math.abs(entityPass.ySpeed) < entityPass.kick) {
+			entityPass.ySpeed = 0 - entityPass.kick;
 		}
-		entity.ySpeed = accel(entity.ySpeed, -1, entity.accelPower);
-	} else if (entity.input.up && entity.xSpeed > entity.maxYSpeed * 1) {
-		if (Math.abs(entity.ySpeed) < entity.kick) {
-			entity.ySpeed = entity.kick;
+		entityPass.ySpeed = accel(entityPass.ySpeed, -1, entityPass.accelPower);
+	} else if (entityPass.input.up && entityPass.xSpeed > entityPass.maxYSpeed * 1) {
+		if (Math.abs(entityPass.ySpeed) < entityPass.kick) {
+			entityPass.ySpeed = entityPass.kick;
 		}
-		entity.ySpeed = accel(entity.xSpeed, 1, entity.accelPower);
+		entityPass.ySpeed = accel(entityPass.xSpeed, 1, entityPass.accelPower);
 	}
 	}
 
 	//stuff for brakes
-	if (entity.input.brakes) {
-		if (Math.abs(entity.xSpeed) < entity.brakesFullStop) {
-			entity.xSpeed = 0;
-		} else if (entity.xSpeed > 0) {
-			entity.xSpeed = brake(entity.xSpeed, 1, entity.brakePower);
+	if (entityPass.input.brakes) {
+		if (Math.abs(entityPass.xSpeed) < entityPass.brakesFullStop) {
+			entityPass.xSpeed = 0;
+		} else if (entityPass.xSpeed > 0) {
+			entityPass.xSpeed = brake(entityPass.xSpeed, 1, entityPass.brakePower);
 		} else {
-			entity.xSpeed = brake(entity.xSpeed, -1, entity.brakePower);
+			entityPass.xSpeed = brake(entityPass.xSpeed, -1, entityPass.brakePower);
 		}
 	}
 }
@@ -283,6 +290,8 @@ function defaultEntityData () {
 }
 
 //rando vars
+//all entitiy container
+var entity = {};
 
 //container var for player data
 var player = defaultEntityData();
