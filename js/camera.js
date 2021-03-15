@@ -23,7 +23,7 @@ function updateCameraOffset () {
 		xOffset = xMax - 800;
 	} else {
 		//between min and max, calc offset
-		xOffset = player.x - xMin;
+		xOffset = entity.player.x - xMin;
 	}
 
 	if (entity.player.y < yMin) {
@@ -34,7 +34,7 @@ function updateCameraOffset () {
 		yOffset = yMax - 450;
 	} else {
 		//between min and max, calc offset
-		yOffset = player.y - yMin;
+		yOffset = entity.player.y - yMin;
 	} 
 
 	//set to zero if noclip
