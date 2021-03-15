@@ -275,7 +275,7 @@ function defaultEntityData () {
 	output.input = {};
 
 	for (var property in input) {
-		output.input.property = false;
+		eval("output.input." + property + " = false;");
 	}
 
 	return output;
