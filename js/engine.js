@@ -294,8 +294,8 @@ function defaultEntityData () {
 var entity = {};
 
 //container var for player data
-var player = defaultEntityData();
-player.id = "playerCarDiv";
+entity.player = defaultEntityData();
+entity.player.id = "playerCarDiv";
 
 //don't change thease directly
 //thease store weather thease modes are enabled
