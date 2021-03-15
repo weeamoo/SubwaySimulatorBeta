@@ -8,6 +8,6 @@ ai.default = function (entity) {};
 ai.controller = function (entity) {
 	//goes through each physical input and copies it to entity's input
 	for (var property in input) {
-		entity.input.property = input.property.pressed;
+		eval("entity.input." + property + " = input." + property + ".pressed;");
 	}
 };
