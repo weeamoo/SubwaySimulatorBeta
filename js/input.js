@@ -128,13 +128,13 @@ document.onkeydown = function(event) {
     case input.up.b:
     case input.up.c:
         input.up.pressed = true;
-        player.lastPress = "Up";
+        entity.player.lastPress = "Up";
       break;
     case input.down.a:
     case input.down.b:
     case input.down.c:
         input.down.pressed = true;
-        player.lastPress = "Down"
+        entity.player.lastPress = "Down"
       break;
     case input.brakes.a:
     case input.brakes.b:
