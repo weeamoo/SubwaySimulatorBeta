@@ -178,7 +178,7 @@ function update (entityPass) {
 function updateAll (entityPass) {
 	//updates all entities in container passed to it
 	for (var property in entityPass) {
-		eval("update(" + entityPass + "." + property + ");");
+		eval("update(entityPass." + property + ");");
 	}
 }
 
