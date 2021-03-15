@@ -142,6 +142,9 @@ function closePlayerDoor () {
 //updates object sent to it (does physics and stuff and sets it to the new position
 function update (entity) {
 
+	//runs ai for entity
+	entity.ai(entity);
+
 	//calls for accel calculations
 	calcAccel(entity);
 
@@ -215,57 +218,78 @@ function calcAccel (entity) {
 	}
 }
 
+function defaultEntityData () {
+	//container var for player data
+	var output = {};
+
+	//don't change thease directly
+	//thease store weather thease modes are enabled
+	//freecam enables the scrollbars so you can move the camera
+	//turns off collision detection when true
+	output.noClip = false;
+	//was for testing stuff, replaced by noclip, this one is probably not used
+	output.unlockY = false;
+	//how fast it is currently moving in each direction, should spawn with zero and change later
+	output.xSpeed = 0;
+	output.ySpeed = 0;
+	//how many wanted stars you have
+	output.wantedLevel = 0;
+	//top speed of the car
+	output.maxXSpeed = 25;
+	//I don't think this is used
+	output.maxYSpeed = 25;
+	//fastest the car is legally allowed to go
+	output.speedLimit = 0;
+	//used for switches
+	output.lastPress = "Up";
+	//door state
+	output.doorOpen = false;
+	//coords
+	output.x = 0;
+	output.y = 0;
+	//max downward speed that can come from gravity
+	output.terminalVelocity = 81000;
+	//weight more makes it fall faster
+	output.weight = 1;
+	//HTML ID of the elemet for the code to control
+	//do not use the default one, plz change after making
+	output.id = "default";
+
+	//acceleration power in percent of speed per frame
+	output.accelPower = 0.1;
+
+	//what minimum speed should be when key is held
+	output.kick = 0.05;
+
+	//when the car will stop completely while brakes are held
+	output.brakesFullStop = 0.1;
+
+	//brakes power
+	output.brakePower = 0.1;
+
+	//ai script to use
+	output.ai = ai.default;
+
+	//controll input
+	//container for entity input
+	output.input = {};
+
+	for (var property in input) {
+		output.input.property = false;
+	}
+
+	Return output;
+
+}
+
 //rando vars
 
 //container var for player data
-var player = {};
+var player = defaultEntityData();
+player.id = "playerCarDiv";
 
 //don't change thease directly
 //thease store weather thease modes are enabled
 //freecam enables the scrollbars so you can move the camera
 //toggle with toggleFreeCam()
 var freeCam = false;
-//turns off collision detection when true
-//toggle with toggleNoClip()
-player.noClip = false;
-//was for testing stuff, replaced by noclip, this one is probably not used
-player.unlockY = false;
-//I don't think I need to explain thease
-player.xSpeed = 0;
-player.ySpeed = 0;
-//how many wanted stars you have
-player.wantedLevel = 0;
-//top speed of the car
-player.maxXSpeed = 25;
-//I don't think this is used
-player.maxYSpeed = 25;
-//fastest the car is legally allowed to go
-player.speedLimit = 0;
-//used for switches
-player.lastPress = "Up";
-//door state
-player.doorOpen = false;
-//coords
-player.x = 0;
-player.y = 0;
-//max downward speed that can come from gravity
-player.terminalVelocity = 81000;
-//weight more makes it fall faster
-player.weight = 1;
-//HTML ID of the elemet for the code to control
-player.id = "playerCarDiv";
-//putting some semicontstants here lol
-//semi constants, can be changed when buying upgrandes
-
-
-//acceleration power in percent of speed per frame
-player.accelPower = 0.1;
-
-//what minimum speed should be when key is held
-player.kick = 0.05;
-
-//when the car will stop completely while brakes are held
-player.brakesFullStop = 0.1;
-
-//brakes power
-player.brakePower = 0.1;

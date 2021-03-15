@@ -2,24 +2,16 @@
 var input = {};
 var gamepad;
 var controllerMode = false;
+//this is the list of bindable controlls in the game and stuff pulls from it now
 input.up = {};
 input.down = {};
 input.left = {};
 input.right = {};
 input.brakes = {};
 input.doorControl = {};
-//container for player input
-player.input = {};
-//pause is weird
 input.pause = {};
+//pause is weird
 
-//set pressed to false to start
-player.input.up = false;
-player.input.down = false;
-player.input.left = false;
-player.input.right = false;
-player.input.brakes = false;
-player.input.doorControl = false;
 //no pressed var for pause cause weird
 
 var viewKeycode = false;
@@ -47,6 +39,11 @@ input.doorControl.a = 71;
 input.doorControl.b = "UNBOUND";
 input.doorControl.c = "UNBOUND";
 
+//generate pressed vars
+for (var property in input) {
+  input.property.pressed = false;
+}
+
 //called every frame to update input values
 function updateInput () {
 
@@ -59,16 +56,16 @@ function updateInput () {
     //left and right axis
     switch (gamepad.axes[0]) {
       case -1:
-        player.input.left = true;
-        player.input.right = false;
+        input.left.pressed = true;
+        input.right.pressed = false;
       break;
       case 0:
-        player.input.left = false;
-        player.input.right = false;
+        input.left.pressed = false;
+        input.right.pressed = false;
       break;
       case 1:
-        player.input.left = false;
-        player.input.right = true;
+        input.left.pressed = false;
+        input.right.pressed = true;
       break;
     }
 
@@ -76,17 +73,17 @@ function updateInput () {
     //looks backwards but it works
     switch (gamepad.axes[1]) {
       case -1:
-        player.input.up = true;
-        player.input.down = false;
+        input.up.pressed = true;
+        input.down.pressed = false;
         player.lastPress = "Up";
       break;
       case 0:
-        player.input.up = false;
-        player.input.down = false;
+        input.up.pressed = false;
+        input.down.pressed = false;
       break;
       case 1:
-        player.input.up = false;
-        player.input.down = true;
+        input.up.pressed = false;
+        input.down.pressed = true;
         player.lastPress = "Down";
       break;
     }
@@ -94,9 +91,9 @@ function updateInput () {
     //B button
     //B for breaks
     if (gamepad.buttons[0].pressed) {
-      player.input.brakes = true;
+      input.brakes.pressed = true;
     } else {
-      player.input.brakes = false;
+      input.brakes.pressed = false;
     }
 
     //select
@@ -105,9 +102,9 @@ function updateInput () {
     //it's testing
     //k fine
     if (gamepad.buttons[9].pressed) {
-      player.input.doorControl = true;
+      input.doorControl.pressed = true;
     } else {
-      player.input.doorControl = false;
+      input.doorControl.pressed = false;
     }
   
   }
@@ -120,29 +117,29 @@ document.onkeydown = function(event) {
     case input.left.a:
     case input.left.b:
     case input.left.c:
-        player.input.left = true;
+        input.left.pressed = true;
       break;
     case input.right.a:
     case input.right.b:
     case input.right.c:
-        player.input.right = true;
+        input.right.pressed = true;
       break;
     case input.up.a:
     case input.up.b:
     case input.up.c:
-        player.input.up = true;
+        input.up.pressed = true;
         player.lastPress = "Up";
       break;
     case input.down.a:
     case input.down.b:
     case input.down.c:
-        player.input.down = true;
+        input.down.pressed = true;
         player.lastPress = "Down"
       break;
     case input.brakes.a:
     case input.brakes.b:
     case input.brakes.c:
-        player.input.brakes = true;
+        input.brakes.pressed = true;
       break;
 //    pause menu
     case input.pause.a:
@@ -153,7 +150,7 @@ document.onkeydown = function(event) {
     case input.doorControl.a:
     case input.doorControl.b:
     case input.doorControl.c:
-        player.input.doorControl = true;
+        input.doorControl.pressed = true;
         togglePlayerDoor();
       break;
   }
@@ -176,27 +173,27 @@ document.onkeyup = function(event) {
     case input.left.a:
     case input.left.b:
     case input.left.c:
-        player.input.left = false;
+        input.left.pressed = false;
       break;
     case input.right.a:
     case input.right.b:
     case input.right.c:
-        player.input.right = false;
+        input.right.pressed = false;
       break;
     case input.up.a:
     case input.up.b:
     case input.up.c:
-        player.input.up = false;
+        input.up.pressed = false;
       break;
     case input.down.a:
     case input.down.b:
     case input.down.c:
-        player.input.down = false;
+        input.down.pressed = false;
       break;
     case input.brakes.a:
     case input.brakes.b:
     case input.brakes.c:
-        player.input.brakes = false;
+        input.brakes.pressed = false;
       break;
     }
 };
