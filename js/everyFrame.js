@@ -18,7 +18,7 @@ function everyFrame () {
 
 function frameMovement () {
 	
-	update(player);
+	updateAll(entity);
 
 }
 
