@@ -165,7 +165,7 @@ function update (entityPass) {
 				//falling faster than terminal velocity nothing to do
 			} else {
 				//calc gravity
-				entityPass.ySpeed = entityPass.ySpeed - player.weight;
+				entityPass.ySpeed = entityPass.ySpeed - entityPass.weight;
 			}
 		}
 		
