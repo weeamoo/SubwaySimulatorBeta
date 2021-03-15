@@ -278,7 +278,7 @@ function defaultEntityData () {
 		output.input.property = false;
 	}
 
-	Return output;
+	return output;
 
 }
 
