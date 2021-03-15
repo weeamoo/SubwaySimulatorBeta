@@ -106,11 +106,11 @@ function updateHUD () {
 	//internal speed value is game units per frame
 	//game runs at 60 fps
 	// 1/25 * 60 * 60 / 1000
-	document.getElementById('hudSpeedDisplay').innerHTML = (player.xSpeed * 8.64).toFixed(2) + " KM/H";
+	document.getElementById('hudSpeedDisplay').innerHTML = (entity.player.xSpeed * 8.64).toFixed(2) + " KM/H";
 	//update speed limit display
-	document.getElementById('hudSpeedLimitDisplay').innerHTML = (player.speedLimit * 8.64).toFixed(2) + " KM/H";
+	document.getElementById('hudSpeedLimitDisplay').innerHTML = (entity.player.speedLimit * 8.64).toFixed(2) + " KM/H";
 	//update switch choice display
-	document.getElementById('hudSwitchDisplay').innerHTML = player.lastPress;
+	document.getElementById('hudSwitchDisplay').innerHTML = entity.player.lastPress;
 }
 
 //music player stuff
