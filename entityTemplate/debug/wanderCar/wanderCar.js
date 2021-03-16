@@ -1,4 +1,7 @@
-entityTemplate.wanderCar = function (name, x, y) {
+//debug folder
+entityTemplate.debug = {};
+
+entityTemplate.debug.wanderCar = function (name, x, y) {
 	//name			the name for the entity, ex: if this was creeper it's JS var would be entity.creeper and it's html ID would be entity_creeper
 	//x x-coord
 	//y y-coord
