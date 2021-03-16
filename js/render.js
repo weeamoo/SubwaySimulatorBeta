@@ -29,6 +29,11 @@ function updateBackPos (xPass, yPass) {
 	xPos.sfg1 = xPass * sfg1factor / 16;
 	yPos.sfg1 = yPass * sfg1factor / 9;
 
+	//entity container
+
+	xPos.en = xPass * bg5factor / 16;
+	yPos.en = yPass * bg5factor / 9;
+
 	document.getElementById("worldBg1").style.left = xPos.bg1 + "%";
 	document.getElementById("worldBg1").style.bottom = yPos.bg1 + "%"
 	document.getElementById("worldBg2").style.left = xPos.bg2 + "%";
@@ -51,6 +56,9 @@ function updateBackPos (xPass, yPass) {
 	document.getElementById("worldFg5").style.bottom = yPos.fg5 + "%"
 	document.getElementById("worldSFg1").style.left = xPos.sfg1 + "%";
 	document.getElementById("worldSFg1").style.bottom = yPos.sfg1 + "%"
+
+	document.getElementById("entityDiv").style.left = xPos.en + "%";
+	document.getElementById("entityDiv").style.bottom = yPos.en + "%"
 }
 
 //universial function that can move everything

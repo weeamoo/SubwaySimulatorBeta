@@ -172,7 +172,7 @@ function update (entityPass) {
 	}
 
 	//applies camera offset
-	updatePos(entityPass.id ,entityPass.x - xOffset, entityPass.y - yOffset);
+	updatePos(entityPass.id ,entityPass.x, entityPass.y);
 }
 
 function updateAll (entityPass) {
@@ -289,6 +289,15 @@ function defaultEntityData () {
 
 }
 
+//function for spawning entity
+function summon (entityPass, x, y) {
+	//will create entity that it's given but override the x and y with what you give it
+
+	//adds html data to page
+	document.getElementById("entityDiv").innerHTML = document.getElementById("entityDiv").innerHTML + entityPass.html;
+
+}
+
 //rando vars
 //all entitiy container
 var entity = {};
@@ -297,6 +306,7 @@ var entity = {};
 entity.player = defaultEntityData();
 entity.player.id = "playerCarDiv";
 entity.player.ai = ai.controller;
+entity.player.html = "<img id=\"playerCarBodyImg\" class=\"playerCarImg\" src=\"/img/player/car.png\"><img id=\"playerCarDoorImg\" class=\"playerCarImg\" src=\"/img/player/door.png\">";
 
 //don't change thease directly
 //thease store weather thease modes are enabled
