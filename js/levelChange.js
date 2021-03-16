@@ -21,6 +21,7 @@ function loadLevel (level, x, y) {
 	entity.player.ySpeed = 0;
 	entity.player.x = x;
 	entity.player.y = y;
+	removeAllEntities();
 
 	//calls to reset all world divs
 	lvlReset();
