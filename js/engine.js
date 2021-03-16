@@ -172,7 +172,7 @@ function update (entityPass) {
 	}
 
 	//applies camera offset
-	updatePos(entityPass.id ,entityPass.x, entityPass.y);
+	updatePos(entity.id ,entity.x - xOffset, entity.y - yOffset);
 }
 
 function updateAll (entityPass) {
