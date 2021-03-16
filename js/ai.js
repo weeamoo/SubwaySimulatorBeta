@@ -15,7 +15,7 @@ ai.controller = function (entityPass) {
 //simple ai for car to go from one side of the map to the other 
 ai.wanderCar = function (entityPass) {
 	//slow movemet, will hit the brakes if going too fast
-	if (Math.abs(entityPass.xSpeed) > 1) {
+	if (Math.abs(entityPass.xSpeed) > entityPass.speedLimit) {
 		entityPass.input.brakes = true;
 		entityPass.input.left = false;
 		entityPass.input.right = false;

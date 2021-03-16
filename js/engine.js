@@ -246,7 +246,7 @@ function defaultEntityData () {
 	//I don't think this is used
 	output.maxYSpeed = 25;
 	//fastest the car is legally allowed to go
-	output.speedLimit = 0;
+	output.speedLimit = 2;
 	//used for switches
 	output.lastPress = "Up";
 	//door state
