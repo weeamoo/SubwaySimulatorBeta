@@ -60,7 +60,7 @@ function wallpaperMode () {
 	entity = {};
 
 	summon(entityTemplate.player("player", 0, 0));
-	player.ai = ai.wanderCar;
+	entity.player.ai = ai.wanderCar;
 	    
 	loadLevel(lvlData.debug.test4, 0, 0);
 	paused = false;
