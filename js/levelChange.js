@@ -1,6 +1,7 @@
 //container vars
 var levelWidth = 0;
 var levelHeight = 0;
+var playerBackup = {};
 
 var bg1factor = 0;
 var bg2factor = 0;
@@ -21,7 +22,10 @@ function loadLevel (level, x, y) {
 	entity.player.ySpeed = 0;
 	entity.player.x = x;
 	entity.player.y = y;
+	
+	playerBackup = entity.player;
 	removeAllEntities();
+	summon(playerBackup);
 
 	//calls to reset all world divs
 	lvlReset();
