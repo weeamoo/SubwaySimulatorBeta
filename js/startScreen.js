@@ -35,10 +35,9 @@ function idleBackground () {
 		entity = {};
 
 		summon(entityTemplate.player("player", 0, 0));
-		player.ai = ai.
+		player.ai = ai.wanderCar;
 	    
 		loadLevel(lvlData.debug.test4, 0, 0);
-		player.xSpeed = 0.1;
 	    	paused = false;
 	}
 }
