@@ -14,11 +14,14 @@ function startGame () {
 	loadLevel(lvlData.debug.test4, 0, 0);
 	
 	//make player car exist
-	summon(entityTemplate.player("player", 0, 0));
+	//summon(entityTemplate.player("player", 0, 0));
 
 	//slef
 	onStartMenu = false;
 	paused = false;
+	
+	//make sure you control car
+	entity.player.ai = ai.controller;
 }
 
 function addMikuToTitle () {
@@ -55,7 +58,7 @@ function wallpaperMode () {
 	
 	loadLevel(lvlData.debug.test4, 0, 0);
 
-	summon(entityTemplate.player("player", 0, 0));
+	//summon(entityTemplate.player("player", 0, 0));
 	entity.player.ai = ai.wanderCar;
 	    
 	paused = false;
