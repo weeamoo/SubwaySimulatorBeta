@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
 	
 	//checks to see if wallpaper mode is passed to it once everything is loaded
 	if (window.location.toString().slice(-15) == "?wallpaper=true") {
-		setTimeout(function(){wallpaperMode()}, 3000);
+		wallpaperMode();
 	}
 }
 
