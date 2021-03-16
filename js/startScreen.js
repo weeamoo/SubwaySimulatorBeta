@@ -3,6 +3,9 @@ var onStartMenu = true;
 setTimeout(function(){idleBackground()}, 60000);
 
 function startGame () {
+	
+	//clear it out
+	entity = {};
 
 	//make player car exist
 	summon(entityTemplate.player("player", 0, 0));
@@ -27,8 +30,12 @@ function addMikuToTitle () {
 
 function idleBackground () {
 	if (onStartMenu == true) {
+		
+		//clear it out
+		entity = {};
 
 		summon(entityTemplate.player("player", 0, 0));
+		player.ai = ai.
 	    
 		loadLevel(lvlData.debug.test4, 0, 0);
 		player.xSpeed = 0.1;
