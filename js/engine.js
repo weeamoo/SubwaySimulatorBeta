@@ -305,6 +305,11 @@ function summon (entityPass) {
 
 }
 
+function removeAllEntities () {
+	entity = {};
+	document.getElementById("entityDiv").innerHTML = "";
+}
+
 //rando vars
 //all entitiy container
 var entity = {};
