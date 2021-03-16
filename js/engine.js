@@ -293,8 +293,8 @@ function defaultEntityData () {
 function summon (entityPass) {
 
 	//to use this do summon([templateFunction](name, x, y));
-	//ex: to spawn the player and name them "player"
-	//summon(entityTemplate.player("player", x, y));
+	//ex: to spawn the player and name them "player" and have them spawn at 0, 0
+	//summon(entityTemplate.player("player", 0, 0));
 
 	//entityPass	refrence to the template for entity
 	//makes the entity var
