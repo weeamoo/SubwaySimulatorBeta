@@ -22,7 +22,7 @@ div#worldBg1, div#worldBg2, div#worldBg3, div#worldBg4, div#worldBg5, div#entity
 }
 
 /*player subway car */
-div#playerCarDiv {
+div#entity_player {
 	position: absolute;
 	width: 6.25%;
 	height: 10%;

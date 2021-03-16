@@ -290,8 +290,15 @@ function defaultEntityData () {
 }
 
 //function for spawning entity
-function summon (entityPass, x, y) {
-	//will create entity that it's given but override the x and y with what you give it
+function summon (entityPass) {
+
+	//to use this do summon([templateFunction](name, x, y));
+	//ex: to spawn the player and name them "player"
+	//summon(entityTemplate.player("player", x, y));
+
+	//entityPass	refrence to the template for entity
+	//makes the entity var
+	eval("entity." + entityPass.name + " = entityPass");
 
 	//adds html data to page
 	document.getElementById("entityDiv").innerHTML = document.getElementById("entityDiv").innerHTML + entityPass.html;
@@ -302,11 +309,8 @@ function summon (entityPass, x, y) {
 //all entitiy container
 var entity = {};
 
-//container var for player data
-entity.player = defaultEntityData();
-entity.player.id = "playerCarDiv";
-entity.player.ai = ai.controller;
-entity.player.html = "<img id=\"playerCarBodyImg\" class=\"playerCarImg\" src=\"/img/player/car.png\"><img id=\"playerCarDoorImg\" class=\"playerCarImg\" src=\"/img/player/door.png\">";
+//var for entity templates
+var entityTemplate = {};
 
 //don't change thease directly
 //thease store weather thease modes are enabled
