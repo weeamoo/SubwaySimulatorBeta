@@ -41,3 +41,30 @@ function idleBackground () {
 	    	paused = false;
 	}
 }
+
+//wallpaper mode
+//runs once everything is loaded
+window.addEventListener('load', function () {
+	
+	//spawns player car
+	summon(entityTemplate.player("player", 0, 0));
+	
+	//checks to see if wallpaper mode is passed to it once everything is loaded
+	if (window.location.toString().slice(-15) == "?wallpaper=true") {
+		setTimeout(function(){wallpaperMode()}, 3000);
+	}
+}
+
+function wallpaperMode () {
+	//clear it out
+	entity = {};
+
+	summon(entityTemplate.player("player", 0, 0));
+	player.ai = ai.wanderCar;
+	    
+	loadLevel(lvlData.debug.test4, 0, 0);
+	paused = false;
+	onStartMenu = false;
+	//hide title screen
+	document.getElementById("titleScreen").classList.add("invis");
+}
