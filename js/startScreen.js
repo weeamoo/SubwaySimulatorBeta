@@ -4,6 +4,9 @@ setTimeout(function(){idleBackground()}, 60000);
 
 function startGame () {
 
+	//make player car exist
+	summon(entityTemplate.player("player", 0, 0));
+
 	//hide title screen
 	document.getElementById("titleScreen").classList.add("invis");
 
@@ -24,6 +27,8 @@ function addMikuToTitle () {
 
 function idleBackground () {
 	if (onStartMenu == true) {
+
+		summon(entityTemplate.player("player", 0, 0));
 	    
 		loadLevel(lvlData.debug.test4, 0, 0);
 		player.xSpeed = 0.1;
