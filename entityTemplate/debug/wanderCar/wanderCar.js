@@ -6,6 +6,11 @@ entityTemplate.debug.wanderCar = function (name, x, y) {
 	//x x-coord
 	//y y-coord
 	
+	//if name is blank it will get a random one
+	if (name == "") {
+		"entity_" + Math.random().toString().slice(2);
+	}
+	
 	//start with default data
 	var output = defaultEntityData();
 	output.name = name;
