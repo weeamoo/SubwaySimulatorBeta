@@ -53,7 +53,7 @@ window.addEventListener('load', function () {
 	if (window.location.toString().slice(-15) == "?wallpaper=true") {
 		wallpaperMode();
 	}
-}
+})
 
 function wallpaperMode () {
 	//clear it out
