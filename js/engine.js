@@ -145,8 +145,7 @@ function update (entityPass) {
 	//runs ai for entity
 	entityPass.ai(entityPass);
 	
-	//applies one frame of movementX
-	entityPass.x = entityPass.x + entityPass.xSpeed;
+	
 
 	//calls for accel calculations
 	calcAccel(entityPass);
@@ -170,7 +169,8 @@ function update (entityPass) {
 		
 	}
 	
-	//applies one frame of movementY
+	//applies one frame of movement
+	entityPass.x = entityPass.x + entityPass.xSpeed;
 	entityPass.y = entityPass.y + entityPass.ySpeed;
 
 	//applies camera offset
