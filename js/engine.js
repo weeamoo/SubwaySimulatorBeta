@@ -148,10 +148,6 @@ function update (entityPass) {
 	//calls for accel calculations
 	calcAccel(entityPass);
 
-	//applies one frame of movement
-	entityPass.x = entityPass.x + entityPass.xSpeed;
-	entityPass.y = entityPass.y + entityPass.ySpeed;
-
 	//sets y to where the rail is (if needed)
 	if (entityPass.noClip == false) {
 
@@ -170,6 +166,10 @@ function update (entityPass) {
 		}
 		
 	}
+	
+	//applies one frame of movement
+	entityPass.x = entityPass.x + entityPass.xSpeed;
+	entityPass.y = entityPass.y + entityPass.ySpeed;
 
 	//applies camera offset
 	updatePos(entityPass.id ,entityPass.x - xOffset, entityPass.y - yOffset);
