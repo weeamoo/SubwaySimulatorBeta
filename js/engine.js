@@ -45,7 +45,7 @@ function toggleFreeCam () {
 
 //takes a wanted level, applies it to the player, and requests update of stars
 function setPlayerWantedLevel (level) {
-	player.wantedLevel = level;
+	entity.player.wantedLevel = level;
 	updateWantedStars(level);
 }
 
