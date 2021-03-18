@@ -157,7 +157,7 @@ function update (entityPass) {
 	if (entityPass.noClip == false) {
 
 		//if it's below the track (going uphill) move it up to rail and upates upwards speed
-		if (entityPass.y <= getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress)) {
+		if (entityPass.y + entityPass.ySpeed <= getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress)) {
 			//applies Y movement
 			entityPass.ySpeed = getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress) - entityPass.y;
 		} else {
