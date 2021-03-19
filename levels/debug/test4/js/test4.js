@@ -1,7 +1,7 @@
 //makes container for lvl stuff
 lvlData.debug.test4 = [];
 
-lvlData.debug.test4.width = 16000;
+lvlData.debug.test4.width = 4000;
 lvlData.debug.test4.height = 1800;
 lvlData.debug.test4.css = "/levels/debug/test4/css/test4.css";
 lvlData.debug.test4.geo = function (x, y, dir) {return 262;};
