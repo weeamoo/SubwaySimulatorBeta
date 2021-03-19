@@ -2,7 +2,7 @@
 lvlData.debug.test4 = [];
 
 lvlData.debug.test4.width = 16000;
-lvlData.debug.test4.height = 900;
+lvlData.debug.test4.height = 1800;
 lvlData.debug.test4.css = "/levels/debug/test4/css/test4.css";
 lvlData.debug.test4.geo = function (x, y, dir) {return 262;};
 lvlData.debug.test4.speedLimit = function (x, y) {return 1;};
@@ -26,9 +26,9 @@ lvlData.debug.test4.sfg1 = "";
 //anything in between is in between
 
 lvlData.debug.test4.bg1factor = 1;
-lvlData.debug.test4.bg2factor = 0.75;
-lvlData.debug.test4.bg3factor = 0.5;
-lvlData.debug.test4.bg4factor = 0.25;
+lvlData.debug.test4.bg2factor = 0.95;
+lvlData.debug.test4.bg3factor = 0.90;
+lvlData.debug.test4.bg4factor = 0.85;
 lvlData.debug.test4.bg5factor = 0;
 lvlData.debug.test4.fg1factor = 0;
 lvlData.debug.test4.fg2factor = 0;
