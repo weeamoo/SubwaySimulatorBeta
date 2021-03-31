@@ -261,7 +261,7 @@ function defaultEntityData () {
 	//max downward speed that can come from gravity
 	output.terminalVelocity = 81000;
 	//weight more makes it fall faster
-	output.weight = 1;
+	output.weight = 2;
 	//HTML ID of the elemet for the code to control
 	//do not use the default one, plz change after making
 	output.id = "default";
