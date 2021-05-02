@@ -111,6 +111,8 @@ function updateHUD () {
 	document.getElementById('hudSpeedLimitDisplay').innerHTML = (entity.player.speedLimit * 8.64).toFixed(2) + " KM/H";
 	//update switch choice display
 	document.getElementById('hudSwitchDisplay').innerHTML = entity.player.lastPress;
+	//update balance
+	document.getElementById('hudBalanceDisplay').innerHTML = "¥ " + entity.player.money;
 }
 
 //music player stuff
@@ -245,6 +247,8 @@ function defaultEntityData () {
 	output.ySpeed = 0;
 	//how many wanted stars you have
 	output.wantedLevel = 0;
+	//wanted timer
+	output.wantedTimer = 0;
 	//top speed of the car
 	output.maxXSpeed = 25;
 	//I don't think this is used
@@ -284,6 +288,9 @@ function defaultEntityData () {
 	//controll input
 	//container for entity input
 	output.input = {};
+
+	//money
+	output.money = 0;
 
 	for (var property in input) {
 		eval("output.input." + property + " = false;");
