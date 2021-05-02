@@ -161,6 +161,16 @@ document.onkeydown = function(event) {
         input.doorControl.pressed = true;
         togglePlayerDoor();
       break;
+    case input.shoot.a:
+    case input.shoot.b:
+    case input.shoot.c:
+        input.shoot.pressed = true;
+      break;
+    case input.special.a:
+    case input.special.b:
+    case input.special.c:
+        input.special.pressed = true;
+      break;
   }
   
   //stuff for binding keys
@@ -202,6 +212,16 @@ document.onkeyup = function(event) {
     case input.brakes.b:
     case input.brakes.c:
         input.brakes.pressed = false;
+      break;
+    case input.shoot.a:
+    case input.shoot.b:
+    case input.shoot.c:
+        input.shoot.pressed = false;
+      break;
+    case input.special.a:
+    case input.special.b:
+    case input.special.c:
+        input.special.pressed = false;
       break;
     }
 };
