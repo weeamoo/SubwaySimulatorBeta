@@ -9,6 +9,8 @@ input.left = {};
 input.right = {};
 input.brakes = {};
 input.doorControl = {};
+input.shoot = {};
+input.special = {};
 input.pause = {};
 //pause is weird
 
@@ -38,6 +40,12 @@ input.pause.c = "UNBOUND";
 input.doorControl.a = 71;
 input.doorControl.b = "UNBOUND";
 input.doorControl.c = "UNBOUND";
+input.shoot.a = 90;
+input.shoot.b = "UNBOUND";
+input.shoot.c = "UNBOUND";
+input.special.a = 88;
+input.special.b = "UNBOUND";
+input.special.c = "UNBOUND";
 
 //generate pressed vars
 for (var property in input) {
