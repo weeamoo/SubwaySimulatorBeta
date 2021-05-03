@@ -16,6 +16,9 @@ div#hud {
 /* general text stuff */
 h1.hudH1Label, h1.hudH1Display {
 	color: #fff;
+	font-size: 150%;
+	margin: 0;
+	margin-left: 25%;
 }
 
 /* video player on HUD */
@@ -25,4 +28,12 @@ iframe#hudVideo {
 	top: 0px;
 	position: absolute;
 	width: 25%;
+}
+
+/*img labels*/
+img.hudImg {
+	width: 100%;
+}
+img#hudLivesLabel {
+	width: 150%;
 }

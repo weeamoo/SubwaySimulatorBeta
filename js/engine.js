@@ -113,6 +113,10 @@ function updateHUD () {
 	document.getElementById('hudSwitchDisplay').innerHTML = entity.player.lastPress;
 	//update balance
 	document.getElementById('hudBalanceDisplay').innerHTML = "¥ " + entity.player.money;
+	//update lives
+	document.getElementById('hudLivesDisplay').innerHTML = entity.player.lives;
+	//update HP
+	document.getElementById('hudHPDisplay').innerHTML = entity.player.hp;
 }
 
 //music player stuff
