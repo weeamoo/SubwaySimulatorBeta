@@ -12,6 +12,7 @@ input.doorControl = {};
 input.shoot = {};
 input.special = {};
 input.radio = {};
+input.hop= {};
 input.pause = {};
 //pause is weird
 
@@ -50,6 +51,9 @@ input.special.c = 0;
 input.radio.a = 82;
 input.radio.b = 0;
 input.radio.c = 0;
+input.hop.a = 82;
+input.hop.b = 0;
+input.hop.c = 0;
 
 //generate pressed vars
 for (var property in input) {
@@ -180,6 +184,11 @@ document.onkeydown = function(event) {
     case input.radio.c:
         input.radio.pressed = true;
       break;
+    case input.hop.a:
+    case input.hop.b:
+    case input.hop.c:
+        input.hop.pressed = true;
+      break;
   }
   
   //stuff for binding keys
@@ -236,6 +245,11 @@ document.onkeyup = function(event) {
     case input.radio.b:
     case input.radio.c:
         input.radio.pressed = false;
+      break;
+    case input.hop.a:
+    case input.hop.b:
+    case input.hop.c:
+        input.hop.pressed = false;
       break;
     }
 };
