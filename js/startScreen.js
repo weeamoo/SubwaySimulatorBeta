@@ -11,7 +11,7 @@ function startGame () {
 	document.getElementById("hud").classList.remove("invis");
 
 	//starting level
-	loadLevel(lvlData.debug.test4, 0, 0);
+	loadLevel(lvlData.debug.test4, 0, 263);
 	
 	//make player car exist
 	//summon(entityTemplate.player("player", 0, 0));

@@ -21,10 +21,10 @@
 
 function toggleNoClip () {
 	if (noClip) {
-		noClip = false;
+		entity.player.noClip = false;
 		console.log("No Clip off");
 	} else {
-		noClip = true;
+		entity.player.noClip = true;
 		console.log("No Clip on");
 	}
 }
