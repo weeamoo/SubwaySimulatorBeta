@@ -1,18 +1,18 @@
 /* main div container */
 div#hud {
-	width: 50%;
-	height: 20%;
+	width: 100%;
+	height: 7%;
 	border-color: white;
 	border-style: solid;
 	position: absolute;
-	/* no fucking clue why but this is what works for this value */
-	bottom: -12%;
-	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	top: 0;
+	/*-ms-transform: translate(-50%, -50%);*/
+	/*transform: translate(-50%, -50%);*/
 	background-color: rgba(0, 0, 0, 0.8);
+	border-left-width: 0;
+	border-top-width: 0;
+	border-right-width: 0;
 }
-
 /* general text stuff */
 h1.hudH1Label, h1.hudH1Display {
 	color: #fff;

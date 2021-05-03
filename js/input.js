@@ -11,6 +11,7 @@ input.brakes = {};
 input.doorControl = {};
 input.shoot = {};
 input.special = {};
+input.radio = {};
 input.pause = {};
 //pause is weird
 
@@ -32,20 +33,23 @@ input.down.a = 40;
 input.down.b = 83;
 input.down.c = 75;
 input.brakes.a = 16;
-input.brakes.b = "UNBOUND";
-input.brakes.c = "UNBOUND";
+input.brakes.b = 0;
+input.brakes.c = 0;
 input.pause.a = 27;
-input.pause.b = "UNBOUND";
-input.pause.c = "UNBOUND";
+input.pause.b = 0;
+input.pause.c = 0;
 input.doorControl.a = 71;
-input.doorControl.b = "UNBOUND";
-input.doorControl.c = "UNBOUND";
+input.doorControl.b = 0;
+input.doorControl.c = 0;
 input.shoot.a = 90;
-input.shoot.b = "UNBOUND";
-input.shoot.c = "UNBOUND";
+input.shoot.b = 0;
+input.shoot.c = 0;
 input.special.a = 88;
-input.special.b = "UNBOUND";
-input.special.c = "UNBOUND";
+input.special.b = 0;
+input.special.c = 0;
+input.radio.a = 82;
+input.radio.b = 0;
+input.radio.c = 0;
 
 //generate pressed vars
 for (var property in input) {
@@ -171,6 +175,11 @@ document.onkeydown = function(event) {
     case input.special.c:
         input.special.pressed = true;
       break;
+    case input.radio.a:
+    case input.radio.b:
+    case input.radio.c:
+        input.radio.pressed = true;
+      break;
   }
   
   //stuff for binding keys
@@ -222,6 +231,11 @@ document.onkeyup = function(event) {
     case input.special.b:
     case input.special.c:
         input.special.pressed = false;
+      break;
+    case input.radio.a:
+    case input.radio.b:
+    case input.radio.c:
+        input.radio.pressed = false;
       break;
     }
 };

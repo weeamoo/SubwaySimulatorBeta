@@ -39,3 +39,10 @@ div#wantedStarsDiv {
 	right: 0px;
 	position: absolute;
 }
+
+/*wanted timer */
+h1#wantedTimer {
+	text-align: center;
+	margin: 0;
+	color: white;
+}
