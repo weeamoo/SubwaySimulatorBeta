@@ -289,6 +289,10 @@ function defaultEntityData () {
 	//container for entity input
 	output.input = {};
 
+	//Hp and lives
+	output.hp = 100;
+	output.lives = 0;
+
 	//money
 	output.money = 0;
 
