@@ -77,6 +77,7 @@ function keyToEng (key) {
 var keyCodeLookup = [];
 
 //add known codes in numeric order plz
+keyCodeLookup[0] = "None";
 keyCodeLookup[8] = "Backspace";
 keyCodeLookup[9] = "Tab";
 keyCodeLookup[13] = "Enter";
