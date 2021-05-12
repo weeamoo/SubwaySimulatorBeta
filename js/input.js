@@ -188,6 +188,11 @@ document.onkeydown = function(event) {
     case input.radio.c:
         input.radio.pressed = true;
       break;
+    case input.phone.a:
+    case input.phone.b:
+    case input.phone.c:
+        input.phone.pressed = true;
+      break;
     case input.hop.a:
     case input.hop.b:
     case input.hop.c:
@@ -249,6 +254,11 @@ document.onkeyup = function(event) {
     case input.radio.b:
     case input.radio.c:
         input.radio.pressed = false;
+      break;
+    case input.phone.a:
+    case input.phone.b:
+    case input.phone.c:
+        input.phone.pressed = true;
       break;
     case input.hop.a:
     case input.hop.b:
