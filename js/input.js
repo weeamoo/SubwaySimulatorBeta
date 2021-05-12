@@ -13,6 +13,7 @@ input.shoot = {};
 input.special = {};
 input.radio = {};
 input.hop= {};
+input.phone = {};
 input.pause = {};
 //pause is weird
 
@@ -51,7 +52,10 @@ input.special.c = 0;
 input.radio.a = 82;
 input.radio.b = 0;
 input.radio.c = 0;
-input.hop.a = 82;
+input.phone.a = 67;
+input.phone.b = 0;
+input.phone.c = 0;
+input.hop.a = 32;
 input.hop.b = 0;
 input.hop.c = 0;
 
