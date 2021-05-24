@@ -2,7 +2,7 @@
 function everyFrame () {
 
 	//don't run the game if it's paused
-	if (paused == false) {
+	if (paused == false && loadingLevel == false) {
 
 		frameMovement();
 

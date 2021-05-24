@@ -1,6 +1,3 @@
-//makes container for lvl stuff
-lvlData.debug.test3 = [];
-
 lvlData.debug.test3.width = 4800;
 lvlData.debug.test3.height = 900;
 lvlData.debug.test3.css = "/levels/debug/test3/css/test3.css";
@@ -34,3 +31,6 @@ lvlData.debug.test3.fg3factor = 1;
 lvlData.debug.test3.fg4factor = 1;
 lvlData.debug.test3.fg5factor = 1;
 lvlData.debug.test3.sfg1factor = 1;
+
+//tells the stupid system that the level is ready
+lvlData.debug.test4.loaded = true;

@@ -1,6 +1,3 @@
-//makes container for lvl stuff
-lvlData.debug.test5 = [];
-
 lvlData.debug.test5.width = 1600;
 lvlData.debug.test5.height = 900;
 lvlData.debug.test5.css = "/levels/debug/test5/css/test5.css";

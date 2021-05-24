@@ -15,7 +15,8 @@ var lvlData = [];
 
 //debug levels go here
 lvlData.debug = [];
-
+registerLevel("lvlData.debug.caramelldansen");
+registerLevel("lvlData.debug.miku");
 registerLevel("lvlData.debug.test1");
 registerLevel("lvlData.debug.test2");
 registerLevel("lvlData.debug.test3");

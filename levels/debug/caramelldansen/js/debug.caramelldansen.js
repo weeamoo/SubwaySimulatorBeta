@@ -1,6 +1,3 @@
-//container create
-lvlData.debug.caramelldansen = [];
-
 lvlData.debug.caramelldansen.width = 1600;
 lvlData.debug.caramelldansen.height = 900;
 lvlData.debug.caramelldansen.css = "/levels/debug/caramelldansen/css/caramelldansen.css";
@@ -32,3 +29,6 @@ lvlData.debug.caramelldansen.fg3factor = 1;
 lvlData.debug.caramelldansen.fg4factor = 1;
 lvlData.debug.caramelldansen.fg5factor = 1;
 lvlData.debug.caramelldansen.sfg1factor = 1;
+
+//tells the stupid system that the level is ready
+lvlData.debug.caramelldansen.loaded = true;

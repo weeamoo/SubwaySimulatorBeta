@@ -1,6 +1,3 @@
-//makes container var for level data
-lvlData.debug.miku = [];
-
 lvlData.debug.miku.width = 48000;
 lvlData.debug.miku.height = 900;	
 lvlData.debug.miku.css = "/levels/debug/miku/css/miku.css";
@@ -32,3 +29,6 @@ lvlData.debug.miku.fg3factor = 1;
 lvlData.debug.miku.fg4factor = 1;
 lvlData.debug.miku.fg5factor = 1;
 lvlData.debug.miku.sfg1factor = 1;
+
+//tells the stupid system that the level is ready
+lvlData.debug.miku.loaded = true;

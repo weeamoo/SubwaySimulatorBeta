@@ -1,6 +1,3 @@
-//makes container var for level data
-lvlData.debug.test2 = [];
-
 //little compression function
 function generateLvlfdkhjdksd () {
 	var cmprTst1Td = "<td id=\"debugGridLevelTd\"><img id=\"debugGridLevelImg\" src=\"/levels/debug/test2/img/bedrock.png\"></td>";
@@ -43,3 +40,6 @@ lvlData.debug.test2.fg3factor = 1;
 lvlData.debug.test2.fg4factor = 1;
 lvlData.debug.test2.fg5factor = 1;
 lvlData.debug.test2.sfg1factor = 1;
+
+//tells the stupid system that the level is ready
+lvlData.debug.test2.loaded = true;

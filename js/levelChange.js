@@ -2,6 +2,7 @@
 var levelWidth = 0;
 var levelHeight = 0;
 var playerBackup = {};
+var loadingLevel = false;
 
 var bg1factor = 0;
 var bg2factor = 0;
@@ -15,11 +16,44 @@ var fg4factor = 0;
 var fg5factor = 0;
 var sfg1factor = 0;
 
+//function for changing active level
+//checks for level data, downloads if it doesnt have it, changes level
 function loadLevel (level, x, y) {
+	loadingLevel = true;
+	//if level is Downloaded just switch to it, otherwise download it and then wait and then switch to it
+	if (level.loaded) {
+		changeLevel(level, x, y);
+	} else {
+		require([level.path]);
+		//such a fucking stupid way to do it cause if you can load it fast you still have to wait 0.5 seconds and if u r slow it still breaks
+		checkLoadLevel(level, x, y);
+	}
+}
 
-	//fetch js file from server
-	require([level.path]);
-	//need to have it wait for this to finish before continuing
+//checks to see if level is loaded and then changes to it when it is
+function checkLoadLevel (level, x, y) {
+	downloadLevel(level);
+	//this causes a memory leak but I don't care
+	setTimeout(function(){
+			if (level.loaded) {
+				changeLevel(level, x, y);
+			} else {
+				checkLoadLevel(level, x, y);
+			}
+		}, 100);
+}
+
+//downloads a level into RAM
+function downloadLevel (level) {
+	if (level.loaded) {
+		require([level.path]);
+	}
+}
+
+//support function for changing active level
+function changeLevel (level, x, y) {
+
+	loadingLevel = true;
 
 	//clearing stuff
 	entity.player.xSpeed = 0;
@@ -84,6 +118,8 @@ function loadLevel (level, x, y) {
 	//factor of 0 will sync it to the car and essentially make a still image of it
 	//factor of 1 will make it move with the background
 	//anything in between is in between
+
+	loadingLevel = false;
 
 }
 
