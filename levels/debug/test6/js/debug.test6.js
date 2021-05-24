@@ -130,3 +130,6 @@ lvlData.debug.test6.geo = function getNearestRail (x, y, dir) {
 	}
 
 };
+
+//tells the stupid system that the level is ready
+lvlData.debug.test6.loaded = true;

@@ -33,4 +33,4 @@ lvlData.debug.test3.fg5factor = 1;
 lvlData.debug.test3.sfg1factor = 1;
 
 //tells the stupid system that the level is ready
-lvlData.debug.test4.loaded = true;
+lvlData.debug.test3.loaded = true;
