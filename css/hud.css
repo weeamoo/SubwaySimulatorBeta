@@ -37,3 +37,20 @@ img.hudImg {
 img#hudLivesLabel {
 	width: 150%;
 }
+
+/* speed label */
+img#hudSpeedsLabel {
+	margin-left: 50%;
+}
+
+/* speed output */
+h1#hudSpeedsDisplay {
+	width: 100%;
+	margin-left: 25%;
+}
+
+/* balance display */
+h1#hudBalanceDisplay {
+	width: 100%;
+	margin-left: 150%;
+}
