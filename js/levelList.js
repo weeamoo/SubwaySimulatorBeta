@@ -4,6 +4,8 @@
 //level should be object name (ex lvlData.debug.test1)
 //ex: registerLevel("lvlData.debug.test1");
 function registerLevel (level) {
+	//adds lvldata
+	level = "lvlData." + level;
 	//creates level data container
 	eval(level + " = [];");
 	eval(level + ".loaded = false;");
@@ -15,11 +17,11 @@ var lvlData = [];
 
 //debug levels go here
 lvlData.debug = [];
-registerLevel("lvlData.debug.caramelldansen");
-registerLevel("lvlData.debug.miku");
-registerLevel("lvlData.debug.test1");
-registerLevel("lvlData.debug.test2");
-registerLevel("lvlData.debug.test3");
-registerLevel("lvlData.debug.test4");
-registerLevel("lvlData.debug.test5");
-registerLevel("lvlData.debug.test6");
+registerLevel("debug.caramelldansen");
+registerLevel("debug.miku");
+registerLevel("debug.test1");
+registerLevel("debug.test2");
+registerLevel("debug.test3");
+registerLevel("debug.test4");
+registerLevel("debug.test5");
+registerLevel("debug.test6");
