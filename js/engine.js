@@ -130,7 +130,7 @@ function playVideoHud (id) {
 
 //door code
 function togglePlayerDoor () {
-	if (player.doorOpen) {
+	if (entity.player.doorOpen) {
 		closePlayerDoor();
 	} else {
 		openPlayerDoor ();
