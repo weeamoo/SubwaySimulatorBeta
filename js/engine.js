@@ -139,12 +139,12 @@ function togglePlayerDoor () {
 
 function openPlayerDoor () {
 	document.getElementById("playerCarDoorImg").style.right = "65%";
-	player.doorOpen = true;
+	entity.player.doorOpen = true;
 }
 
 function closePlayerDoor () {
 	document.getElementById("playerCarDoorImg").style.right = "50%";
-	player.doorOpen = false;
+	entity.player.doorOpen = false;
 }
 
 //updates object sent to it (does physics and stuff and sets it to the new position
