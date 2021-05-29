@@ -331,6 +331,22 @@ function removeAllEntities () {
 	document.getElementById("entityDiv").innerHTML = "";
 }
 
+function shoot (entityPass, weapon) {
+	//entityPass = entity shooting
+	//weapon = weapon
+
+}
+
+function hop (entityPass, power) {
+	//entityPass entity that is hopping
+	//power power of hop
+
+	entityPass.ySpeed = entityPass.ySpeed + power;
+
+	//eval(entityPass + ".ySpeed = " + power + ";");
+
+}
+
 //rando vars
 //all entitiy container
 var entity = {};

@@ -197,6 +197,7 @@ document.onkeydown = function(event) {
     case input.hop.b:
     case input.hop.c:
         input.hop.pressed = true;
+        hop(entity.player, 25);
       break;
   }
   
