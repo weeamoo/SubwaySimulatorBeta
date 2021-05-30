@@ -302,6 +302,10 @@ function defaultEntityData () {
 	//money
 	output.money = 0;
 
+	//add slot for weapon
+	output.weapon = weapon.none;
+
+	//setup inputs
 	for (var property in input) {
 		eval("output.input." + property + " = false;");
 	}
@@ -331,9 +335,10 @@ function removeAllEntities () {
 	document.getElementById("entityDiv").innerHTML = "";
 }
 
-function shoot (entityPass, weapon) {
+function shoot (entityPass) {
 	//entityPass = entity shooting
 	//weapon = weapon
+	entityPass.weapon(entityPass);
 
 }
 

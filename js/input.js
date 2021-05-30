@@ -177,6 +177,7 @@ document.onkeydown = function(event) {
     case input.shoot.b:
     case input.shoot.c:
         input.shoot.pressed = true;
+        shoot(entity.player);
       break;
     case input.special.a:
     case input.special.b:

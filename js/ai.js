@@ -32,3 +32,14 @@ ai.wanderCar = function (entityPass) {
 		entityPass.input.left = true;
 	}
 }
+
+ai.bullet = {};
+//standard bullet ai
+ai.bullet.norm = function (entityPass) {
+	//remove if it goes off the screen
+	if (entityPass.x > levelWidth) {
+		document.getElementById(entityPass.id) = "";
+		delete entityPass;
+	}
+	
+}
