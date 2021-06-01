@@ -9,7 +9,7 @@ entityTemplate.bullet.norm = function (name, x, y, owner) {
 
 	//if name is blank it will get a random one
 	if (name == "") {
-		name = Math.random().toString().slice(2);
+		name = "entity_" + Math.random().toString().slice(2);
 	}
 	
 	//start with default data
