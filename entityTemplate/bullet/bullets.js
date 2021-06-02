@@ -18,7 +18,7 @@ entityTemplate.bullet.norm = function (name, x, y, owner) {
 	//modifies
 	output.id = "entity_" + name;
 	output.ai = ai.bullet.norm;
-	output.html = "<img src=\"/img/bullet/bullet.png\" />";
+	output.html = "<div id=\"" + output.id + "\" class=\"bulletNormDiv\" style=\"left: 0%; bottom: 29.1111%;\"><img class=\"bulletNormImg\" src=\"/img/bullet/bullet.png\"></div>";
 	output.xspeed = 20;
 	output.weight = 0;
 	output.owner = owner;
