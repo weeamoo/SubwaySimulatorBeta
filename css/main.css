@@ -46,3 +46,16 @@ h1#wantedTimer {
 	margin: 0;
 	color: white;
 }
+
+/*bullets*/
+div.bulletNormDiv {
+	position: absolute;
+	width: 6.25%;
+	height: 10%;
+}
+
+img.bulletNormImg {
+	width: 100%;
+	position: absolute;
+	right: 50%;
+}
