@@ -9,6 +9,7 @@ entityTemplate.player = function (name, x, y) {
 	//modifies
 	output.id = "entity_" + name;
 	output.ai = ai.controller;
+	output.weapon = weapon.norm;
 	output.html = "<div id=\"" + output.id + "\" style=\"left: 0%; bottom: 29.1111%;\"><img id=\"playerCarBodyImg\" class=\"playerCarImg\" src=\"/img/player/car.png\"><img id=\"playerCarDoorImg\" class=\"playerCarImg\" src=\"/img/player/door.png\"></div>";
 
 	return output;
