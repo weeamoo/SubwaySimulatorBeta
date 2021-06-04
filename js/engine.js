@@ -166,8 +166,13 @@ function update (entityPass) {
 
 		//if it's below the track (going uphill) move it up to rail and upates upwards speed
 		if (entityPass.y + entityPass.ySpeed <= getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress)) {
-			//applies Y movement
-			entityPass.ySpeed = getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress) - entityPass.y;
+			//checks to see how far below the track the train is
+			if (entityPass.y + entityPass.ySpeed + 0.05 >= getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress)) {
+				entityPass.y = getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress)
+			} else {
+				//applies Y movement
+				entityPass.ySpeed = getNearestRail(entityPass.x, entityPass.y, entityPass.lastPress) - entityPass.y;
+			}
 		} else {
 			//shit's falling need to calc gravity
 			if (entityPass.ySpeed < entityPass.terminalVelocity * -1) {
@@ -333,6 +338,12 @@ function summon (entityPass) {
 function removeAllEntities () {
 	entity = {};
 	document.getElementById("entityDiv").innerHTML = "";
+}
+
+//despawns an entity
+function despawn (entityPass) {
+	document.getElementById(entityPass.id).innerHTML = "";
+	eval("delete entity." + entityPass.name + ";");
 }
 
 function shoot (entityPass) {

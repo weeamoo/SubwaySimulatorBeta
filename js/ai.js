@@ -38,8 +38,7 @@ ai.bullet = {};
 ai.bullet.norm = function (entityPass) {
 	//remove if it goes off the screen
 	if (entityPass.x > levelWidth) {
-		document.getElementById(entityPass.id) = "";
-		delete entityPass;
+		despawn(entityPass);
 	}
 	
 }
