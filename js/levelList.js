@@ -25,3 +25,4 @@ registerLevel("debug.test3");
 registerLevel("debug.test4");
 registerLevel("debug.test5");
 registerLevel("debug.test6");
+registerLevel("debug.test7");
