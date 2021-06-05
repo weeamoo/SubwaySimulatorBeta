@@ -44,9 +44,12 @@ function toggleFreeCam () {
 //wanted level functions
 
 //takes a wanted level, applies it to the player, and requests update of stars
-function setPlayerWantedLevel (level) {
-	entity.player.wantedLevel = level;
-	updateWantedStars(level);
+function setWantedLevel (entityPass, level) {
+	entityPass.wantedLevel = level;
+	if (entityPass == entity.player) {
+		updateWantedStars(level);
+	}
+	entityPass.wantedTimer = level * 3600;
 }
 
 //sets wanted stars on screen to number passed, can be called outside of updatePlayerWantedLevel function for cutscenes and stuff
@@ -119,6 +122,8 @@ function updateHUD () {
 	document.getElementById('hudHPDisplay').innerHTML = entity.player.hp;
 	//update speeds limit display
 	document.getElementById('hudSpeedsDisplay').innerHTML = (entity.player.xSpeed * 8.64).toFixed(2) + "/" + (entity.player.speedLimit * 8.64).toFixed(2) + " KM/H";
+	//update wanted timer
+	document.getElementById('wantedTimer').innerHTML = (entity.player.wantedTimer / 3600).toFixed(0) + ":" + ((entity.player.wantedTimer / 60) % 60).toFixed(0) ;
 }
 
 //music player stuff
@@ -190,6 +195,18 @@ function update (entityPass) {
 
 	//applies camera offset
 	updatePos(entityPass.id ,entityPass.x - xOffset, entityPass.y - yOffset);
+
+	if (entityPass.wantedLevel > 0) {
+		//ticks wanted level down by one if need be
+		if (entityPass.wantedTimer > 0) {
+			entityPass.wantedTimer = entityPass.wantedTimer - 1;
+		}
+
+		//removes wanted level when time hits zero
+		if (entityPass.wantedTimer == 0) {
+			setWantedLevel (entityPass, 0)
+		}
+	}
 }
 
 function updateAll (entityPass) {
