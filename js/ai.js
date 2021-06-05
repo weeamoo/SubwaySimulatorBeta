@@ -42,3 +42,15 @@ ai.bullet.norm = function (entityPass) {
 	}
 	
 }
+
+ai.police = {};
+//standard police ai
+ai.police.normal = function (entityPass) {
+	if (entityPass.patrolling) {
+		ai.wanderCar(entityPass);
+	}
+	//remove if it goes off the screen
+	if (entityPass.x > levelWidth) {
+		despawn(entityPass);
+	}
+}
