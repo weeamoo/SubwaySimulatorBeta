@@ -17,7 +17,7 @@ entityTemplate.police.normal = function (name, x, y) {
 	output.weapon = weapon.norm;
 	output.patrolling = true;
 	output.chasing = false;
-	output.html = "<div id=\"" + output.id + "\" style=\"left: 0%; bottom: 29.1111%;\"><img id=\"playerCarDoorImg\" class=\"playerCarImg\" src=\"/img/cops/normal/cop.png\"></div>";
+	output.html = "<div id=\"" + output.id + "\" class =\"policeCarDiv\" style=\"left: 0%; bottom: 29.1111%;\"><img id=\"policeCarDoorImg\" class=\"playerCarImg\" src=\"/img/cops/normal/cop.png\"></div>";
 
 	return output;
 }
