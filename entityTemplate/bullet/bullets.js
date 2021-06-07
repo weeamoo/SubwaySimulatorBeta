@@ -23,7 +23,7 @@ entityTemplate.bullet.norm = function (name, x, y, owner) {
 	output.ySpeed = 0;
 	output.weight = 0;
 	output.x = x;
-	output.y = y;
+	output.y = y + 25;
 	output.owner = owner;
 
 	return output;

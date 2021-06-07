@@ -48,21 +48,21 @@ h1#wantedTimer {
 }
 
 /* cop car */
-.policeCarImg {
+img.policeCarImg {
 	width: 100%;
 	position: absolute;
-	right: 0px;
-	bottom: 45%;
 }
 
 /*bullets*/
 div.bulletNormDiv {
 	position: absolute;
-	width: 0.5%;
+	width: 6.25%;
+	height: 10%;
 }
 
 img.bulletNormImg {
-	width: 100%;
+	width: 10%;
 	position: absolute;
-	right: 50%;
+	top: 45%;
+	right: 45%;
 }
