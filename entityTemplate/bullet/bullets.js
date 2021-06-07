@@ -2,14 +2,14 @@
 entityTemplate.bullet = {};
 
 //normal one
-entityTemplate.bullet.norm = function (name, x, y, owner) {
+entityTemplate.bullet.test = function (name, x, y, owner) {
 	//name			the name for the entity, ex: if this was creeper it's JS var would be entity.creeper and it's html ID would be entity_creeper
 	//x x-coord
 	//y y-coord
 
 	//if name is blank it will get a random one
 	if (name == "") {
-		name = "bullet_" + Math.random().toString().slice(2);
+		name = "bullet_test_" + Math.random().toString().slice(2);
 	}
 	
 	//start with default data
