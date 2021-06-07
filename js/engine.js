@@ -361,6 +361,7 @@ function removeAllEntities () {
 function despawn (entityPass) {
 	document.getElementById(entityPass.id).innerHTML = "";
 	eval("delete entity." + entityPass.name + ";");
+	setTimeout(function(){document.getElementById(entityPass.id).outerHTML = "";}, 200);
 }
 
 function shoot (entityPass) {
