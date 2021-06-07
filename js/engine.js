@@ -207,7 +207,7 @@ function update (entityPass) {
 
 	//ticks down weaponcooldown if it's not zero
 	if (entityPass.weaponCooldown > 0) {
-		entityPass.weaponCooldown > 0
+		entityPass.weaponCooldown = entityPass.weaponCooldown - 1;
 	} else {
 		//fires weapon if key is held and timer is at zero
 		if (entityPass.input.shoot == true) {
