@@ -210,7 +210,7 @@ function update (entityPass) {
 		entityPass.weaponCooldown > 0
 	} else {
 		//fires weapon if key is held and timer is at zero
-		if (entityPass.input.shoot.pressed == true) {
+		if (entityPass.input.shoot == true) {
 			shoot(entityPass);
 		}
 	}
