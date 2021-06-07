@@ -47,6 +47,14 @@ h1#wantedTimer {
 	color: white;
 }
 
+/* cop car */
+.policeCarImg {
+	width: 100%;
+	position: absolute;
+	right: 0px;
+	bottom: 45%;
+}
+
 /*bullets*/
 div.bulletNormDiv {
 	position: absolute;
