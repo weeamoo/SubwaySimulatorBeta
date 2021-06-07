@@ -377,7 +377,7 @@ function despawn (entityPass) {
 function shoot (entityPass) {
 	//entityPass = entity shooting
 	//weapon = weapon
-	entityPass.weapon(entityPass);
+	entityPass.weapon.shoot(entityPass);
 
 }
 
