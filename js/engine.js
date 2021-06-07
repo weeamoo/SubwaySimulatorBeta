@@ -7,16 +7,13 @@
 /* write code here to find screen size and save it to vars */
 
 /* make function here to call get nearest rail and  then have it decide weather to warp the subway up a bit to be on top of the rail or let it fall
-
 	Condition	Return
 	above rail	0
 	on rail		1
 	in rail		1
-
 */
 
 /* make function here to move car to specific coords on map in game units and translate them to whatever is needed for tha browser
-
 */
 
 function toggleNoClip () {
@@ -207,6 +204,16 @@ function update (entityPass) {
 			setWantedLevel (entityPass, 0)
 		}
 	}
+
+	//ticks down weaponcooldown if it's not zero
+	if (entityPass.weaponCooldown > 0) {
+		entityPass.weaponCooldown > 0
+	} else {
+		//fires weapon if key is held and timer is at zero
+		if (entityPass.input.shoot.pressed == true) {
+			shoot(entityPass);
+		}
+	}
 }
 
 function updateAll (entityPass) {
@@ -326,6 +333,9 @@ function defaultEntityData () {
 
 	//add slot for weapon
 	output.weapon = weapon.none;
+
+	//output to hold cooldown before weapon can be fired again
+	output.weaponCooldown = 0;
 
 	//setup inputs
 	for (var property in input) {
