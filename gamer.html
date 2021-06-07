@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8" >
+		
+		<meta property="og:site_name" content="SubwaySimulator">
+		
+		<meta property="og:image" content="https://subway.surfinontheinter.net/img/boxArt/card.png">
+		
+		<meta property="og:title" content="Subway Simulator">
+		
+		<meta property="og:description" content="From the desert to the plains, you'll be hauling loads and trying to stay one step ahead of the law, as you climb into your BIG RIG for non-stop driving action. Race across Japan and deliver your load to its destination before the competition. So keep the tank full and pedal to the metal as you rackup points and OWN the road!!!">
+		
+		<meta property="description" content="From the desert to the plains, you'll be hauling loads and trying to stay one step ahead of the law, as you climb into your BIG RIG for non-stop driving action. Race across Japan and deliver your load to its destination before the competition. So keep the tank full and pedal to the metal as you rackup points and OWN the road!!!">
+
+		<title id="title" >Subway simulator 2020</title>
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		
+		<link rel="stylesheet" type="text/css" href="/css/title.css">
+		
+		<link rel="stylesheet" type="text/css" href="/css/pause.css">
+		
+		<link rel="stylesheet" type="text/css" href="/css/hud.css">
+		
+		<link rel="stylesheet" type="text/css" href="/css/classes.css">
+		
+		<link rel="stylesheet" type="text/css" href="/css/bindingMenu.css">
+		
+		<link rel="stylesheet" type="text/css" href="/css/noAntiAliasing.css">
+		
+		<link id="lvlLoaderCSS" rel="stylesheet" type="text/css" href="/levels/debug/test1/css/test1.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		
+		<script src="/js/controlBindings.js"></script>
+	
+		<script src="/js/input.js"></script>
+
+		<script src="/js/ai.js"></script>
+
+		<script src="/js/startScreen.js"></script>
+
+		<script src="/js/engine.js"></script>
+
+		<script src="/js/camera.js"></script>
+
+		<script src="/js/levelChange.js"></script>
+
+		<script src="/js/pause.js"></script>
+
+		<script src="/js/exit.js"></script>
+
+		<script src="/js/render.js"></script>
+
+		<script src="/js/physic.js"></script>
+
+		<meta name="description" content="Subway simulator <- Best Game" >
+
+		<script src="/js/everyFrame.js"></script>
+
+		<script src="/js/levelList.js"></script>
+
+		<script src="/entityTemplate/player/player.js"></script>
+
+		<script src="/entityTemplate/debug/wanderCar/wanderCar.js"></script>
+		
+		<script src="/entityTemplate/bullet/bullets.js"></script>
+		
+		<script src="/entityTemplate/police/normal/police.normal.js"></script>
+		
+		<script src="/js/weapons/weapons.js"></script>
+		
+		<script src="/js/require.js"></script>
+		
+	</head>
+
+	<body id="body" class="hideScroll" >
+
+		<div id="worldBg5" >
+			
+		</div>
+
+		<div id="worldBg4" >
+			
+		</div>
+
+		<div id="worldBg3" >
+			
+		</div>
+
+		<div id="worldBg2" >
+			
+		</div>
+
+		<div id="worldBg1" >
+			
+		</div>
+
+		<div id="entityDiv" >
+			
+		</div>
+
+		<div id="worldFg1" >
+			
+		</div>
+
+		<div id="worldFg2" >
+			
+		</div>
+
+		<div id="worldFg3" >
+			
+		</div>
+
+		<div id="worldFg4" >
+			
+		</div>
+
+		<div id="worldFg5" >
+			
+		</div>
+		
+		<div id="hud" class="invis" >
+
+			<table id="hudTable" >
+
+				<tr>
+
+					<td>
+
+						<img id="hudHPLabel" class="hudImg" src="/img/gui/hud/hp.png" />
+						
+					</td>
+
+					<td>
+
+						<h1 id="hudHPDisplay" class="hudH1Display" >69420</h1>
+							
+					</td>
+
+					<td>
+
+						<img id="hudSpeedsLabel" class="hudImg" src="/img/gui/hud/speed.png" />
+							
+					</td>
+
+					<td>
+
+						<h1 id="hudSpeedsDisplay" class="hudH1Display" >69420 MPH</h1>
+							
+					</td>
+					
+				</tr>
+
+				<tr>
+
+					<td>
+
+						<img id="hudLivesLabel" class="hudImg" src="/img/gui/hud/lives.png" />
+						
+					</td>
+
+					<td>
+
+						<h1 id="hudLivesDisplay" class="hudH1Display" >69420</h1>
+							
+					</td>
+
+					<td>
+
+						<h1 id="hudBalanceDisplay" class="hudH1Display" >¥ 69420</h1>
+							
+					</td>
+					
+				</tr>
+				
+			</table>
+
+			<table id="hudTable" class="invis">
+
+				<tbody>
+
+					<tr>
+
+						<td>
+
+							<h1 id="hudSpeedLimitLabel" class="hudH1Label" >Speed Limit:</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="hudSpeedLimitDisplay" class="hudH1Display" >69420 MPH</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="hudSwitchLabel" class="hudH1Label" >Next Switch:</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="hudSwitchDisplay" class="hudH1Display" >UP</h1>
+							
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<td>
+
+							<h1 id="hudSpeedLabel" class="hudH1Label" >Your Speed:</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="hudSpeedDisplay" class="hudH1Display" >69420 MPH</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="hudBalanceLabel" class="hudH1Label" >Balance</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="hudBalanceDisplay" class="hudH1Display" >¥ 69420</h1>
+							
+						</td>
+						
+					</tr>
+					
+				</tbody>
+				
+			</table>
+
+			<iframe id="hudVideo" class="invis" width="15%" height="15%" src="" frameborder="0" allowfullscreen></iframe>
+		
+		</div>
+
+		<div id="worldSFg1" >
+			
+		</div>
+		
+		<div id="titleScreen" >
+
+			<a onclick="document.getElementById('titleScreenImgLogo').src = '/img/gui/titleScreen/logo/trans.png';" >
+			
+				<img id="titleScreenImgLogo" src="/img/gui/titleScreen/logo/norm.png" />
+
+			</a>
+
+			<table id="titleScreenButtonsTable" >
+
+				<tbody id="titleScreenButtonsTbody" >
+
+					<tr id="titleScreenButtonsTr" >
+						
+						<td  id="titleScreenButtonsTable" >
+
+							<a onclick='startGame()' >
+				
+								<div id="titleScreenStartButton" >
+							       
+									<img id="titleScreenImgStartButton" src="/img/gui/titleScreen/start/norm.png" />
+	
+								</div>
+				
+							</a>
+
+						</td>
+						
+						<td id="titleScreenButtonsTable" >
+
+							<a onclick='showBindMenu();' >
+				
+								<div id="titleScreenStartButton" >
+							       
+									<img id="titleScreenImgControlsButton" src="/img/gui/titleScreen/controls/norm.png" />
+	
+								</div>
+
+							</a>
+
+						</td>
+						
+						<td  id="titleScreenButtonsTable" class="invis" >
+			
+							<a onclick='alert("wtf is a demo?");' >
+				
+								<div id="titleScreenStartButton" >
+							       
+									<p id="titleScreenStartButtonText" >Demo</p>
+	
+								</div>
+				
+							</a>
+
+						</td>
+
+					</tr>
+					
+				</tbody>
+				
+			</table>
+
+			<a onclick="addMikuToTitle()" >
+
+				<p id="titleScreenVersionNumber" >Pre-Alpha 0.69.421</p>
+
+			</a>
+			
+		</div>
+		
+		<div id="pauseMenu" class="invis" >
+			
+			<h1 id="pauseMenuH1" >BREAK TIME</h1>
+
+			<table id="pauseMenuButtonsTable" >
+
+				<tbody id="pauseMenuButtonsTbody" >
+
+					<tr id="pauseMenuButtonsTr" >
+						
+						<td  id="pauseMenuButtonsTable" >
+
+							<a onclick='togglePause()' >
+				
+								<div id="pauseMenuStartButton" >
+							       
+									<p id="titleScreenStartButtonText" >Resume</p>
+	
+								</div>
+				
+							</a>
+
+						</td>
+						
+						<td  id="pauseMenuButtonsTable" >
+
+							<a onclick='showBindMenu();' >
+				
+								<div id="pauseMenuStartButton" >
+							       
+									<p id="titleScreenStartButtonText" >Controls</p>
+	
+								</div>
+
+							</a>
+
+						</td>
+						
+						<td  id="pauseMenuButtonsTable" >
+			
+							<a onclick='exit();' >
+				
+								<div id="pauseMenuStartButton" >
+							       
+									<p id="pauseMenuStartButtonText" >EXIT</p>
+	
+								</div>
+				
+							</a>
+
+						</td>
+
+					</tr>
+
+					<tr id="pauseMenuButtonsTr" >
+						
+						<td  id="pauseMenuButtonsTable" >
+
+							<div id="playerCarPreviewDiv" style="left: 45%;bottom: 75%" >
+
+								<img id="playerCarBodyImg" class="playerCarImg" src="/img/player/car.png" />
+
+								<img id="playerCarDoorImg" class="playerCarImg" src="/img/player/door.png" />
+							
+							</div>
+
+						</td>
+
+					</tr>
+					
+				</tbody>
+				
+			</table>
+			
+		</div>
+
+		<div id="controlBindingsMenu"  class="invis" >
+			
+			<h1 id="controlBindingsMenuH1" >Edit Control Bindings</h1>
+
+			<a onclick="unShowBindMenu();">
+			
+				<h1 id="controlBindingsMenuCloseButton" >X</h1>
+
+			</a>
+
+			<table id="lastKeyPressTable" >
+
+				<tbody>
+
+					<tr>
+
+						<td>
+
+							<h1 id="lastKeyPressTableH1Label" class="lastKeyPressTableCell" >Last Key Pressed:</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="lastKeyPressTableH1KeyName" class="lastKeyPressTableCell" >FUCK</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="lastKeyPressTableH1Label" class="lastKeyPressTableCell" >JS Keycode:</h1>
+							
+						</td>
+
+						<td>
+
+							<h1 id="lastKeyPressTableH1KeyCode" class="lastKeyPressTableCell" >Script isn't working</h1>
+							
+						</td>
+
+					</tr>
+					
+				</tbody>
+				
+			</table>
+
+			<h1 id="controlBindingsMenuH1" >Click a bind to apply this key to it</h1>
+			
+			<table id="controlBindingsTable" >
+
+				<tbody>
+					
+					<tr>
+
+						<td>
+							
+							<h1 id="controlBindingsTableH1" class="controlBindingsTableHeaderCell" >Control</h1>
+
+						</td>
+
+						<td>
+
+							<h1 id="controlBindingsTableH1" class="controlBindingsTableHeaderCell" >Bind 1</h1>
+
+						</td>
+
+						<td>
+
+							<h1 id="controlBindingsTableH1" class="controlBindingsTableHeaderCell" >Bind 2</h1>
+
+						</td>
+
+						<td>
+
+							<h1 id="controlBindingsTableH1" class="controlBindingsTableHeaderCell" >Bind 3</h1>
+
+						</td>
+						
+					</tr>
+					
+					<tr>
+
+						<td>
+							
+							<h1 id="controlBindingsTableH1TestLabel" class="controlBindingsTableCell" >Control</h1>
+
+						</td>
+
+						<td>
+
+							<a onclick='bind(lastKey, "input.test.a");'>
+
+								<h1 id="controlBindingsTableH1TestA" class="controlBindingsTableCell" >Bind 1</h1>
+
+							</a>
+
+						</td>
+
+						<td>
+
+							<a onclick='bind(lastKey, "input.test.b");'>
+
+								<h1 id="controlBindingsTableH1TestB" class="controlBindingsTableCell" >Bind 2</h1>
+
+							</a>
+
+						</td>
+
+						<td>
+
+							<a onclick='bind(lastKey, "input.test.c");'>
+
+								<h1 id="controlBindingsTableH1TestC" class="controlBindingsTableCell" >Bind 3</h1>
+
+							</a>
+
+						</td>
+						
+					</tr>
+
+				</tbody>
+				
+			</table>
+
+		</div>
+
+		<div id="wantedStarsDiv" class="invis" >
+
+			<table id="wantedStarsTable" >
+
+				<tbody>
+
+					<tr>
+
+						<td>
+
+							<img id="wantedStar5" class="wantedStar" src="/img/gui/police/wanted/emptyStar.png" />
+							
+						</td>
+
+						<td>
+
+							<img id="wantedStar4" class="wantedStar" src="/img/gui/police/wanted/emptyStar.png" />
+							
+						</td>
+
+						<td>
+
+							<img id="wantedStar3" class="wantedStar" src="/img/gui/police/wanted/emptyStar.png" />
+							
+						</td>
+
+						<td>
+
+							<img id="wantedStar2" class="wantedStar" src="/img/gui/police/wanted/emptyStar.png" />
+							
+						</td>
+
+						<td>
+
+							<img id="wantedStar1" class="wantedStar" src="/img/gui/police/wanted/emptyStar.png" />
+							
+						</td>
+						
+					</tr>
+
+					<tr>
+						
+						<td colspan="5" >
+
+							<h1 id="wantedTimer" class="wantedH1" >69:420</h1>
+							
+						</td>
+
+					</tr>
+					
+				</tbody>
+
+			</table>
+
+		</div>
+
+	</body>	
+
+</html>
