@@ -15,6 +15,11 @@ function registerLevel (level) {
 //main var that all levels will be loaded into
 var lvlData = [];
 
+//default level for if engine can't find level elements it pulls default values from this one
+//also downloads during game load
+registerLevel("default");
+downloadLevel(lvlData.default);
+
 //debug levels go here
 lvlData.debug = [];
 registerLevel("debug.caramelldansen");
