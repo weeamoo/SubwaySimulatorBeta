@@ -15,6 +15,7 @@ entityTemplate.police.normal = function (name, x, y) {
 	output.id = "entity_" + name;
 	output.ai = ai.police.standard;
 	output.weapon = weapon.test;
+	output.speedLimitCalc = function (entityPass) {if (entityPass.lights) {return 999999;} else {return(speedLimitCalc(entityPass.x, entityPass.y))}};
 	//patrolling mode
 	output.patrolling = true;
 	//area around police car that can be scanned for crimes
