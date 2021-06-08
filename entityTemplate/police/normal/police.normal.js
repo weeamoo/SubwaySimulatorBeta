@@ -26,7 +26,7 @@ entityTemplate.police.normal = function (name, x, y) {
 	//chasing mode
 	output.chasing = false;
 	//what police car is chasing
-	output.target = {};
+	output.target = "none";
 	//stores state of the lights
 	output.lights = false;
 	output.html = "<div id=\"" + output.id + "\" class =\"policeCarDiv\" style=\"left: 0%; bottom: 29.1111%;\"><img id=\"policeCarImg\" class=\"policeCarImg\" src=\"/img/cops/normal/cop2.png\"></div>";
@@ -41,10 +41,6 @@ ai.police.standard = function (entityPass) {
 		//code for when police car is patrolling
 		//calls wanderCar ai for roaming
 		ai.wanderCar(entityPass);
-	}
-	//remove if it goes off the screen
-	if (entityPass.x > levelWidth) {
-		despawn(entityPass);
 	}
 
 	//checks every entity and determines if it's within the cop car's collum of sight
@@ -83,15 +79,15 @@ ai.police.functions.entityCheck =  function (entityPass, policePass) {
 		//console.log("enti in range");
 
 		if (entityPass.wantedLevel > 0) {
-			if (policePass.target == {}) {
+			if (policePass.target == "none") {
 				//if car is not currently in pursuit of an entity
-				policePass.target == entityPass;
+				policePass.target = entityPass;
 				policePass.chasing = true;
 				policePass.patrolling = false;
 			}
 		} else {
 			//check speed
-			if (entityPass.xSpeed > entityPass.speedLimit + entityPass.speedTolerance) {
+			if (Math.abs(entityPass.xSpeed) > entityPass.speedLimit + policePass.speedTolerance) {
 				//assign wanted level
 				setWantedLevel(entityPass, 1);
 			}
@@ -101,7 +97,7 @@ ai.police.functions.entityCheck =  function (entityPass, policePass) {
 		if (entityPass == policePass.target) {
 			//end the chase if the wanted level has expired
 			if (entityPass.wantedLevel == 0) {
-				policePass.target == {};
+				policePass.target = "none";
 				policePass.chasing = false;
 				policePass.patrolling = true;
 			}
@@ -109,7 +105,7 @@ ai.police.functions.entityCheck =  function (entityPass, policePass) {
 	}
 
 	//chasing AI if entity is target of pursuit
-	if (entityPass.x >= policePass.x - policePass.extendedRange && entityPass.x <= policePass.x + policePass.extendedRange && entityPass.y <= policePass.y + policePass.extendedRange && entityPass.y >= policePass.y - policePass.extendedRange && entityPass == policePass.target) {
+	if (entityPass.x >= policePass.x - policePass.extendedRange && entityPass.x <= policePass.x + policePass.extendedRange && entityPass.y <= policePass.y + policePass.extendedRange && entityPass.y >= policePass.y - policePass.extendedRange && entityPass == policePass.target && entityPass != policePass) {
 		if (entityPass.x > policePass.x) {
 			policePass.input.right = true;
 			policePass.input.left = false;
