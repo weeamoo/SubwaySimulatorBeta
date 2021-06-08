@@ -1,7 +1,7 @@
 lvlData.debug.test7.width = 1600;
 lvlData.debug.test7.height = 900;
 lvlData.debug.test7.css = "/levels/debug/test7/css/test7.css";
-/*lvlData.debug.test7.geo = function (x, y, dir) {player.speedLimit = 1;return 262;};  see workspace below*/
+//lvlData.debug.test7.geo = function (x, y, dir) {player.speedLimit = 1;return 262;};  see workspace below
 lvlData.debug.test7.speedLimit = function (x, y) {return 5;};
 lvlData.debug.test7.objects = function (x, y, entity) {};
 
