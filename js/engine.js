@@ -192,6 +192,9 @@ function update (entityPass) {
 
 	//applies camera offset
 	updatePos(entityPass.id ,entityPass.x - xOffset, entityPass.y - yOffset);
+	
+	//updates speed limit
+	entityPass.speedLimit = entityPass.speedLimitCalc(entityPass);
 
 	if (entityPass.wantedLevel > 0) {
 		//ticks wanted level down by one if need be
@@ -282,6 +285,8 @@ function defaultEntityData () {
 	output.ySpeed = 0;
 	//how many wanted stars you have
 	output.wantedLevel = 0;
+	//how speedlimit is fetched usually just get whatever the speedlimit for the area is but can be modified when needed
+	output.speedLimitCalc = function (entityPass) {return(speedLimitCalc(entityPass.x, entityPass.y))};
 	//wanted timer
 	output.wantedTimer = 0;
 	//top speed of the car
