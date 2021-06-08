@@ -75,7 +75,7 @@ function changeLevel (level, x, y) {
 	speedLimitCalc = getLevelPart(level.speedLimit);
 	
 	//sets function for objects that can be collided with
-	objectCalc = getLevelPart(level.speedLimit);
+	objectCalc = getLevelPart(level.objects);
 
 	//level size
 	levelWidth = getLevelPart(level.width);
