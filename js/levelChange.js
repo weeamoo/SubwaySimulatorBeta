@@ -125,6 +125,9 @@ function changeLevel (level, x, y) {
 
 //gets level parts from level data
 function getLevelPart (part) {
+	if (part == undefined) {
+		console.log(part + " was not defined in the level data and failed to load");
+	}
 	return part;
 }
 
