@@ -124,9 +124,16 @@ function changeLevel (level, x, y) {
 }
 
 //gets level parts from level data
-function getLevelPart (part) {
+function getLevelPart (part, parta) {
 	if (part == undefined) {
 		console.log(part + " was not defined in the level data and failed to load");
+		if (parta == undefined) {
+			console.log(part + "no default data found ur shit is going to crash sorry");
+		} else {
+			console.log(part + "luckily we have a default that we can use");
+			eval("lvlData.default.ram = lvlData.default." + parta  + ";");
+			return lvlData.default.ram;
+		}
 	}
 	return part;
 }
