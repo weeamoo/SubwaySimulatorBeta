@@ -45,7 +45,7 @@ function checkLoadLevel (level, x, y) {
 
 //downloads a level into RAM
 function downloadLevel (level) {
-	if (level.loaded) {
+	if (level.loaded == false) {
 		require([level.path]);
 	}
 }
@@ -119,6 +119,10 @@ function changeLevel (level, x, y) {
 	//factor of 1 will make it move with the background
 	//anything in between is in between
 
+	//runs loaded levelscript
+	loadScript = getLevelPart(level.loadScript , "loadScript");
+	loadScript();
+
 	loadingLevel = false;
 
 }
@@ -126,11 +130,12 @@ function changeLevel (level, x, y) {
 //gets level parts from level data
 function getLevelPart (part, parta) {
 	if (part == undefined) {
-		console.log(part + " was not defined in the level data and failed to load");
+		console.log("A value in the the data for this level was not definedand failed to load");
 		if (parta == undefined) {
-			console.log(part + "no default data found ur shit is going to crash sorry");
+			console.log("no default data found ur shit is going to crash sorry");
 		} else {
-			console.log(part + "luckily we have a default that we can use");
+			console.log("luckily we have a default that we can use");
+			console.log("please consider updating the level you just loaded to prevent this. PART: " + parta);
 			eval("lvlData.default.ram = lvlData.default." + parta  + ";");
 			return lvlData.default.ram;
 		}
@@ -169,3 +174,4 @@ function lvlReset () {
 var getNearestRail = function (x, y, dir) {return 0;};
 var speedLimitCalc = function (x, y) {return 0;};
 var objectCalc = function (x, y, entity) {};
+var loadScript = function () {};
