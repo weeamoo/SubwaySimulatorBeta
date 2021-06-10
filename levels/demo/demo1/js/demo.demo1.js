@@ -3,7 +3,7 @@ lvlData.demo.demo1.height = 8000;
 lvlData.demo.demo1.spawnX = 100;
 lvlData.demo.demo1.spawnY = 0;
 lvlData.demo.demo1.css = "/levels/demo/demo1/css/demo1.css";
-lvlData.demo.demo1.geo = function (x, y, dir) {return 500;};
+//lvlData.demo.demo1.geo = function (x, y, dir) {return 500;};
 lvlData.demo.demo1.speedLimit = function (x, y) {return 5;};
 lvlData.demo.demo1.objects = function (x, y, entity) {};
 lvlData.demo.demo1.loadScript = function () {};
@@ -39,3 +39,10 @@ lvlData.demo.demo1.sfg1factor = 1;
 
 //tells the stupid system that the level is ready
 lvlData.demo.demo1.loaded = true;
+
+lvlData.demo.demo1.geo = function (x, y, dir) {
+	
+	switch (true) {
+
+	}
+}
