@@ -43,6 +43,21 @@ lvlData.demo.demo1.loaded = true;
 lvlData.demo.demo1.geo = function (x, y, dir) {
 	
 	switch (true) {
-
+		case (x < 300):
+        	switch (true) {
+        		case (y > 5900):
+        			return 6000;
+        		break;
+        		case (y > 3400):
+        			return 3500;
+        		break;
+        		case (y > 1600):
+        			return 1700;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
 	}
 }
