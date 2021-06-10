@@ -31,3 +31,7 @@ registerLevel("debug.test4");
 registerLevel("debug.test5");
 registerLevel("debug.test6");
 registerLevel("debug.test7");
+
+//demo level
+lvlData.demo = [];
+registerLevel("demo.demo1");

@@ -1,0 +1,20 @@
+table#debugGridLevelTable {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	border: none;
+	margin: 0;
+	padding: 0;
+	border-width: 0px;
+	height: 100%;
+	width: 400%;
+}
+
+td#debugGridLevelTd {
+	padding: 0px;
+}
+
+img#debugGridLevelImg {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
