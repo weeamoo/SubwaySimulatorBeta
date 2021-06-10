@@ -59,5 +59,15 @@ lvlData.demo.demo1.geo = function (x, y, dir) {
         		break;
         	}
         break;
+        default:
+        	switch (true) {
+        		case (y > 5900):
+        			return 6000;
+        		break;
+        		default:
+        			return 2000;
+        		break;
+        	}
+        break;
 	}
 }
