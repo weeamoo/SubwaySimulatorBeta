@@ -1,5 +1,7 @@
 lvlData.default.width = 4800;
 lvlData.default.height = 900;
+lvlData.default.spawnX = 100;
+lvlData.default.spawnY = 500;
 lvlData.default.css = "/levels/default/css/default.css";
 lvlData.default.geo = function (x, y, dir) {return 500;};
 lvlData.default.speedLimit = function (x, y) {return 5;};

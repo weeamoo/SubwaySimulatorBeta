@@ -12,6 +12,8 @@ entityTemplate.police.normal = function (name, x, y) {
 	var output = defaultEntityData();
 	output.name = name;
 	//modifies
+	output.x = x;
+	output.y = y;
 	output.id = "entity_" + name;
 	output.ai = ai.police.standard;
 	output.weapon = weapon.test;

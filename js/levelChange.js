@@ -55,6 +55,16 @@ function changeLevel (level, x, y) {
 
 	loadingLevel = true;
 
+	//set x and y to default values if they are undefined
+	if (x == undefined) {
+		x = getLevelPart(level.spawnX, "spawnX");
+	}
+
+	if (y == undefined) {
+		y = getLevelPart(level.spawnY, "spawnY");
+	}
+
+
 	//clearing stuff
 	entity.player.xSpeed = 0;
 	entity.player.ySpeed = 0;
