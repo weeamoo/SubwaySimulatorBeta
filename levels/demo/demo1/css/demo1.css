@@ -1,4 +1,4 @@
-table#debugGridLevelTable {
+table#demoGridLevelTable {
 	border-spacing: 0px;
 	border-collapse: collapse;
 	border: none;
@@ -9,11 +9,11 @@ table#debugGridLevelTable {
 	width: 400%;
 }
 
-td#debugGridLevelTd {
+td#demoGridLevelTd {
 	padding: 0px;
 }
 
-img#debugGridLevelImg {
+img#demoGridLevelImg {
 	display: block;
 	height: 100%;
 	width: 100%;
