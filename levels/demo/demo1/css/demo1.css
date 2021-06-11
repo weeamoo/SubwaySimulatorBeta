@@ -7,6 +7,8 @@ table#demoGridLevelTable {
 	border-width: 0px;
 	height: 888.8888888%;
 	width: 562.5%;
+	position: absolute;
+	bottom: 0;
 }
 
 td#demoGridLevelTd {
