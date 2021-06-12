@@ -402,19 +402,243 @@ lvlData.demo.demo1.geo = function (x, y, dir) {
         		break;
         	}
         break;
+		case (x < 4525):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3900):
+        			if (dir == "Up") {
+        				return x - 500;
+        			} else {
+        				return (x * -1) + 8500;
+        			}
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 4975):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 4000):
+        			return x - 500;
+        		break;
+        		case (y > (x * -1) + 8490):
+        			return (x * -1) + 8500;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 5500):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 4000):
+        			return x - 500;
+        		break;
+        		case (y > 2900):
+        			if (dir == "up") {
+        				return (x * -1) + 8500;
+        			} else {
+        				return 3000;
+        			}
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 5975):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5490):
+        			return 5500;
+        		break;
+        		case (y > 4000):
+        			return x - 500;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 6000):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			if (dir == "Up") {
+        				return 5500;
+        			} else {
+        				x - 500;
+        			}
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 6975):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1000):
+        			return (x * -1) + 8000;
+        		break;
+        		default:
+        			return x - 6000;
+        		break;
+        	}
+        break;
+		case (x < 7000):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		default:
+        			if (dir == "Up") {
+        				return (x * -1) + 8000;
+        			} else {
+        				return x - 6000;
+        			}
+        		break;
+        	}
+        break;
+		case (x < 7975):
+        	switch (true) {
+        		case (y > 6000):
+        			return (x * -1) + 1400;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 2000):
+        			return (x * -1) + 10000;
+        		break;
+        		default:
+        			return x - 6000;
+        		break;
+        	}
+        break;
+		case (x < 8000):
+        	switch (true) {
+        		case (y > 6000):
+        			return (x * -1) + 1400;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		default:
+        			if (dir == "Up") {
+        				return (x * -1) + 10000;
+        			} else {
+        				return x - 6000;
+        			}
+        		break;
+        	}
+        break;
+		case (x < 8475):
+        	switch (true) {
+        		case (y > 5990):
+        			return 6000;
+        		break;
+        		case (y > 5400):
+        			return x - 2500;
+        		break;
+        		default:
+        			return 2000;
+        		break;
+        	}
+        break;
+		case (x < 8500):
+        	switch (true) {
+        		case (y > 5400):
+        			if (dir == "Up") {
+        				return 6000;
+        			} else {
+        				return x - 2500;
+        			}
+        		break;
+        		default:
+        			return 2000;
+        		break;
+        	}
+        break;
         default:
         	switch (true) {
         		case (y > 5900):
         			return 6000;
         		break;
-        		case (y > 3400):
-        			return 3500;
-        		break;
-        		case (y > 1600):
-        			return 1700;
-        		break;
         		default:
-        			return 0;
+        			return 2000;
         		break;
         	}
         break;
