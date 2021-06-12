@@ -58,14 +58,363 @@ lvlData.demo.demo1.geo = function (x, y, dir) {
         			return 0;
         		break;
         	}
+		case (x < 325):
+        	switch (true) {
+        		case (y > 5900):
+        			return 6000;
+        		break;
+        		case (y > 3400):
+        			return 3500;
+        		break;
+        		case (y > 1600):
+        			if (dir == "Up") {
+        				return x + 1400;
+        			} else {
+        				return (x * -1) + 2000;
+        			}
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 500):
+        	switch (true) {
+        		case (y > 5900):
+        			return 6000;
+        		break;
+        		case (y > 3400):
+        			return 3500;
+        		break;
+        		case (y > x + 1395):
+        			return x + 1400;
+        		break;
+        		case (y > 1400):
+        			return (x * -1) + 2000;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 525):
+        	switch (true) {
+        		case (y > 5900):
+        			if (dir == "Up") {
+        				return 6000;
+        			} else {
+        				return (x * -1) + 6500;
+        			}
+        		break;
+        		case (y > 3400):
+        			if (dir == "Up") {
+        				return x + 3000;
+        			} else {
+        				return (x * -1) + 4000;
+        			}
+        		break;
+        		case (y > x + 1395):
+        			return x + 1400;
+        		break;
+        		case (y > 1400):
+        			return (x * -1) + 2000;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 600):
+        	switch (true) {
+        		case (y > 5900):
+        			return 6000;
+        		break;
+        		case (y > 5400):
+        			return (x * -1) + 6500;
+        		break;
+        		case (y > x + 2990):
+        			return x + 3000;
+        		break;
+        		case (y > 2900):
+        			return (x * -1) + 4000;
+        		break;
+        		case (y > x + 1395):
+        			return x + 1400;
+        		break;
+        		case (y > 1300):
+        			return (x * -1) + 2000;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 1000):
+        	switch (true) {
+        		case (y > 5900):
+        			return 6000;
+        		break;
+        		case (y > 5400):
+        			return (x * -1) + 6500;
+        		break;
+        		case (y > x + 2990):
+        			return x + 3000;
+        		break;
+        		case (y > 2900):
+        			return (x * -1) + 4000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 1200):
+        	switch (true) {
+        		case (y > 5900):
+        			x + 5000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3900):
+        			return 4000;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return x + 1000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 1400):
+        	switch (true) {
+        		case (y > 5900):
+        			x + 5000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3900):
+        			return 4000;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return (x * -1) + 3400;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 2000):
+        	switch (true) {
+        		case (y > 5900):
+        			return x + 5000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3900):
+        			return 4000;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 2300):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3600):
+        			return (x - -1) + 6000;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 2400):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3600):
+        			return 3700;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 2500):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3900):
+        			return 4000;
+        		break;
+        		case (y > 3600):
+        			return 3700;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 2600):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3600):
+        			return 3700;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 2300):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3600):
+        			return x + 1100;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
+        break;
+		case (x < 4500):
+        	switch (true) {
+        		case (y > 6900):
+        			return 7000;
+        		break;
+        		case (y > 5400):
+        			return 5500;
+        		break;
+        		case (y > 3900):
+        			return 4000;
+        		break;
+        		case (y > 2900):
+        			return 3000;
+        		break;
+        		case (y > 1900):
+        			return 2000;
+        		break;
+        		case (y > 1300):
+        			return 1400;
+        		break;
+        		default:
+        			return 0;
+        		break;
+        	}
         break;
         default:
         	switch (true) {
         		case (y > 5900):
         			return 6000;
         		break;
+        		case (y > 3400):
+        			return 3500;
+        		break;
+        		case (y > 1600):
+        			return 1700;
+        		break;
         		default:
-        			return 2000;
+        			return 0;
         		break;
         	}
         break;
