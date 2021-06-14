@@ -25,11 +25,23 @@ ai.wanderCar = function (entityPass) {
 	}
 
 	//if you're really far left it will start you going right
-	if (entityPass.x < 300) {
+	if (entityPass.x < 0) {
 		entityPass.input.right = true;
-	} else if (entityPass.x > levelWidth - 300) {
+	} else if (entityPass.x > levelWidth) {
 		//same thing but if ur right u go left
 		entityPass.input.left = true;
+	}
+
+	//lastpress toggle every 10 seconds
+	if (entityPass.lastPressCooldown < 0) {
+		if (entityPass.lastPress = "Up") {
+			entityPass.lastpress = "Down";
+		} else {
+			entityPass.lastpress = "Up";
+		}
+		entityPass.lastPressCooldown = 600;
+	} else {
+		entityPass.lastPressCooldown = entityPass.lastPressCooldown - 1;
 	}
 }
 

@@ -342,6 +342,9 @@ function defaultEntityData () {
 	//output to hold cooldown before weapon can be fired again
 	output.weaponCooldown = 0;
 
+	//used for dumb ai shit
+	output.lastPressCooldown = 600;
+
 	//setup inputs
 	for (var property in input) {
 		eval("output.input." + property + " = false;");

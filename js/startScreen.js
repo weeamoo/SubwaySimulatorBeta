@@ -24,6 +24,28 @@ function startGame () {
 	entity.player.ai = ai.controller;
 }
 
+function startDemo () {
+
+	//hide title screen
+	document.getElementById("titleScreen").classList.add("invis");
+
+	//show hud
+	document.getElementById("hud").classList.remove("invis");
+
+	//starting level
+	loadLevel(lvlData.demo.demo2);
+	
+	//make player car exist
+	//summon(entityTemplate.player("player", 0, 0));
+
+	//slef
+	onStartMenu = false;
+	paused = false;
+	
+	//make sure you control car
+	entity.player.ai = ai.controller;
+}
+
 function addMikuToTitle () {
 	document.getElementById("titleScreen").style.backgroundImage = "url(\"https://surfinontheinter.net/img/myspace/mikuback.jpg\")";
 }
