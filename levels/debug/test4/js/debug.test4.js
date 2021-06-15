@@ -2,7 +2,7 @@ lvlData.debug.test4.width = 4000;
 lvlData.debug.test4.height = 1800;
 lvlData.debug.test4.css = "/levels/debug/test4/css/test4.css";
 lvlData.debug.test4.geo = function (x, y, dir) {return 262;};
-lvlData.debug.test4.speedLimit = function (x, y) {return 5;};
+lvlData.debug.test4.speedLimit = function (x, y) {return 1;};
 lvlData.debug.test4.objects = function (x, y, entity) {};
 
 //html data
