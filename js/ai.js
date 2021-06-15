@@ -25,9 +25,9 @@ ai.wanderCar = function (entityPass) {
 	}
 
 	//if you're really far left it will start you going right
-	if (entityPass.x < 0) {
+	if (entityPass.x < 25) {
 		entityPass.input.right = true;
-	} else if (entityPass.x > levelWidth) {
+	} else if (entityPass.x > levelWidth - 25) {
 		//same thing but if ur right u go left
 		entityPass.input.left = true;
 	}
