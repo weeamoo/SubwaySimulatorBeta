@@ -56,7 +56,7 @@ function idleBackground () {
 		loadLevel(lvlData.debug.test4, 0, 0);
 		
 		//make player car exist
-		summon(entityTemplate.player("player", 0, 0));
+		summon(entityTemplate.player("player", 0, 262));
 		entity.player.ai = ai.wanderCar;
 		
 	    	paused = false;
