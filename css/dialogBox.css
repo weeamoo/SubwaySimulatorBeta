@@ -15,8 +15,8 @@ div#dialogBoxDiv {
 
 img#dialogBoxPfpImg {
 	/* height: 25%; */
-	width: 45%;
-	margin-left: 5%;
+	width: 100%;
+	border-radius: 5%;
 }
 
 p#dialogBoxNameTxt {
@@ -24,7 +24,8 @@ p#dialogBoxNameTxt {
 	color: #FFF;
 	font-weight: bold;
 	font-size: 150%;
-	margin-left: 5%;
+	/* margin-left: 5%; */
+	text-align: center;
 }
 
 p#dialogBoxTxt {
@@ -34,4 +35,33 @@ p#dialogBoxTxt {
 	margin: 0;
 	text-align: left;
 	font-size: 150%;
+	margin: 0.5%;
 }
+
+/* layout lable for dialog box */
+table.dialogBoxTable {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	padding-left: 0.5%;
+}
+
+/* layout table cells */
+tr.dialogBoxTr {
+	padding: 0px;
+}
+
+/* cell that has picture */
+td#dialogBoxTdaa {
+	width: 11%;
+}
+
+/* cell that has the text below the picture */
+td#dialogBoxTdba {
+	width: 11%;
+}
+
+/* cell that contains what the character is saying */
+td#dialogBoxTdab {
+	vertical-align: top;
+}
+
