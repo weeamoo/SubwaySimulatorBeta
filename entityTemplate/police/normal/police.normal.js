@@ -14,6 +14,8 @@ entityTemplate.police.normal = function (name, x, y) {
 	//modifies
 	output.x = x;
 	output.y = y;
+	output.width = 95;
+	output.height = 50;
 	output.id = "entity_" + name;
 	output.ai = ai.police.standard;
 	output.weapon = weapon.test;
