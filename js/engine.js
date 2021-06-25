@@ -321,6 +321,10 @@ function defaultEntityData () {
 
 	//brakes power
 	output.brakePower = 0.1;
+	
+	//height and witdth of entity
+	output.height = 100;
+	output.width = 100;
 
 	//ai script to use
 	output.ai = ai.default;
