@@ -7,6 +7,8 @@ entityTemplate.player = function (name, x, y) {
 	var output = defaultEntityData();
 	output.name = name;
 	//modifies
+	output.width = 95;
+	output.height = 50;
 	output.id = "entity_" + name;
 	output.ai = ai.controller;
 	output.weapon = weapon.test;
