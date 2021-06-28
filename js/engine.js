@@ -403,6 +403,26 @@ function hop (entityPass, power) {
 
 }
 
+function dialogBox (messagePass, scrollSpeedPass, actionPass, imgPass, namePass, soundPass, keyReqPass) {
+	// messagePass = message to display
+	// scrollSpeedPassPass = number of frames between when characters are added to box
+	// actionPass = bit of code to run when dialog box is done
+	// imgPass = image to display while text is being displayed (who's talking)
+	// namePass = name to display of who is talking
+	// soundPass = sound beep or something to play when character appears
+	// keyReqPass = if you need to press a key to advance to the next thing
+
+	//makes dialog box visable
+	document.getElementById("dialogBoxDiv").classList.remove("invis");
+	//sets text in box to match message
+	document.getElementById("dialogBoxTxt").innerHTML = messagePass;
+	//changes pic to one thats provided
+	document.getElementById("dialogBoxPfpImg").src = imgPass;
+	//sets name to one that's provided
+	document.getElementById("dialogBoxNameTxt").innerHTML = namePass;
+
+}
+
 function toggleFullscreen() {
     if (document.fullscreenElement) {
         document.exitFullscreen();
