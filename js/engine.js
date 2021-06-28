@@ -415,7 +415,7 @@ function dialogBox (messagePass, scrollSpeedPass, actionPass, imgPass, namePass,
 	for (var i = 0; i < messagePass.length; i++) {
 		
 		//sets text in box to match message
-		setTimeout(function(){document.getElementById("dialogBoxTxt").innerHTML = messagePass.slice(0, i);}, i * scrollSpeedPass);
+		setTimeout(function(){document.getElementById("dialogBoxTxt").innerHTML = messagePass.slice(0, i);}, (i * scrollSpeedPass));
 		
    		//var c = text.charAt(x);
    	 	//Add code here to do the translation
