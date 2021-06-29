@@ -411,24 +411,29 @@ function dialogBox (messagePass, scrollSpeedPass, actionPass, imgPass, namePass,
 	// namePass = name to display of who is talking
 	// soundPass = sound beep or something to play when character appears
 	// keyReqPass = if you need to press a key to advance to the next thing
-	
-	for (var i = 0; i < messagePass.length; i++) {
-		
-		//sets text in box to match message
-		setTimeout(function(){document.getElementById("dialogBoxTxt").innerHTML = messagePass.slice(0, i);}, (i * scrollSpeedPass));
-		
-   		//var c = text.charAt(x);
-   	 	//Add code here to do the translation
-	}
 
-	//makes dialog box visable
-	document.getElementById("dialogBoxDiv").classList.remove("invis");
 	//sets text in box to match message
 	//document.getElementById("dialogBoxTxt").innerHTML = messagePass;
 	//changes pic to one thats provided
 	document.getElementById("dialogBoxPfpImg").src = imgPass;
 	//sets name to one that's provided
 	document.getElementById("dialogBoxNameTxt").innerHTML = namePass;
+
+	//makes dialog box visable
+	document.getElementById("dialogBoxDiv").classList.remove("invis");
+	
+	for (var i = 1; i < messagePass.length + 1; i++) {
+		
+		//sets text in box to match message
+		console.log(messagePass.slice(0, i));
+		console.log(i * scrollSpeedPass);
+		console.log("setTimeout(function(){document.getElementById(\"dialogBoxTxt\").innerHTML = messagePass.slice(0, " + i + ");}, " + i * scrollSpeedPass + ");");
+		//jesus fuck
+		eval("setTimeout(function(){document.getElementById(\"dialogBoxTxt\").innerHTML = messagePass.slice(0, " + i  + ");}, " + i * scrollSpeedPass + ");");
+		
+   		//var c = text.charAt(x);
+   	 	//Add code here to do the translation
+	}
 
 }
 
