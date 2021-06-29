@@ -36,12 +36,15 @@ p#titleScreenStartButtonText {
 
 /* table that holds title screen buttons */
 table#titleScreenButtonsTable {
-	margin: auto;
+	/* margin: auto; */
 	border-spacing: 20px;
 	top: 15%;
-	position: absolute;
-	width: 50%;
-	left: 25%;
+	/* position: absolute; */
+	/* width: 50%; */
+	/* left: 7%; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;
 }
 
 /* title */
