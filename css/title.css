@@ -88,9 +88,11 @@ p#titleScreenSplashTxt {
 	text-align: center;
 	animation-name: splashScreenTxt;
 	animation-duration: 2s;
+	animation-iteration-count: infinite;
 }
 
 @keyframes splashScreenTxt {
-	from {font-size: 125%;}
-	to {font-size: 175%;}
+	0% {font-size: 125%;}
+	50% {font-size: 175%;}
+	100% {font-size: 125%;}
 }
