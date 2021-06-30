@@ -76,3 +76,21 @@ p#titleScreenVersionNumber {
 	margin: 0px;
 	font-size: 250%;
 }
+
+/* splash screen */
+p#titleScreenSplashTxt {
+	position: absolute;
+	transform: rotate(-30deg) translateX(-50%);
+	color: yellow;
+	left: 75%;
+	top: 0;
+	width: 50%;
+	text-align: center;
+	animation-name: splashScreenTxt;
+	animation-duration: 2s;
+}
+
+@keyframes splashScreenTxt {
+	from {font-size: 125%;}
+	to {font-size: 175%;}
+}
