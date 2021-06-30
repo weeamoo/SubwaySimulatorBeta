@@ -80,7 +80,7 @@ p#titleScreenVersionNumber {
 /* splash screen */
 p#titleScreenSplashTxt {
 	position: absolute;
-	transform: rotate(-30deg) translateX(-50%);
+	transform: rotate(-30deg) translateX(-50%) translateY(-50%);
 	color: yellow;
 	left: 75%;
 	top: 0;
