@@ -36,3 +36,18 @@ table#pauseMenuButtonsTable {
 	margin: auto;
 	border-spacing: 20px;
 }
+
+/* car preview */
+img.playerCarPreviewImg {
+	width: 100%;
+	position: absolute;
+	bottom: 50%;
+}
+
+div#playerCarPreviewDiv {
+	position: absolute;
+	width: 25%;
+	height: 10%;
+	bottom: 0px;
+	left: 0px;
+}
