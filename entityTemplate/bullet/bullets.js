@@ -26,7 +26,7 @@ entityTemplate.bullet.test = function (name, x, y, owner) {
 	output.x = x;
 	output.y = y + 25;
 	output.damage = 100;
-	output.range = 20;
+	output.range = 40;
 	output.owner = owner;
 
 	return output;
