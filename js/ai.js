@@ -44,13 +44,3 @@ ai.wanderCar = function (entityPass) {
 		entityPass.lastPressCooldown = entityPass.lastPressCooldown - 1;
 	}
 }
-
-ai.bullet = {};
-//standard bullet ai
-ai.bullet.norm = function (entityPass) {
-	//remove if it goes off the screen
-	if (entityPass.x > levelWidth) {
-		despawn(entityPass);
-	}
-	
-}
