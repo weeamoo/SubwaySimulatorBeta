@@ -25,7 +25,40 @@ entityTemplate.bullet.test = function (name, x, y, owner) {
 	output.weight = 0;
 	output.x = x;
 	output.y = y + 25;
+	output.damage = 100;
+	output.range = 20;
 	output.owner = owner;
 
 	return output;
+}
+
+//bullet code
+
+ai.bullet = {};
+//standard bullet ai
+ai.bullet.norm = function (entityPass) {
+	//checks every entity and determines if it's close enough to be considered hit
+	for (var property in entity) {
+		eval("ai.police.functions.entityCheck(entity." + property + ", entityPass);");
+	}
+	
+	//remove if it goes off the screen
+	if (entityPass.x > levelWidth) {
+		despawn(entityPass);
+	}
+	
+}
+
+ai.bullet.functions = {};
+ai.bullet.functions.entityCheck =  function (entityPass, bulletPass) {
+	//console.log(entityPass);
+	//console.log(bulletPass);
+
+	//left wall, right wall, top wall, bottom wall, not itself
+	if (entityPass.x >= bulletPass.x - policePass.range && entityPass.x <= bulletPass.x + bulletPass.range && entityPass.y <= bulletPass.y + bulletPass.range && entityPass.y >= bulletPass.y - bulletPass.range && entityPass != bulletPass) {
+		//this should mean it hit
+		entityPass.hp = entityPass.hp - bulletPass.damage;
+		despawn(bulletPass);
+	}
+
 }
